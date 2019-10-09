@@ -56,6 +56,8 @@ public class CameraLerp : MonoBehaviour
 
     public void CameraOut()
     {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
         player.transform.position = outPos;
         transform.position = Vector3.Slerp(transform.position, outCamPos, Time.deltaTime * 2f);
 
