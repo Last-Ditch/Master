@@ -12,6 +12,9 @@ public class CameraLerp : MonoBehaviour
     private Vector3 outPos = new Vector3(-34.5f, 7.9f, 36.5f);
     public float x;
 
+    public bool nearLaptop;
+
+
     void Start()
     {
         inMenu = false;
@@ -19,7 +22,7 @@ public class CameraLerp : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetButtonDown("Jump"))
+        if(Input.GetButtonDown("Jump") && nearLaptop)
         {
             Debug.Log("Jump");
             inMenu = !inMenu;
@@ -51,6 +54,5 @@ public class CameraLerp : MonoBehaviour
     }
 
 
-   
 
 }

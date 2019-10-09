@@ -838,6 +838,25 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 255612440}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &579395031 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8309716595950070746, guid: c28824631715a424abf18df70e7e7eeb,
+    type: 3}
+  m_PrefabInstance: {fileID: 1438827587}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &579395032
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 579395031}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4, y: 4, z: 4}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &783576367
 GameObject:
   m_ObjectHideFlags: 0
@@ -1102,6 +1121,7 @@ MonoBehaviour:
   screen: {fileID: 1762604367}
   player: {fileID: 1445814726}
   x: 0
+  nearLaptop: 0
 --- !u!1 &1349695140
 GameObject:
   m_ObjectHideFlags: 0
@@ -1299,6 +1319,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Laptop
       objectReference: {fileID: 0}
+    - target: {fileID: 8309716595950070746, guid: c28824631715a424abf18df70e7e7eeb,
+        type: 3}
+      propertyPath: m_TagString
+      value: Laptop
+      objectReference: {fileID: 0}
     - target: {fileID: 8848901711743264826, guid: c28824631715a424abf18df70e7e7eeb,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1441,6 +1466,7 @@ GameObject:
   - component: {fileID: 1451299878}
   - component: {fileID: 1451131558}
   - component: {fileID: 1448212518}
+  - component: {fileID: 1445814727}
   m_Layer: 0
   m_Name: Player - FPSController
   m_TagString: Untagged
@@ -1448,6 +1474,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1445814727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1445814726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d336eb48e6c1a204d9334dd8a1ae2aa7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!20 &1446142950
 Camera:
   m_ObjectHideFlags: 0
