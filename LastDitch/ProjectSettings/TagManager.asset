@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Laptop
+  - SD card
   layers:
   - Default
   - TransparentFX
