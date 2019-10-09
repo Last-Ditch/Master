@@ -12,12 +12,6 @@ public class Laptop : MonoBehaviour
         script = GetComponentInChildren<CameraLerp>();
     }
 
-    void Update()
-    {
-        
-    }
-
-
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Laptop")
