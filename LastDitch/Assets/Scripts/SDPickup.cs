@@ -14,7 +14,6 @@ public class SDPickup : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.E) && sdSlot!=null)
         {
-            Debug.Log("2");
             if (sdSlot.gameObject.GetComponent<MeshRenderer>().enabled)
             {
                 sdSlot.gameObject.GetComponent<MeshRenderer>().enabled = false;
@@ -25,6 +24,10 @@ public class SDPickup : MonoBehaviour
             {
                 sdSlot.gameObject.GetComponent<MeshRenderer>().enabled = true;
                 haveCard = false;
+                if(sdSlot.gameObject.transform.parent.tag == "Ultimaker")
+                {
+                    GameObject.FindGameObjectWithTag("Progress").GetComponent<ProgressTracker>().sdIn = true;
+                }
                 return;
             }
         }
@@ -35,7 +38,6 @@ public class SDPickup : MonoBehaviour
     {
         if(other.gameObject.tag == "SD card")
         {
-            Debug.Log("1");
             sdSlot = other.gameObject;
         }
     }
@@ -44,7 +46,6 @@ public class SDPickup : MonoBehaviour
     {
         if (other.gameObject.tag == "SD card")
         {
-            Debug.Log("1");
             sdSlot = null;
         }
     }

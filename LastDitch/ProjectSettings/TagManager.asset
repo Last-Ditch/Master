@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Laptop
   - SD card
+  - Progress
+  - Ultimaker
+  - Print
   layers:
   - Default
   - TransparentFX
