@@ -5,7 +5,9 @@ using UnityEngine.SceneManagement;
 public class ProgressTracker : MonoBehaviour
 {
     public bool sliced, sdIn;
-    public bool MatPicked, MatPLA, MatABS, MatTPU, MatPTE, LHPicked, LH1, LH2, LH3, InfillPicked, IP1, IP2, IP3, IP4, IP5;
+    public bool MatPicked, LHPicked, InfillPicked;
+    public int MaterialC, LayerHeightC, InfillC;
+    public Material PLA, ABS, TPU, PTE;
 
     void Awake()
     {
@@ -21,8 +23,26 @@ public class ProgressTracker : MonoBehaviour
 
     private void Update()
     {
-       if(sliced && sdIn)
+        if (sliced && sdIn)
         {
+            switch (MaterialC)
+            {
+                case 4:
+                    GameObject.FindGameObjectWithTag("Print").GetComponent<MeshRenderer>().material = PTE;
+                    break;
+                case 3:
+                    GameObject.FindGameObjectWithTag("Print").GetComponent<MeshRenderer>().material = TPU;
+                    break;
+                case 2:
+                    GameObject.FindGameObjectWithTag("Print").GetComponent<MeshRenderer>().material = ABS;
+                    break;
+                case 1:
+                    GameObject.FindGameObjectWithTag("Print").GetComponent<MeshRenderer>().material = PLA;
+                    break;
+                default:
+                    GameObject.FindGameObjectWithTag("Print").GetComponent<MeshRenderer>().material = PLA;
+                    break;
+            }
             GameObject.FindGameObjectWithTag("Print").GetComponent<MeshRenderer>().enabled = true;
         }
     }
@@ -31,103 +51,20 @@ public class ProgressTracker : MonoBehaviour
     public void Material(int i)
     {
         MatPicked = true;
-        if (i == 1)
-        {
-            MatPLA = true;
-            MatABS = false;
-            MatTPU = false;
-            MatPTE = false;
-        }
-        if (i == 2)
-        {
-            MatPLA = false;
-            MatABS = true;
-            MatTPU = false;
-            MatPTE = false;
-        }
-        if (i == 3)
-        {
-            MatPLA = false;
-            MatABS = false;
-            MatTPU = true;
-            MatPTE = false;
-        }
-        if (i == 4)
-        {
-            MatPLA = false;
-            MatABS = false;
-            MatTPU = false;
-            MatPTE = true;
-        }
+        MaterialC = i;
     }
 
     public void LayerHeight(int i)
     {
         LHPicked = true;
-        if (i == 1)
-        {
-            LH1 = true;
-            LH2 = false;
-            LH3 = false;
-        }
-        if (i == 2)
-        {
-            LH1 = false;
-            LH2 = true;
-            LH3 = false;
-        }
-        if (i == 3)
-        {
-            LH1 = false;
-            LH2 = false;
-            LH3 = true;
-        }
+        LayerHeightC = i;
 
     }
 
     public void Infill(int i)
     {
         InfillPicked = true;
-        if (i == 1)
-        {
-            IP1 = true;
-            IP2 = false;
-            IP3 = false;
-            IP4 = false;
-            IP5 = false;
-        }
-        if (i == 2)
-        {
-            IP1 = false;
-            IP2 = true;
-            IP3 = false;
-            IP4 = false;
-            IP5 = false;
-        }
-        if (i == 3)
-        {
-            IP1 = false;
-            IP2 = false;
-            IP3 = true;
-            IP4 = false;
-            IP5 = false;
-        }
-        if (i == 4)
-        {
-            IP1 = false;
-            IP2 = false;
-            IP3 = false;
-            IP4 = true;
-            IP5 = false;
-        }
-        if (i == 5)
-        {
-            IP1 = false;
-            IP2 = false;
-            IP3 = false;
-            IP4 = false;
-            IP5 = true;
-        }
+        InfillC = i;
     }
 
 }

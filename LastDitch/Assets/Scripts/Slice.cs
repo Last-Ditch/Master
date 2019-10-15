@@ -8,23 +8,37 @@ public class Slice : MonoBehaviour
 
     public GameObject exportPanel;
     public Slider progressbar;
+    public ProgressTracker progressScript;
+    public GameObject notDone;
+    public GameObject Mat;
+    public GameObject LH;
+    public GameObject ID;
 
-    bool exporting;
-
-    private void Update()
+    private void Start()
     {
-        if(exporting)
-        {
-            
-
-
-        }
+        progressScript = GameObject.FindGameObjectWithTag("Progress").GetComponent<ProgressTracker>();
     }
-
 
 
     public void Sliced()
     {
+        if(!progressScript.MatPicked || !progressScript.LHPicked || !progressScript.InfillPicked)
+        {
+            notDone.SetActive(true);
+            if(!progressScript.MatPicked)
+            {
+                Mat.SetActive(true);
+            }
+            if(!progressScript.LHPicked)
+            {
+                LH.SetActive(true);
+            }
+            if(!progressScript.InfillPicked)
+            {
+                ID.SetActive(true);
+            }
+            return;
+        }
         exportPanel.SetActive(true);
         StartCoroutine(ExportingFile());
     }
@@ -45,4 +59,14 @@ public class Slice : MonoBehaviour
             StartCoroutine(ExportingFile());
         }
     }
+
+
+    public void TurnOff()
+    {
+        Mat.SetActive(false);
+        LH.SetActive(false);
+        ID.SetActive(false);
+        notDone.SetActive(false);
+    }
+
 }

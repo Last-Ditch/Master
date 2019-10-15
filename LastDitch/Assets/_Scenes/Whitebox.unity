@@ -653,6 +653,7 @@ GameObject:
   m_Component:
   - component: {fileID: 342084084}
   - component: {fileID: 342084083}
+  - component: {fileID: 342084085}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -691,6 +692,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &342084085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 342084082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26d1d82090c6d1741a35c47adad0dafd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  progressScript: {fileID: 0}
 --- !u!1 &425198449
 GameObject:
   m_ObjectHideFlags: 0
@@ -3508,5 +3522,25 @@ PrefabInstance:
       propertyPath: print
       value: 
       objectReference: {fileID: 503290216}
+    - target: {fileID: 84816720365471767, guid: e12d76ed9911217428d5b32df6000f60,
+        type: 3}
+      propertyPath: ABS
+      value: 
+      objectReference: {fileID: 2100000, guid: 93226f51ac46e244b85d0b82823b95e1, type: 2}
+    - target: {fileID: 84816720365471767, guid: e12d76ed9911217428d5b32df6000f60,
+        type: 3}
+      propertyPath: PLA
+      value: 
+      objectReference: {fileID: 2100000, guid: 79b93ccb88b8b374fa50d155ac668d9c, type: 2}
+    - target: {fileID: 84816720365471767, guid: e12d76ed9911217428d5b32df6000f60,
+        type: 3}
+      propertyPath: PTE
+      value: 
+      objectReference: {fileID: 2100000, guid: 6ed87dd6b7602404b9dd327b82caebfb, type: 2}
+    - target: {fileID: 84816720365471767, guid: e12d76ed9911217428d5b32df6000f60,
+        type: 3}
+      propertyPath: TPU
+      value: 
+      objectReference: {fileID: 2100000, guid: 1a752c0003704844f81d19498e965d48, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e12d76ed9911217428d5b32df6000f60, type: 3}
