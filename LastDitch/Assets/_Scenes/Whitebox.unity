@@ -39857,6 +39857,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79e7e27af04183245a61b0fa8fa06ce0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  click: {fileID: 0}
   haveCard: 0
   readytoPrint: 0
 --- !u!1 &1445814726
@@ -39905,6 +39906,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79e7e27af04183245a61b0fa8fa06ce0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  click: {fileID: 8300000, guid: 7f48e0652987c1e4ab80afedcf4de8ca, type: 3}
   haveCard: 0
   readytoPrint: 0
 --- !u!20 &1446142950
@@ -39957,14 +39959,14 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1445814726}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 7e9ab985f79b32049b32dbe64d955bf4, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 0.085
+  m_audioClip: {fileID: 8300000, guid: 7f48e0652987c1e4ab80afedcf4de8ca, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
