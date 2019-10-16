@@ -4,21 +4,21 @@ using UnityEngine;
 
 public class SlowlyDown : MonoBehaviour
 {
-    public GameObject model;
     //197.4
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        model = GameObject.FindGameObjectWithTag("Pyr3");
-    }
 
-    // Update is called once per frame
+    public AudioSource speaker;
+
     void Update()
     {
         if (transform.localPosition.y >= 0)
         {
+            speaker.enabled = true;
             transform.Translate(0, -0.001f, 0);
+        }
+        else
+        {
+            speaker.enabled = false;
         }
     }
 }
