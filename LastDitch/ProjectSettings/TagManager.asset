@@ -5,10 +5,14 @@ TagManager:
   serializedVersion: 2
   tags:
   - Laptop
-  - SD card
   - Progress
   - Ultimaker
   - Print
+  - Pyr1
+  - Pyr2
+  - Pyr3
+  - SD card Laptop
+  - SD card Printer
   layers:
   - Default
   - TransparentFX

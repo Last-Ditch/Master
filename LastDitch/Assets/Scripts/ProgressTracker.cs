@@ -6,8 +6,13 @@ public class ProgressTracker : MonoBehaviour
 {
     public bool sliced, sdIn;
     public bool MatPicked, LHPicked, InfillPicked;
-    public int MaterialC, LayerHeightC, InfillC;
-    public Material PLA, ABS, TPU, PTE;
+    public int MaterialC, LayerHeightC, InfillC, ModelPicked;
+
+    private void Start()
+    {
+        ModelPicked = 1;
+    }
+
 
     void Awake()
     {
@@ -19,32 +24,6 @@ public class ProgressTracker : MonoBehaviour
         }
 
         DontDestroyOnLoad(this.gameObject);
-    }
-
-    private void Update()
-    {
-        if (sliced && sdIn)
-        {
-            switch (MaterialC)
-            {
-                case 4:
-                    GameObject.FindGameObjectWithTag("Print").GetComponent<MeshRenderer>().material = PTE;
-                    break;
-                case 3:
-                    GameObject.FindGameObjectWithTag("Print").GetComponent<MeshRenderer>().material = TPU;
-                    break;
-                case 2:
-                    GameObject.FindGameObjectWithTag("Print").GetComponent<MeshRenderer>().material = ABS;
-                    break;
-                case 1:
-                    GameObject.FindGameObjectWithTag("Print").GetComponent<MeshRenderer>().material = PLA;
-                    break;
-                default:
-                    GameObject.FindGameObjectWithTag("Print").GetComponent<MeshRenderer>().material = PLA;
-                    break;
-            }
-            GameObject.FindGameObjectWithTag("Print").GetComponent<MeshRenderer>().enabled = true;
-        }
     }
 
 
@@ -66,5 +45,4 @@ public class ProgressTracker : MonoBehaviour
         InfillPicked = true;
         InfillC = i;
     }
-
 }

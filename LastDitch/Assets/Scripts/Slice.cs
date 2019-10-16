@@ -40,6 +40,7 @@ public class Slice : MonoBehaviour
             return;
         }
         exportPanel.SetActive(true);
+        progressScript.sliced = true;
         StartCoroutine(ExportingFile());
     }
 

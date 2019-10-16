@@ -7,7 +7,7 @@ public class SDPickup : MonoBehaviour
 
     GameObject sdSlot;
     public bool haveCard = false;
-
+    public bool readytoPrint;
 
     void Update()
     {
@@ -36,16 +36,26 @@ public class SDPickup : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag == "SD card")
+        if (other.gameObject.tag == "SD card Laptop")
         {
+            sdSlot = other.gameObject;
+        }
+        if (other.gameObject.tag == "SD card Printer")
+        {
+            readytoPrint = true;
             sdSlot = other.gameObject;
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.tag == "SD card")
+        if (other.gameObject.tag == "SD card Laptop")
         {
+            sdSlot = null;
+        }
+        if (other.gameObject.tag == "SD card Printer")
+        {
+            readytoPrint = false;
             sdSlot = null;
         }
     }
