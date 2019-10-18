@@ -13,6 +13,8 @@ TagManager:
   - Pyr3
   - SD card Laptop
   - SD card Printer
+  - Hand
+  - Wall
   layers:
   - Default
   - TransparentFX
