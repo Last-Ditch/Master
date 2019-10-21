@@ -5,16 +5,11 @@ using UnityEngine;
 public class SlowlyDown : MonoBehaviour
 {
     //197.4
-
+    public Animator anim;
 
     bool canGo = false;
 
     public AudioSource speaker;
-
-    private void OnEnable()
-    {
-        StartCoroutine(animPlay());
-    }
 
     void Update()
     {
@@ -23,17 +18,25 @@ public class SlowlyDown : MonoBehaviour
             speaker.enabled = true;
             transform.Translate(0, -0.001f, 0);
         }
-        else
+        if(transform.localPosition.y <= 0)
         {
+            anim.SetTrigger("StopPrinting");
+            Debug.Log("EP");
             speaker.enabled = false;
         }
     }
 
-
+    public void Printing()
+    {
+        StartCoroutine(animPlay());
+    }
 
     IEnumerator animPlay()
     {
-        yield return new WaitForSeconds(8f);
+        anim.SetTrigger("IntoPosition");
+        yield return new WaitForSeconds(1.5f);
+        anim.SetTrigger("StartPrinting");
         canGo = true;
+        Debug.Log("SP");
     }
 }
