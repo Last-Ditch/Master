@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ExtractInfo : MonoBehaviour
 {
+    
     public ProgressTracker progressScript;
     public GameObject model;
     public Material PLA, ABS, TPU, PTE;
@@ -11,7 +12,7 @@ public class ExtractInfo : MonoBehaviour
     public SDPickup SDCardScript;
     public SlowlyDown revealScript;
     public GameObject Pyr1, Pyr2, Pyr3;
-
+    bool canPrint = true;
     private void Start()
     {
         progressScript = GameObject.FindGameObjectWithTag("Progress").GetComponent<ProgressTracker>();
@@ -115,8 +116,14 @@ public class ExtractInfo : MonoBehaviour
                         }
                         break;
                 }
+                if(canPrint)
+                {
+                    
+                    revealScript.enabled = true;
+                    revealScript.Printing();
+                    canPrint = false;
+                }
                 
-                revealScript.enabled = true;
             }
         }
     }
