@@ -48,8 +48,7 @@ public class Slice : MonoBehaviour
     IEnumerator ExportingFile()
     {
         yield return new WaitForSeconds(.5f);
-        Debug.Log(progressbar.value);
-        progressbar.value +=10;
+        progressbar.value +=25;
         if (progressbar.value == 100)
         {
             GameObject.FindGameObjectWithTag("Progress").GetComponent<ProgressTracker>().sliced = true;
