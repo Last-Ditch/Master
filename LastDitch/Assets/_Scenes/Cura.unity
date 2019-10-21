@@ -2846,7 +2846,7 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 2.09
+  m_Intensity: 2.08
   m_Range: 14.69
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -5225,16 +5225,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1970776689}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: 4c0a39a7652bc024da2317fc6d685244,
-        type: 3}
-      propertyPath: m_Name
-      value: Pyramid(Thick)
-      objectReference: {fileID: 0}
-    - target: {fileID: -927199367670048503, guid: 4c0a39a7652bc024da2317fc6d685244,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 4c0a39a7652bc024da2317fc6d685244,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5304,6 +5294,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 4c0a39a7652bc024da2317fc6d685244,
+        type: 3}
+      propertyPath: m_Name
+      value: Pyramid(Thick)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 4c0a39a7652bc024da2317fc6d685244,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c0a39a7652bc024da2317fc6d685244, type: 3}
@@ -6093,16 +6093,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1970776689}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: fcb0119078e01a24daf57b88ba8018c7,
-        type: 3}
-      propertyPath: m_Name
-      value: Thin Pyramid
-      objectReference: {fileID: 0}
-    - target: {fileID: -927199367670048503, guid: fcb0119078e01a24daf57b88ba8018c7,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: fcb0119078e01a24daf57b88ba8018c7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6172,6 +6162,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: fcb0119078e01a24daf57b88ba8018c7,
+        type: 3}
+      propertyPath: m_Name
+      value: Thin Pyramid
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: fcb0119078e01a24daf57b88ba8018c7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fcb0119078e01a24daf57b88ba8018c7, type: 3}
