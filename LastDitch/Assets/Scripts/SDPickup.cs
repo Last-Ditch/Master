@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class SDPickup : MonoBehaviour
 {
-    Animator anim;
     AudioSource speaker;
     public AudioClip click;
     GameObject sdSlot;
@@ -24,9 +23,8 @@ public class SDPickup : MonoBehaviour
             
             if (sdSlot.gameObject.GetComponent<MeshRenderer>().enabled)
             {
-                //speaker.PlayOneShot(click);
-                anim = sdSlot.GetComponent<Animator>();
-                anim.SetTrigger("SDOut");
+                speaker.PlayOneShot(click);
+                sdSlot.gameObject.GetComponent<MeshRenderer>().enabled = false;
                 haveCard = true;
                 if(sdSlot.gameObject.transform.parent.tag == "Ultimaker")
                 {
@@ -36,9 +34,8 @@ public class SDPickup : MonoBehaviour
             }
             if (!sdSlot.gameObject.GetComponent<MeshRenderer>().enabled && haveCard)
             {
-                //speaker.PlayOneShot(click);
-                anim = sdSlot.GetComponent<Animator>();
-                anim.SetTrigger("SDIn");
+                speaker.PlayOneShot(click);
+                sdSlot.gameObject.GetComponent<MeshRenderer>().enabled = true;
                 haveCard = false;
                 if(sdSlot.gameObject.transform.parent.tag == "Ultimaker")
                 {
