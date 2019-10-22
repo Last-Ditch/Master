@@ -20,6 +20,7 @@ public class Selection : MonoBehaviour
         if (currentModel != null)
         {
             currentModel.SetActive(false);
+            currentObj.SetActive(false);
         }
         currentModel = models[i];
         currentModel.SetActive(true);
