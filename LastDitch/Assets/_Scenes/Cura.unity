@@ -6084,11 +6084,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: fcb0119078e01a24daf57b88ba8018c7,
         type: 3}
       propertyPath: m_LocalScale.z
-<<<<<<< Updated upstream
       value: 16.17
-=======
-      value: 15
->>>>>>> Stashed changes
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fcb0119078e01a24daf57b88ba8018c7, type: 3}
