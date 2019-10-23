@@ -234,7 +234,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!1 &66421061 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3454894866831441329, guid: c971787a5895e8a46bc95bdd414f5ea0,
@@ -256,7 +256,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!65 &66421065
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -339,7 +339,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!1 &89557656 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6090750197971014313, guid: c971787a5895e8a46bc95bdd414f5ea0,
@@ -396,7 +396,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!1 &111899858 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6090750197894101995, guid: c971787a5895e8a46bc95bdd414f5ea0,
@@ -453,7 +453,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!1 &135048474 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: a28e7ebcaf1bb25418a5236863ab4650,
@@ -553,7 +553,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!1 &152087485 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6090750196385373308, guid: c971787a5895e8a46bc95bdd414f5ea0,
@@ -610,7 +610,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!1 &160462137 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6090750197338855632, guid: c971787a5895e8a46bc95bdd414f5ea0,
@@ -667,7 +667,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!1 &177358292 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3607314419902538353, guid: c971787a5895e8a46bc95bdd414f5ea0,
@@ -702,7 +702,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!1 &187879388 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5702567088040601000, guid: c971787a5895e8a46bc95bdd414f5ea0,
@@ -737,7 +737,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!1 &202602153 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9000366428979677760, guid: c971787a5895e8a46bc95bdd414f5ea0,
@@ -759,7 +759,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!65 &202602157
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -38656,7 +38656,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!1 &305522483 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6090750197826985929, guid: c971787a5895e8a46bc95bdd414f5ea0,
@@ -38713,7 +38713,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!1 &318709897 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6090750196851612942, guid: c971787a5895e8a46bc95bdd414f5ea0,
@@ -38770,7 +38770,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!1 &342084082
 GameObject:
   m_ObjectHideFlags: 0
@@ -38892,7 +38892,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!65 &372325158
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -38940,7 +38940,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!1 &387146390 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 335093540741256737, guid: c971787a5895e8a46bc95bdd414f5ea0,
@@ -38975,7 +38975,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!1 &393230869 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7537596313639065320, guid: c971787a5895e8a46bc95bdd414f5ea0,
@@ -38997,7 +38997,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!65 &393230873
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -39032,7 +39032,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!65 &412299613
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -39196,7 +39196,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!1 &464473411 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 782023234881082834, guid: fcb0119078e01a24daf57b88ba8018c7,
@@ -39231,7 +39231,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!1 &480323299
 GameObject:
   m_ObjectHideFlags: 0
@@ -39299,7 +39299,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!1 &497339001 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5532778777828603359, guid: c971787a5895e8a46bc95bdd414f5ea0,
@@ -39334,7 +39334,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!1 &499383952 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6090750197749310832, guid: c971787a5895e8a46bc95bdd414f5ea0,
@@ -39528,7 +39528,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!1001 &536485028
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -39787,7 +39787,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!65 &578720498
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -39854,7 +39854,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!1 &599644677 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6090750197127747557, guid: c971787a5895e8a46bc95bdd414f5ea0,
@@ -39898,7 +39898,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!65 &602313951
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -40157,7 +40157,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!65 &608907098
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -40205,7 +40205,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!1 &646580516 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6090750196225758823, guid: c971787a5895e8a46bc95bdd414f5ea0,
@@ -40262,7 +40262,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!1 &676271584 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6090750197929805945, guid: c971787a5895e8a46bc95bdd414f5ea0,
@@ -40319,7 +40319,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!1 &692818977 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7119050783558576031, guid: a28e7ebcaf1bb25418a5236863ab4650,
@@ -40376,7 +40376,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!65 &723055895
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -40424,7 +40424,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!1 &726551737
 GameObject:
   m_ObjectHideFlags: 0
@@ -40492,7 +40492,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!1 &738281816 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6090750197351144935, guid: c971787a5895e8a46bc95bdd414f5ea0,
@@ -40549,7 +40549,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!1 &754165336 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3058421769680728062, guid: c971787a5895e8a46bc95bdd414f5ea0,
@@ -40571,7 +40571,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!65 &754165340
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -40675,7 +40675,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!1 &791354197 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5397511171910850320, guid: c971787a5895e8a46bc95bdd414f5ea0,
@@ -40710,7 +40710,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!1 &809002756 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6090750196933442904, guid: c971787a5895e8a46bc95bdd414f5ea0,
@@ -40789,7 +40789,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!1 &855909942
 GameObject:
   m_ObjectHideFlags: 0
@@ -40857,7 +40857,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!1 &871150991
 GameObject:
   m_ObjectHideFlags: 0
@@ -41108,7 +41108,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!1 &907787216 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2544933351692666132, guid: c971787a5895e8a46bc95bdd414f5ea0,
@@ -41130,7 +41130,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!65 &907787220
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -41165,7 +41165,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!65 &926599427
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -41200,7 +41200,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!65 &942409908
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -41248,7 +41248,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!1 &975599545 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6090750198163358227, guid: c971787a5895e8a46bc95bdd414f5ea0,
@@ -41292,7 +41292,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!65 &976699584
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -41397,7 +41397,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!1 &1074370405 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: fcb0119078e01a24daf57b88ba8018c7,
@@ -41478,7 +41478,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!65 &1080527871
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -41757,7 +41757,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!1 &1131889187 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3825348097018575344, guid: c971787a5895e8a46bc95bdd414f5ea0,
@@ -41792,7 +41792,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!1 &1140281140 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 4c0a39a7652bc024da2317fc6d685244,
@@ -41995,7 +41995,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!1 &1234676051
 GameObject:
   m_ObjectHideFlags: 0
@@ -42190,7 +42190,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!1 &1274550435 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -4682901362387869790, guid: a28e7ebcaf1bb25418a5236863ab4650,
@@ -43239,7 +43239,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!1 &1340988175 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6090750196985206696, guid: c971787a5895e8a46bc95bdd414f5ea0,
@@ -43653,7 +43653,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!1 &1383405927
 GameObject:
   m_ObjectHideFlags: 0
@@ -43852,7 +43852,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!1 &1428691318 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6090750197489657512, guid: c971787a5895e8a46bc95bdd414f5ea0,
@@ -44304,7 +44304,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!54 &1451131558
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -44918,7 +44918,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!1 &1524549171
 GameObject:
   m_ObjectHideFlags: 0
@@ -45047,7 +45047,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!1 &1549486061 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6090750197787591054, guid: c971787a5895e8a46bc95bdd414f5ea0,
@@ -45135,7 +45135,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!65 &1621486046
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -45205,7 +45205,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!1 &1669653093 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5394697636081635440, guid: c971787a5895e8a46bc95bdd414f5ea0,
@@ -45240,7 +45240,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!1 &1675601044 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8889276551758488719, guid: c971787a5895e8a46bc95bdd414f5ea0,
@@ -45262,7 +45262,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!65 &1675601048
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -45434,7 +45434,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!65 &1723655565
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -45482,7 +45482,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!1 &1728209101 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8252403706729238719, guid: c971787a5895e8a46bc95bdd414f5ea0,
@@ -45517,7 +45517,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!1 &1752865284 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 640836018035811465, guid: a28e7ebcaf1bb25418a5236863ab4650,
@@ -45552,7 +45552,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!1 &1762604366
 GameObject:
   m_ObjectHideFlags: 0
@@ -45760,7 +45760,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!1 &1787128287 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4225561422010127074, guid: c971787a5895e8a46bc95bdd414f5ea0,
@@ -45782,7 +45782,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!65 &1787128291
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -45867,7 +45867,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!1 &1819177551 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6090750196208591512, guid: c971787a5895e8a46bc95bdd414f5ea0,
@@ -45924,7 +45924,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!1 &1859096506 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -4682901362387869790, guid: fcb0119078e01a24daf57b88ba8018c7,
@@ -45959,7 +45959,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!1 &1866332321
 GameObject:
   m_ObjectHideFlags: 0
@@ -46074,7 +46074,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!1 &1902079601
 GameObject:
   m_ObjectHideFlags: 0
@@ -46189,7 +46189,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!65 &1909137331
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -46662,7 +46662,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!1 &1993610670
 GameObject:
   m_ObjectHideFlags: 0
@@ -46820,7 +46820,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!1 &2033056886
 GameObject:
   m_ObjectHideFlags: 0
@@ -47109,7 +47109,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!1 &2090185054 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6090750196618867445, guid: c971787a5895e8a46bc95bdd414f5ea0,
@@ -47188,7 +47188,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!1001 &84816720300294335
 PrefabInstance:
   m_ObjectHideFlags: 0
