@@ -8,7 +8,7 @@ public class SlowlyDown : MonoBehaviour
     public Animator anim;
     public GameObject model;
     bool canGo = false;
-
+    bool stopPrinting;
     public AudioSource speaker;
 
     void Update()
@@ -18,12 +18,14 @@ public class SlowlyDown : MonoBehaviour
             speaker.enabled = true;
             transform.Translate(0, -0.001f, 0);
         }
-        if(transform.localPosition.y <= 0)
+        if(transform.localPosition.y <= 0 && !stopPrinting)
         {
             anim.SetTrigger("StopPrinting");
             Debug.Log("EP");
             model.tag = "Interactable";
             speaker.enabled = false;
+            GameObject.FindGameObjectWithTag("Manager").GetComponent<ExtractInfo>().donePrinting = true;
+            stopPrinting = true;
         }
     }
 

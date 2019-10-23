@@ -11,12 +11,6 @@ public class Destruction : MonoBehaviour
         parts = GetComponentsInChildren<Transform>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -41,9 +35,11 @@ public class Destruction : MonoBehaviour
     IEnumerator Countdown()
     {
         yield return new WaitForSeconds(5);
+
         foreach (Transform t in parts)
         {
             Destroy(t.gameObject);
         }
+
     }
 }

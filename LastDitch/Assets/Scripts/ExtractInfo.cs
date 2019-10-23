@@ -15,6 +15,8 @@ public class ExtractInfo : MonoBehaviour
     public GameObject Pyr1, Pyr2, Pyr3,
                       Ball1, Ball2, Ball3;
     bool canPrint = true;
+    public bool donePrinting;
+
     private void Start()
     {
         progressScript = GameObject.FindGameObjectWithTag("Progress").GetComponent<ProgressTracker>();
@@ -24,7 +26,7 @@ public class ExtractInfo : MonoBehaviour
 
     private void Update()
     {
-        if (progressScript.sliced && progressScript.sdIn)
+        if (progressScript.sliced && progressScript.sdIn && !donePrinting)
         {
             if (progressScript.ModelPicked == 1)
             {
