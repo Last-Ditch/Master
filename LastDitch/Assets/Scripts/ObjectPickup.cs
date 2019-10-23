@@ -17,6 +17,7 @@ public class ObjectPickup : MonoBehaviour
         {
             if (model != null)
             {
+                model.GetComponent<BreakawayStructure>().PickedUp();
                 rb = model.GetComponent<Rigidbody>();
                 rb.velocity = Vector3.zero;
                 rb.angularVelocity = Vector3.zero;
@@ -60,6 +61,7 @@ public class ObjectPickup : MonoBehaviour
         if (other.gameObject.tag == "Interactable")
         {
             model = other.gameObject;
+            
         }
     }
 
