@@ -6,7 +6,7 @@ public class SlowlyDown : MonoBehaviour
 {
     //197.4
     public Animator anim;
-
+    public GameObject model;
     bool canGo = false;
 
     public AudioSource speaker;
@@ -22,6 +22,7 @@ public class SlowlyDown : MonoBehaviour
         {
             anim.SetTrigger("StopPrinting");
             Debug.Log("EP");
+            model.tag = "Interactable";
             speaker.enabled = false;
         }
     }

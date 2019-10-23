@@ -122,6 +122,7 @@ public class ExtractInfo : MonoBehaviour
                 {
 
                     revealScript.enabled = true;
+                    revealScript.model = model;
                     revealScript.Printing();
                     canPrint = false;
                 }
@@ -238,6 +239,7 @@ public class ExtractInfo : MonoBehaviour
                 {
 
                     revealScript.enabled = true;
+                    revealScript.model = model;
                     revealScript.Printing();
                     canPrint = false;
                 }
