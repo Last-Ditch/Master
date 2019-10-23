@@ -27,4 +27,9 @@ public class TransferProgress : MonoBehaviour
     {
         progressScript.Infill(i);
     }
+
+    public void Support()
+    {
+        progressScript.supportsAdded = !progressScript.supportsAdded;
+    }
 }

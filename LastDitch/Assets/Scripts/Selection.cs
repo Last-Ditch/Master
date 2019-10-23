@@ -1,18 +1,24 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class Selection : MonoBehaviour
 {
     [SerializeField] Material PLA, ABS, TPU, PTE;
     [SerializeField] GameObject[] models;
     [SerializeField] GameObject currentModel, currentObj;
     MeshRenderer[] children;
+    Transform[] supprtChildren;
     GameObject defaultObj;
 
+    Toggle supportUI;
     int currentMat;
-    bool materialPicked;
+    bool materialPicked, supportsAdded;
 
+    private void Start()
+    {
+        supportUI = GameObject.FindGameObjectWithTag("SupportUI").GetComponent<Toggle>();
+    }
 
 
     public void Import(int i)
@@ -30,10 +36,12 @@ public class Selection : MonoBehaviour
 
     public void LayerHeight(int i)
     {
+        if (currentObj == null) { return; }
         switch (i)
         {
             case 3:
                 currentObj.SetActive(false);
+                supportUI.isOn = false;
                 currentObj = currentModel.transform.GetChild(3).gameObject;
                 currentObj.SetActive(true);
                 if(materialPicked)
@@ -43,6 +51,7 @@ public class Selection : MonoBehaviour
                 break;
             case 2:
                 currentObj.SetActive(false);
+                supportUI.isOn = false;
                 currentObj = currentModel.transform.GetChild(2).gameObject;
                 currentObj.SetActive(true);
                 if (materialPicked)
@@ -52,6 +61,7 @@ public class Selection : MonoBehaviour
                 break;
             case 1:
                 currentObj.SetActive(false);
+                supportUI.isOn = false;
                 currentObj = currentModel.transform.GetChild(1).gameObject;
                 currentObj.SetActive(true);
                 if (materialPicked)
@@ -61,6 +71,7 @@ public class Selection : MonoBehaviour
                 break;
             default:
                 currentObj.SetActive(false);
+                supportUI.isOn = false;
                 currentObj = currentModel.transform.GetChild(0).gameObject;
                 currentObj.SetActive(true);
                 if (materialPicked)
@@ -73,6 +84,7 @@ public class Selection : MonoBehaviour
 
     public void Material(int i)
     {
+        if(currentObj == null) { return; }
         currentMat = i;
         materialPicked = true;
         children = currentObj.GetComponentsInChildren<MeshRenderer>();
@@ -128,8 +140,39 @@ public class Selection : MonoBehaviour
 
     public void Density(int i)
     {
-
+        if (currentObj == null) { return; }
     }
 
-
+    public void Supports()
+    {
+        supportsAdded = !supportsAdded;
+        if (supportsAdded)
+        {
+            supprtChildren = currentObj.GetComponentsInChildren<Transform>();
+            if (supprtChildren != null)
+            {
+                foreach (Transform g in supprtChildren)
+                {
+                    if (g.gameObject.tag == "Support")
+                    {
+                        g.GetComponent<MeshRenderer>().enabled = true;
+                    }
+                }
+            }
+        }
+        else
+        {
+            supprtChildren = currentObj.GetComponentsInChildren<Transform>(); 
+            if (supprtChildren != null)
+            {
+                foreach (Transform g in supprtChildren)
+                {
+                    if (g.gameObject.tag == "Support")
+                    {
+                        g.GetComponent<MeshRenderer>().enabled = false;
+                    }
+                }
+            }
+        }
+    }
 }
