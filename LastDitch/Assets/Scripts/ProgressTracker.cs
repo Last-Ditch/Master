@@ -8,11 +8,6 @@ public class ProgressTracker : MonoBehaviour
     public bool MatPicked, LHPicked, InfillPicked;
     public int MaterialC, LayerHeightC, InfillC, ModelPicked;
 
-    private void Start()
-    {
-        ModelPicked = 1;
-    }
-
 
     void Awake()
     {
@@ -46,8 +41,8 @@ public class ProgressTracker : MonoBehaviour
         InfillC = i;
     }
 
-    public void Support()
+    public void ModelChosen(int i)
     {
-        supportsAdded = !supportsAdded;
+        ModelPicked = i;
     }
 }

@@ -11,6 +11,10 @@ public class TransferProgress : MonoBehaviour
         progressScript = GameObject.FindGameObjectWithTag("Progress").GetComponent<ProgressTracker>();
     }
 
+    public void ModelChosen(int i)
+    {
+        progressScript.ModelChosen(i);
+    }
 
     public void Material(int i)
     {
@@ -28,7 +32,7 @@ public class TransferProgress : MonoBehaviour
         progressScript.Infill(i);
     }
 
-    public void Support()
+    public void Supports()
     {
         progressScript.supportsAdded = !progressScript.supportsAdded;
     }

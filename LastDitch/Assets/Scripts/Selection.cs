@@ -14,6 +14,8 @@ public class Selection : MonoBehaviour
     Toggle supportUI;
     int currentMat;
     bool materialPicked, supportsAdded;
+    public TransferProgress transferScript;
+
 
     private void Start()
     {
@@ -146,6 +148,7 @@ public class Selection : MonoBehaviour
     public void Supports()
     {
         supportsAdded = !supportsAdded;
+        transferScript.Supports();
         if (supportsAdded)
         {
             supprtChildren = currentObj.GetComponentsInChildren<Transform>();
