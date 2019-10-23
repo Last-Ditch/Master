@@ -17,6 +17,7 @@ TagManager:
   - Wall
   - Support
   - SupportUI
+  - Interactable
   layers:
   - Default
   - TransparentFX
