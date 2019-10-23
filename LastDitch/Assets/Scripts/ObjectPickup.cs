@@ -44,9 +44,10 @@ public class ObjectPickup : MonoBehaviour
     void Throw()
     {
         pickup = false;
+        
         model.GetComponent<Collider>().enabled = true;
         model.transform.parent = null;
-        model.GetComponent<Rigidbody>().AddForce(hand.transform.forward * 4000);
+        model.GetComponent<Rigidbody>().AddForce(hand.transform.forward * 5000);
         model.GetComponent<Rigidbody>().useGravity = true;
 
     }
@@ -54,7 +55,7 @@ public class ObjectPickup : MonoBehaviour
 
 
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
         if (other.gameObject.tag == "Interactable")
         {
