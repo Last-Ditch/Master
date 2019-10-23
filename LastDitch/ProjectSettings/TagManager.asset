@@ -18,6 +18,7 @@ TagManager:
   - Support
   - SupportUI
   - Interactable
+  - part
   layers:
   - Default
   - TransparentFX
