@@ -128,7 +128,10 @@ public class ExtractInfo : MonoBehaviour
                     if (i.GetComponent<MeshRenderer>())
                     {
                         i.GetComponent<MeshRenderer>().material = PTE;
-                        i.GetComponent<Collider>().material = PhysPTE;
+                        if (i.gameObject.tag != "Support")
+                        {
+                            i.GetComponent<Collider>().material = PhysPTE;
+                        }
                     }
                 }
                 break;
@@ -138,7 +141,10 @@ public class ExtractInfo : MonoBehaviour
                     if (i.GetComponent<MeshRenderer>())
                     {
                         i.GetComponent<MeshRenderer>().material = TPU;
-                        i.GetComponent<Collider>().material = PhysTPU;
+                        if (i.gameObject.tag != "Support")
+                        {
+                            i.GetComponent<Collider>().material = PhysTPU;
+                        }
                     }
                 }
                 break;
@@ -148,7 +154,10 @@ public class ExtractInfo : MonoBehaviour
                     if (i.GetComponent<MeshRenderer>())
                     {
                         i.GetComponent<MeshRenderer>().material = ABS;
-                        i.GetComponent<Collider>().material = PhysABS;
+                        if (i.gameObject.tag != "Support")
+                        {
+                            i.GetComponent<Collider>().material = PhysABS;
+                        }
                     }
                 };
                 break;
@@ -158,7 +167,10 @@ public class ExtractInfo : MonoBehaviour
                     if (i.GetComponent<MeshRenderer>())
                     {
                         i.GetComponent<MeshRenderer>().material = PLA;
-                        i.GetComponent<Collider>().material = PhysPLA;
+                        if (i.gameObject.tag != "Support")
+                        {
+                            i.GetComponent<Collider>().material = PhysPLA;
+                        }
                     }
                 };
                 break;
@@ -168,7 +180,10 @@ public class ExtractInfo : MonoBehaviour
                     if (i.GetComponent<MeshRenderer>())
                     {
                         i.GetComponent<MeshRenderer>().material = PLA;
-                        i.GetComponent<Collider>().material = PhysPLA;
+                        if (i.gameObject.tag != "Support")
+                        {
+                            i.GetComponent<Collider>().material = PhysPLA;
+                        }
                     }
                 }
                 break;
