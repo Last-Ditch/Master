@@ -8,7 +8,7 @@ public class ExtractInfo : MonoBehaviour
     public ProgressTracker progressScript;
     public GameObject model;
     public Material PLA, ABS, TPU, PTE;
-    public MeshRenderer[] children;
+    public Transform[] children;
     public Transform[] supprtChildren;
     public SDPickup SDCardScript;
     public SlowlyDown revealScript;
@@ -16,6 +16,8 @@ public class ExtractInfo : MonoBehaviour
                       Ball1, Ball2, Ball3;
     bool canPrint = true;
     public bool donePrinting;
+    public PhysicMaterial PhysPLA, PhysABS, PhysTPU, PhysPTE;
+
 
     private void Start()
     {
@@ -71,55 +73,8 @@ public class ExtractInfo : MonoBehaviour
                         break;
                 }
 
-                children = model.GetComponentsInChildren<MeshRenderer>();
-                switch (progressScript.MaterialC)
-                {
-                    case 4:
-                        foreach (MeshRenderer i in children)
-                        {
-                            if (i.GetComponent<MeshRenderer>())
-                            {
-                                i.GetComponent<MeshRenderer>().material = PTE;
-                            }
-                        }
-                        break;
-                    case 3:
-                        foreach (MeshRenderer i in children)
-                        {
-                            if (i.GetComponent<MeshRenderer>())
-                            {
-                                i.GetComponent<MeshRenderer>().material = TPU;
-                            }
-                        }
-                        break;
-                    case 2:
-                        foreach (MeshRenderer i in children)
-                        {
-                            if (i.GetComponent<MeshRenderer>())
-                            {
-                                i.GetComponent<MeshRenderer>().material = ABS;
-                            }
-                        };
-                        break;
-                    case 1:
-                        foreach (MeshRenderer i in children)
-                        {
-                            if (i.GetComponent<MeshRenderer>())
-                            {
-                                i.GetComponent<MeshRenderer>().material = PLA;
-                            }
-                        };
-                        break;
-                    default:
-                        foreach (MeshRenderer i in children)
-                        {
-                            if (i.GetComponent<MeshRenderer>())
-                            {
-                                i.GetComponent<MeshRenderer>().material = PLA;
-                            }
-                        }
-                        break;
-                }
+                MaterialChange();
+
                 if (canPrint)
                 {
 
@@ -173,56 +128,8 @@ public class ExtractInfo : MonoBehaviour
                         break;
                 }
 
-                children = model.GetComponentsInChildren<MeshRenderer>();
-                switch (progressScript.MaterialC)
-                {
-                    case 4:
-                        foreach (MeshRenderer i in children)
-                        {
-                            if (i.GetComponent<MeshRenderer>())
-                            {
-                                i.GetComponent<MeshRenderer>().material = PTE;
-                            }
-                        }
-                        break;
-                    case 3:
-                        foreach (MeshRenderer i in children)
-                        {
-                            if (i.GetComponent<MeshRenderer>())
-                            {
-                                i.GetComponent<MeshRenderer>().material = TPU;
-                            }
-                        }
-                        break;
-                    case 2:
-                        foreach (MeshRenderer i in children)
-                        {
-                            if (i.GetComponent<MeshRenderer>())
-                            {
-                                i.GetComponent<MeshRenderer>().material = ABS;
-                            }
-                        };
-                        break;
-                    case 1:
-                        foreach (MeshRenderer i in children)
-                        {
-                            if (i.GetComponent<MeshRenderer>())
-                            {
-                                i.GetComponent<MeshRenderer>().material = PLA;
-                            }
-                        };
-                        break;
-                    default:
-                        foreach (MeshRenderer i in children)
-                        {
-                            if (i.GetComponent<MeshRenderer>())
-                            {
-                                i.GetComponent<MeshRenderer>().material = PLA;
-                            }
-                        }
-                        break;
-                    
-                }
+                MaterialChange();
+
                 if(progressScript.supportsAdded)
                 {
                     supprtChildren = model.GetComponentsInChildren<Transform>();
@@ -248,5 +155,64 @@ public class ExtractInfo : MonoBehaviour
             }
         }
 
+    }
+
+    void MaterialChange()
+    {
+        children = model.GetComponentsInChildren<Transform>();
+        switch (progressScript.MaterialC)
+        {
+            case 4:
+                foreach (Transform i in children)
+                {
+                    if (i.GetComponent<MeshRenderer>())
+                    {
+                        i.GetComponent<MeshRenderer>().material = PTE;
+                        i.GetComponent<Collider>().material = PhysPTE;
+                    }
+                }
+                break;
+            case 3:
+                foreach (Transform i in children)
+                {
+                    if (i.GetComponent<MeshRenderer>())
+                    {
+                        i.GetComponent<MeshRenderer>().material = TPU;
+                        i.GetComponent<Collider>().material = PhysTPU;
+                    }
+                }
+                break;
+            case 2:
+                foreach (Transform i in children)
+                {
+                    if (i.GetComponent<MeshRenderer>())
+                    {
+                        i.GetComponent<MeshRenderer>().material = ABS;
+                        i.GetComponent<Collider>().material = PhysABS;
+                    }
+                };
+                break;
+            case 1:
+                foreach (Transform i in children)
+                {
+                    if (i.GetComponent<MeshRenderer>())
+                    {
+                        i.GetComponent<MeshRenderer>().material = PLA;
+                        i.GetComponent<Collider>().material = PhysPLA;
+                    }
+                };
+                break;
+            default:
+                foreach (Transform i in children)
+                {
+                    if (i.GetComponent<MeshRenderer>())
+                    {
+                        i.GetComponent<MeshRenderer>().material = PLA;
+                        i.GetComponent<Collider>().material = PhysPLA;
+                    }
+                }
+                break;
+
+        }
     }
 }
