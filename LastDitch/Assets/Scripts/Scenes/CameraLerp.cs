@@ -70,7 +70,9 @@ public class CameraLerp : MonoBehaviour
         {
             movingCam = false;
             timer = 2f;
-            GetComponentInParent<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>().enabled = true;
+            //GetComponentInParent<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>().enabled = true;
+            player.GetComponent<player_controller>().enabled = true;
+            player.GetComponentInChildren<player_look>().enabled = true;
         }
     }
 
@@ -78,7 +80,9 @@ public class CameraLerp : MonoBehaviour
     {
         transform.position = Vector3.Slerp(transform.position, screen.position, Time.deltaTime * 2f);
         transform.rotation = Quaternion.Slerp(transform.rotation, screen.rotation, Time.time * 0.5f);
-        GetComponentInParent<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>().enabled = false;
+        //GetComponentInParent<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>().enabled = false;
+        player.GetComponent<player_controller>().enabled = false;
+        player.GetComponentInChildren<player_look>().enabled = false;
 
         if (timer > 0)
         {

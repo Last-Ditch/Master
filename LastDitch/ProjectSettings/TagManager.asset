@@ -20,6 +20,8 @@ TagManager:
   - Interactable
   - part
   - Manager
+  - Screen
+  - SD Card
   layers:
   - Default
   - TransparentFX
