@@ -51,27 +51,7 @@ public class ExtractInfo : MonoBehaviour
                         model.SetActive(true);
                         break;
                 }
-                switch (progressScript.InfillC)
-                {
-                    case 5:
-
-                        break;
-                    case 4:
-
-                        break;
-                    case 3:
-
-                        break;
-                    case 2:
-
-                        break;
-                    case 1:
-
-                        break;
-                    default:
-
-                        break;
-                }
+                SetInfill();
 
                 MaterialChange();
 
@@ -106,27 +86,7 @@ public class ExtractInfo : MonoBehaviour
                         model.SetActive(true);
                         break;
                 }
-                switch (progressScript.InfillC)
-                {
-                    case 5:
-
-                        break;
-                    case 4:
-
-                        break;
-                    case 3:
-
-                        break;
-                    case 2:
-
-                        break;
-                    case 1:
-
-                        break;
-                    default:
-
-                        break;
-                }
+                SetInfill();
 
                 MaterialChange();
 
@@ -213,6 +173,31 @@ public class ExtractInfo : MonoBehaviour
                 }
                 break;
 
+        }
+    }
+
+    void SetInfill()
+    {
+        switch (progressScript.InfillC)
+        {
+            case 5:
+                model.GetComponent<Destruction>().health = 50;
+                break;
+            case 4:
+                model.GetComponent<Destruction>().health = 40;
+                break;
+            case 3:
+                model.GetComponent<Destruction>().health = 30;
+                break;
+            case 2:
+                model.GetComponent<Destruction>().health = 20;
+                break;
+            case 1:
+                model.GetComponent<Destruction>().health = 10;
+                break;
+            default:
+                model.GetComponent<Destruction>().health = 10;
+                break;
         }
     }
 }

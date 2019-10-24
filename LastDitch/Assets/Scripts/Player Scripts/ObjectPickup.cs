@@ -17,6 +17,7 @@ public class ObjectPickup : MonoBehaviour
         {
             if (model != null)
             {
+                
                 model.GetComponent<BreakawayStructure>().PickedUp();
                 rb = model.GetComponent<Rigidbody>();
                 rb.velocity = Vector3.zero;
@@ -45,7 +46,7 @@ public class ObjectPickup : MonoBehaviour
     void Throw()
     {
         pickup = false;
-        
+        model.GetComponent<Destruction>().canBeDamaged = true;
         model.GetComponent<Collider>().enabled = true;
         model.transform.parent = null;
         model.GetComponent<Rigidbody>().AddForce(hand.transform.forward * 5000);

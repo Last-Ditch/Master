@@ -5,6 +5,8 @@ using UnityEngine;
 public class Destruction : MonoBehaviour
 {
     Transform[] parts;
+    public float health;
+    public bool canBeDamaged;
 
     void Start()
     {
@@ -14,19 +16,28 @@ public class Destruction : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.tag == "Wall")
+        if (collision.gameObject.tag == "Wall")
         {
-            foreach(Transform t in parts)
+            if(health > 0 & canBeDamaged)
             {
-                if(t.gameObject.tag == "part")
-                {
-                    t.transform.parent = null;
-                    t.GetComponent<Rigidbody>().isKinematic = false;
-                    t.GetComponent<Rigidbody>().useGravity = true;
-                    t.GetComponent<Collider>().enabled = true;
-                }
+                canBeDamaged = false;
+                health -= 10;
             }
-            StartCoroutine(Countdown());
+
+            if (health <= 0)
+            {
+                foreach (Transform t in parts)
+                {
+                    if (t.gameObject.tag == "part")
+                    {
+                        t.transform.parent = null;
+                        t.GetComponent<Rigidbody>().isKinematic = false;
+                        t.GetComponent<Rigidbody>().useGravity = true;
+                        t.GetComponent<Collider>().enabled = true;
+                    }
+                }
+                StartCoroutine(Countdown());
+            }
         }
     }
 
