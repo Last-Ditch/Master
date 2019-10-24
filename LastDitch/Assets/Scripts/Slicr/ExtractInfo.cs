@@ -119,6 +119,7 @@ public class ExtractInfo : MonoBehaviour
 
     void MaterialChange()
     {
+        
         children = model.GetComponentsInChildren<Transform>();
         switch (progressScript.MaterialC)
         {
@@ -127,6 +128,7 @@ public class ExtractInfo : MonoBehaviour
                 {
                     if (i.GetComponent<MeshRenderer>())
                     {
+
                         i.GetComponent<MeshRenderer>().material = PTE;
                         if (i.gameObject.tag != "Support")
                         {
@@ -134,6 +136,7 @@ public class ExtractInfo : MonoBehaviour
                         }
                     }
                 }
+                model.GetComponent<Collider>().material = PhysPTE;
                 break;
             case 3:
                 foreach (Transform i in children)
@@ -147,6 +150,7 @@ public class ExtractInfo : MonoBehaviour
                         }
                     }
                 }
+                model.GetComponent<Collider>().material = PhysTPU;
                 break;
             case 2:
                 foreach (Transform i in children)
@@ -159,7 +163,8 @@ public class ExtractInfo : MonoBehaviour
                             i.GetComponent<Collider>().material = PhysABS;
                         }
                     }
-                };
+                }
+                model.GetComponent<Collider>().material = PhysABS;
                 break;
             case 1:
                 foreach (Transform i in children)
@@ -172,7 +177,8 @@ public class ExtractInfo : MonoBehaviour
                             i.GetComponent<Collider>().material = PhysPLA;
                         }
                     }
-                };
+                }
+                model.GetComponent<Collider>().material = PhysPLA;
                 break;
             default:
                 foreach (Transform i in children)
@@ -186,6 +192,7 @@ public class ExtractInfo : MonoBehaviour
                         }
                     }
                 }
+                model.GetComponent<Collider>().material = PhysPLA;
                 break;
 
         }
