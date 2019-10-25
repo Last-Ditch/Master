@@ -11,12 +11,11 @@ public class ui_triggers : MonoBehaviour
     {
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
         if(other.tag == "Player")
         {
             is_near = true;
-
         }
         
     }
@@ -25,23 +24,24 @@ public class ui_triggers : MonoBehaviour
     {
         if(other.tag == "Player")
         {
-            is_near = false;
+             is_near = false;
         }
     }
 
 
-     void OnMouseOver()
+     void Update()
     {
         if (is_near == true)
         {
 
             text.SetActive(true);
         }
+        else
+        {
+            text.SetActive(false);
+        }
     }
 
-     void OnMouseExit()
-    {
-        text.SetActive(false);
-    }
+
 
 }
