@@ -56,6 +56,7 @@ public class CameraLerp : MonoBehaviour
 
     public void CameraOut()
     {
+        GameObject.FindGameObjectWithTag("Speaker").GetComponent<Audio>().AudioButton(6);
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         player.transform.position = outPos;

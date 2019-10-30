@@ -20,6 +20,7 @@ public class SlowlyDown : MonoBehaviour
         }
         if(transform.localPosition.y <= 0 && !stopPrinting)
         {
+            GameObject.FindGameObjectWithTag("Speaker").GetComponent<Audio>().AudioButton(12);
             anim.SetTrigger("StopPrinting");
             Debug.Log("EP");
             model.tag = "Interactable";

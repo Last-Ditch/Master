@@ -47859,6 +47859,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Speaker Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 278736315152596270, guid: 8488402a058d2bf479cb8cc618491b7e,
+        type: 3}
+      propertyPath: m_TagString
+      value: Speaker
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8488402a058d2bf479cb8cc618491b7e, type: 3}
 --- !u!1 &2033048301 stripped
