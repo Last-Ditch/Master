@@ -28,6 +28,11 @@ public class Audio : MonoBehaviour
             
         }
 
+        if(SceneManager.GetActiveScene().buildIndex == 1 && counter < 4)
+        {
+            counter = 4;
+        }
+
         if (!speaker.isPlaying && counter < 6 && SceneManager.GetActiveScene().buildIndex == 1)
         {
             
