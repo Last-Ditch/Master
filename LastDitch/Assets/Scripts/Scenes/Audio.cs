@@ -40,7 +40,7 @@ public class Audio : MonoBehaviour
             counter++;
         }
 
-        Debug.Log(counter);
+        //Debug.Log(counter);
     }
 	
     public void AudioButton(int i)

@@ -41697,7 +41697,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1138752490}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1680743376}
+        m_MethodName: quit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1138752490
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45880,11 +45891,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1453003801}
     m_Modifications:
-    - target: {fileID: 7913135358309473903, guid: 53a88e5f34ae06e42b99d833f75b08bc,
-        type: 3}
-      propertyPath: m_Name
-      value: Big Screen 2
-      objectReference: {fileID: 0}
     - target: {fileID: 343899617170572043, guid: 53a88e5f34ae06e42b99d833f75b08bc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -45954,6 +45960,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.x
       value: 272.92728
+      objectReference: {fileID: 0}
+    - target: {fileID: 7913135358309473903, guid: 53a88e5f34ae06e42b99d833f75b08bc,
+        type: 3}
+      propertyPath: m_Name
+      value: Big Screen 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 53a88e5f34ae06e42b99d833f75b08bc, type: 3}

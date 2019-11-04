@@ -11,7 +11,7 @@ public class start_menu : MonoBehaviour
         SceneManager.LoadScene(0);
     }
 
-    public void quite()
+    public void quit()
     {
         Application.Quit();
     }
