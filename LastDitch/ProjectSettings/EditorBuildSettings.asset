@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Scenes/Cura.unity
     guid: 051db012f7c1d3241a56e11062445207
+  - enabled: 1
+    path: Assets/_Scenes/Sart Menu.unity
+    guid: 45466e69bd075bc44a24403cf1f6656a
   m_configObjects: {}

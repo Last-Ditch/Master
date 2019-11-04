@@ -10,6 +10,7 @@ public class SDPickup : MonoBehaviour
     GameObject sdSlot;
     public bool haveCard = false;
     public bool readytoPrint;
+    public GameObject sd_ui;
 
     private void Start()
     {
@@ -47,7 +48,24 @@ public class SDPickup : MonoBehaviour
                 return;
             }
         }
+        StartCoroutine(sd_ui_trigger());
+    
 
+    }
+
+   IEnumerator sd_ui_trigger()
+    {
+        if(haveCard == true)
+        {
+            yield return new WaitForSeconds(0.5f);
+            sd_ui.SetActive(true);
+        }
+
+        if (haveCard == false)
+        {
+            yield return new WaitForSeconds(0.5f);
+            sd_ui.SetActive(false);
+        }
     }
 
 
