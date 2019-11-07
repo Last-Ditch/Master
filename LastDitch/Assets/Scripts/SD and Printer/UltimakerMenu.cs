@@ -5,7 +5,7 @@ using UnityEngine;
 public class UltimakerMenu : MonoBehaviour
 {
     [SerializeField] GameObject[] menus;
-
+    [SerializeField] SlowlyDown revealScript;
     //mainMenu, filamentMenu, printingMenu;
 
     //startPrint, resumeprint, filamentButton, lowerBuildPlate;
@@ -35,17 +35,31 @@ public class UltimakerMenu : MonoBehaviour
 
     public void StartPrinting()
     {
+        if (!revealScript.isPrinting)
+        {
+            revealScript.Printing();
+        }
+        ChangeMenu(2);
+    }
 
+    public void StopPrinting()
+    {
+        revealScript.StopPrinting();
+        ChangeMenu(0);
     }
 
     public void ResumePrinting()
     {
-
+        if(revealScript.isPrinting)
+        {
+            revealScript.Printing();
+        }
+        ChangeMenu(2);
     }
 
     public void LowerBuildPlate()
     {
-
+        //need more work to do this
     }
 
 }

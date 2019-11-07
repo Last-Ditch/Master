@@ -55,15 +55,6 @@ public class ExtractInfo : MonoBehaviour
 
                 MaterialChange();
 
-                if (canPrint)
-                {
-
-                    revealScript.enabled = true;
-                    revealScript.model = model;
-                    revealScript.Printing();
-                    canPrint = false;
-                }
-
             }
             if (progressScript.ModelPicked == 2)
             {
@@ -104,14 +95,15 @@ public class ExtractInfo : MonoBehaviour
                         }
                     }
                 }
-                if (canPrint)
-                {
 
-                    revealScript.enabled = true;
-                    revealScript.model = model;
-                    revealScript.Printing();
-                    canPrint = false;
-                }
+            }
+            if (canPrint)
+            {
+                revealScript.completedSlicr = true;
+                revealScript.enabled = true;
+                revealScript.model = model;
+                //revealScript.Printing();
+                canPrint = false;
             }
         }
 

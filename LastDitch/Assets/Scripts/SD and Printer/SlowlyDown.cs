@@ -7,7 +7,9 @@ public class SlowlyDown : MonoBehaviour
     //197.4
     public Animator anim;
     public GameObject model;
-    bool canGo = false;
+    public bool completedSlicr;
+    public bool canGo = false;
+    public bool isPrinting;
     bool stopPrinting;
     public AudioSource speaker;
 
@@ -32,8 +34,19 @@ public class SlowlyDown : MonoBehaviour
 
     public void Printing()
     {
-        StartCoroutine(animPlay());
+        if (completedSlicr)
+        {
+            StartCoroutine(animPlay());
+        }
     }
+
+
+    public void StopPrinting()
+    {
+        anim.SetTrigger("StopPrinting");
+        canGo = false;
+    }
+
 
     IEnumerator animPlay()
     {
@@ -41,6 +54,7 @@ public class SlowlyDown : MonoBehaviour
         yield return new WaitForSeconds(1.5f);
         anim.SetTrigger("StartPrinting");
         canGo = true;
+        isPrinting = true;
         Debug.Log("SP");
     }
 }
