@@ -4,19 +4,42 @@ using UnityEngine;
 
 public class SlowlyDown : MonoBehaviour
 {
+
+    //7.999962
+
+
     //197.4
     public Animator anim;
     public GameObject model;
     public bool completedSlicr;
     public bool canGo = false;
+    bool rising;
+    bool hasRisen;
     public bool isPrinting;
     bool stopPrinting;
     public AudioSource speaker;
 
     void Update()
     {
-        if (transform.localPosition.y >= 0 && canGo)
+        
+        if (rising && !hasRisen)
         {
+            
+            transform.Translate(0, 0.002f, 0);
+            if (transform.localPosition.y >= 197.4)
+            {
+                StartCoroutine(animPlay());
+                rising = false;
+                hasRisen = true;
+            }
+        }
+
+        
+
+
+        if (transform.localPosition.y >= 0 && canGo )
+        {
+            model.SetActive(true);
             speaker.enabled = true;
             transform.Translate(0, -0.001f, 0);
         }
@@ -34,9 +57,11 @@ public class SlowlyDown : MonoBehaviour
 
     public void Printing()
     {
-
-            StartCoroutine(animPlay());
-        
+        rising = true;
+        if(hasRisen)
+        {
+            canGo = true;
+        }
     }
 
 

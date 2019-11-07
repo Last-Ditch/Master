@@ -36,19 +36,19 @@ public class ExtractInfo : MonoBehaviour
                 {
                     case 3:
                         model = Pyr3;
-                        model.SetActive(true);
+                        //model.SetActive(true);
                         break;
                     case 2:
                         model = Pyr2;
-                        model.SetActive(true);
+                        //model.SetActive(true);
                         break;
                     case 1:
                         model = Pyr1;
-                        model.SetActive(true);
+                        //model.SetActive(true);
                         break;
                     default:
                         model = Pyr1;
-                        model.SetActive(true);
+                        //model.SetActive(true);
                         break;
                 }
                 SetInfill();
@@ -62,19 +62,19 @@ public class ExtractInfo : MonoBehaviour
                 {
                     case 3:
                         model = Ball3;
-                        model.SetActive(true);
+                        //model.SetActive(true);
                         break;
                     case 2:
                         model = Ball2;
-                        model.SetActive(true);
+                        //model.SetActive(true);
                         break;
                     case 1:
                         model = Ball1;
-                        model.SetActive(true);
+                        //model.SetActive(true);
                         break;
                     default:
                         model = Ball1;
-                        model.SetActive(true);
+                        //model.SetActive(true);
                         break;
                 }
                 SetInfill();
@@ -99,6 +99,7 @@ public class ExtractInfo : MonoBehaviour
             }
             if (canPrint)
             {
+                
                 revealScript.completedSlicr = true;
                 revealScript.enabled = true;
                 revealScript.model = model;
