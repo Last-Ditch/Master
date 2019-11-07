@@ -38748,6 +38748,7 @@ MonoBehaviour:
   - {fileID: 1023126738}
   - {fileID: 414179080}
   - {fileID: 1518772388}
+  - {fileID: 1553090972}
   revealScript: {fileID: 1383405929}
   resumeButton: {fileID: 924874862}
   printButton: {fileID: 1769659405}
@@ -49760,7 +49761,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1462029102
 MonoBehaviour:
   m_ObjectHideFlags: 0

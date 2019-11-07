@@ -34,10 +34,9 @@ public class SlowlyDown : MonoBehaviour
 
     public void Printing()
     {
-        if (completedSlicr)
-        {
+
             StartCoroutine(animPlay());
-        }
+        
     }
 
 

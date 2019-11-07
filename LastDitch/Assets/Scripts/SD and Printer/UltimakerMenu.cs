@@ -38,13 +38,18 @@ public class UltimakerMenu : MonoBehaviour
 
     public void StartPrinting()
     {
-        if (!revealScript.isPrinting)
+        if (!revealScript.isPrinting && revealScript.completedSlicr)
         {
+            ChangeMenu(2);
+            resumeButton.interactable = true;
+            printButton.interactable = false;
             revealScript.Printing();
         }
-        ChangeMenu(2);
-        resumeButton.interactable = true;
-        printButton.interactable = false;
+        else
+        {
+            ChangeMenu(3);
+        }
+
     }
 
     public void StopPrinting()
