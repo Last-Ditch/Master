@@ -1,11 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UltimakerMenu : MonoBehaviour
 {
     [SerializeField] GameObject[] menus;
     [SerializeField] SlowlyDown revealScript;
+    [SerializeField] Button resumeButton;
+    [SerializeField] Button printButton;
     //mainMenu, filamentMenu, printingMenu;
 
     //startPrint, resumeprint, filamentButton, lowerBuildPlate;
@@ -40,6 +43,8 @@ public class UltimakerMenu : MonoBehaviour
             revealScript.Printing();
         }
         ChangeMenu(2);
+        resumeButton.interactable = true;
+        printButton.interactable = false;
     }
 
     public void StopPrinting()
