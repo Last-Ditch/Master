@@ -6,39 +6,53 @@ using UnityEngine.SceneManagement;
 
 public class tutorial : MonoBehaviour
 {
+    public GameObject wasd;
+    public GameObject pause_button;
+
+    public static tutorial instance = null;
 
     private void Start()
     {
-        gameObject.GetComponent<Image>().enabled = true;
+       
+        if (!instance)
+        {
+            instance = this;
+            wasd.SetActive(true);
+            pause_button.SetActive(true);
+            StartCoroutine(kill());
+        }
+        else
+        {
+            Destroy(wasd);
+            Destroy(pause_button);
+            return;
+        }
 
-        StartCoroutine(kill());
+
+
+        DontDestroyOnLoad(this.gameObject);
     }
 
     IEnumerator kill()
     {
         yield return new WaitForSeconds(25);
 
-        Destroy(gameObject);
+        Destroy(wasd);
+        Destroy(pause_button);
     }
 
-    void OnEnable() { SceneManager.sceneUnloaded += SceneUnloadedMethod; }
-    void OnDisable() { SceneManager.sceneUnloaded -= SceneUnloadedMethod; }
+   
 
     int lastSceneIndex = -1;
 
-    // looks a bit funky but the method signature must match the scenemanager delegate signature
-    void SceneUnloadedMethod(Scene sceneNumber)
+    
+
+    public int scene_number;
+
+    public void load_scene(int scene_number)
     {
-        int sceneIndex = sceneNumber.buildIndex;
-        // only want to update last scene unloaded if were not just reloading the current scene
-        if (lastSceneIndex != sceneIndex)
-        {
-            lastSceneIndex = sceneIndex;
-            Debug.Log("unloaded scene is : " + lastSceneIndex);
-        }
+        lastSceneIndex = SceneManager.GetActiveScene().buildIndex;
+
     }
-    public int GetLastSceneNumber()
-    {
-        return lastSceneIndex;
-    }
+    
 }

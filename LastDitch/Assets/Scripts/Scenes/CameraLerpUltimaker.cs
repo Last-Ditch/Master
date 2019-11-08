@@ -13,12 +13,15 @@ public class CameraLerpUltimaker : MonoBehaviour
     public bool nearUltimaker;
     public GameObject ultimakerMenu;
     float timer = 2f;
+    public GameObject hud;
 
     void Update()
     {
 
         if(Input.GetButtonDown("Jump") && nearUltimaker)
         {
+            hud.SetActive(false);      //Dylan
+
             inMenu = !inMenu;
 
             timer = 2.5f;
@@ -38,6 +41,8 @@ public class CameraLerpUltimaker : MonoBehaviour
 
     public void CameraOut()
     {
+        hud.SetActive(true);    //Dylan
+
         Cursor.lockState = CursorLockMode.Locked;
         transform.position = Vector3.Slerp(transform.position, original.position, Time.deltaTime * 2f);
         transform.rotation = Quaternion.Slerp(transform.rotation, original.rotation, Time.time * 0.5f);

@@ -13,6 +13,7 @@ public class CameraLerp : MonoBehaviour
     public float x;
     public bool movingCam;
     public bool nearLaptop;
+    public GameObject hub;                          //Dylan
 
     float timer = 2f;
 
@@ -30,7 +31,9 @@ public class CameraLerp : MonoBehaviour
 
         if(Input.GetButtonDown("Jump") && nearLaptop)
         {
-            Debug.Log("Jump");
+            hub.SetActive(false);
+
+            //Debug.Log("Jump");
             inMenu = !inMenu;
             if(inMenu)
             {
@@ -56,6 +59,7 @@ public class CameraLerp : MonoBehaviour
 
     public void CameraOut()
     {
+        hub.SetActive(true);
         GameObject.FindGameObjectWithTag("Speaker").GetComponent<Audio>().AudioButton(6);
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
