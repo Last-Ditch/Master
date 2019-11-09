@@ -14,12 +14,15 @@ public class CameraLerpUltimaker : MonoBehaviour
     public GameObject ultimakerMenu;
     float timer = 2f;
     public GameObject hud;
+    public ObjectPickup pickup;
+
 
     void Update()
     {
 
         if(Input.GetButtonDown("Jump") && nearUltimaker)
         {
+            pickup.enabled = false;
             hud.SetActive(false);      //Dylan
 
             inMenu = !inMenu;
@@ -60,6 +63,7 @@ public class CameraLerpUltimaker : MonoBehaviour
             timer = 2f;
             player.GetComponent<player_controller>().enabled = true;
             player.GetComponentInChildren<player_look>().enabled = true;
+            pickup.enabled = true;
         }
     }
 

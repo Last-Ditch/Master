@@ -22,7 +22,7 @@ public class ExtractInfo : MonoBehaviour
     private void Start()
     {
         progressScript = GameObject.FindGameObjectWithTag("Progress").GetComponent<ProgressTracker>();
-        revealScript.enabled = false;
+        //revealScript.enabled = false;
     }
 
 
@@ -30,85 +30,93 @@ public class ExtractInfo : MonoBehaviour
     {
         if (progressScript.sliced && progressScript.sdIn && !donePrinting)
         {
-            if (progressScript.ModelPicked == 1)
-            {
-                switch (progressScript.LayerHeightC)
-                {
-                    case 3:
-                        model = Pyr3;
-                        //model.SetActive(true);
-                        break;
-                    case 2:
-                        model = Pyr2;
-                        //model.SetActive(true);
-                        break;
-                    case 1:
-                        model = Pyr1;
-                        //model.SetActive(true);
-                        break;
-                    default:
-                        model = Pyr1;
-                        //model.SetActive(true);
-                        break;
-                }
-                SetInfill();
+            revealScript.completedSlicr = true;
 
-                MaterialChange();
-
-            }
-            if (progressScript.ModelPicked == 2)
-            {
-                switch (progressScript.LayerHeightC)
-                {
-                    case 3:
-                        model = Ball3;
-                        //model.SetActive(true);
-                        break;
-                    case 2:
-                        model = Ball2;
-                        //model.SetActive(true);
-                        break;
-                    case 1:
-                        model = Ball1;
-                        //model.SetActive(true);
-                        break;
-                    default:
-                        model = Ball1;
-                        //model.SetActive(true);
-                        break;
-                }
-                SetInfill();
-
-                MaterialChange();
-
-                if(progressScript.supportsAdded)
-                {
-                    supprtChildren = model.GetComponentsInChildren<Transform>();
-                    if (supprtChildren != null)
-                    {
-                        foreach (Transform g in supprtChildren)
-                        {
-                            if (g.gameObject.tag == "Support")
-                            {
-                                g.GetComponent<MeshRenderer>().enabled = true;
-                            }
-                        }
-                    }
-                }
-
-            }
             if (canPrint)
             {
                 
-                revealScript.completedSlicr = true;
-                revealScript.enabled = true;
-                revealScript.model = model;
+                
+                //revealScript.enabled = true;
+                //revealScript.model = model;
                 //revealScript.Printing();
                 canPrint = false;
             }
         }
 
     }
+
+    public void MakeModel()
+    {
+        if (progressScript.ModelPicked == 1)
+        {
+            switch (progressScript.LayerHeightC)
+            {
+                case 3:
+                    model = Instantiate(Pyr3, transform, false);
+                    //model.SetActive(true);
+                    break;
+                case 2:
+                    model = Instantiate(Pyr2, transform, false);
+                    //model.SetActive(true);
+                    break;
+                case 1:
+                    model = Instantiate(Pyr1, transform, false);
+                    //model.SetActive(true);
+                    break;
+                default:
+                    model = Instantiate(Pyr1, transform, false);
+                    //model.SetActive(true);
+                    break;
+            }
+            SetInfill();
+
+            MaterialChange();
+
+        }
+        if (progressScript.ModelPicked == 2)
+        {
+            switch (progressScript.LayerHeightC)
+            {
+                case 3:
+                    model = Instantiate(Ball3, transform, false);
+                    //model.SetActive(true);
+                    break;
+                case 2:
+                    model = Instantiate(Ball2, transform, false);
+                    //model.SetActive(true);
+                    break;
+                case 1:
+                    model = Instantiate(Ball1, transform, false);
+                    //model.SetActive(true);
+                    break;
+                default:
+                    model = Instantiate(Ball1, transform, false);
+                    //model.SetActive(true);
+                    break;
+            }
+            SetInfill();
+
+            MaterialChange();
+
+            if (progressScript.supportsAdded)
+            {
+                supprtChildren = model.GetComponentsInChildren<Transform>();
+                if (supprtChildren != null)
+                {
+                    foreach (Transform g in supprtChildren)
+                    {
+                        if (g.gameObject.tag == "Support")
+                        {
+                            g.GetComponent<MeshRenderer>().enabled = true;
+                        }
+                    }
+                }
+            }
+
+        }
+        revealScript.model = model;
+    }
+
 
     void MaterialChange()
     {

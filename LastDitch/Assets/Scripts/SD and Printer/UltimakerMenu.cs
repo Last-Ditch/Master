@@ -9,6 +9,7 @@ public class UltimakerMenu : MonoBehaviour
     [SerializeField] SlowlyDown revealScript;
     [SerializeField] Button resumeButton;
     [SerializeField] Button printButton;
+    [SerializeField] GameObject printArea;
     //mainMenu, filamentMenu, printingMenu;
 
     //startPrint, resumeprint, filamentButton, lowerBuildPlate;
@@ -38,6 +39,13 @@ public class UltimakerMenu : MonoBehaviour
 
     public void StartPrinting()
     {
+        if(printAreaFull())
+        {
+            ChangeMenu(4);
+            return;
+        }
+
+
         if (!revealScript.isPrinting && revealScript.completedSlicr)
         {
             ChangeMenu(2);
@@ -72,4 +80,25 @@ public class UltimakerMenu : MonoBehaviour
         //need more work to do this
     }
 
+
+    public void Reset()
+    {
+        resumeButton.interactable = false;
+        printButton.interactable = true;
+    }
+
+
+
+    bool printAreaFull()
+    {
+        Transform[] children = printArea.transform.GetComponentsInChildren<Transform>();
+        foreach (Transform g in children)
+        {
+            if (g.gameObject.tag == "Interactable")
+            {
+                return true;
+            }
+        }
+        return false;
+    }
 }

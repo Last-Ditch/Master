@@ -45,4 +45,11 @@ public class ProgressTracker : MonoBehaviour
     {
         ModelPicked = i;
     }
+
+    public void Reset()
+    {
+        MatPicked = false;
+        LHPicked = false;
+        InfillPicked = false;
+    }
 }

@@ -6,7 +6,8 @@ public class SlowlyDown : MonoBehaviour
 {
 
     //7.999962
-
+    [SerializeField] GameObject[] Pyramids;
+    [SerializeField] GameObject[] Balls;
 
     //197.4
     public Animator anim;
@@ -16,8 +17,24 @@ public class SlowlyDown : MonoBehaviour
     bool rising;
     bool hasRisen;
     public bool isPrinting;
-    bool stopPrinting;
+    public bool stopPrinting;
     public AudioSource speaker;
+    public UltimakerMenu menuScript;
+    public bool sdd;
+    public ExtractInfo infoScript;
+
+    public void Reset()
+    {
+        canGo = false;
+        rising = false;
+        hasRisen = false;
+        isPrinting = false;
+        stopPrinting = false;
+        transform.localPosition = new Vector3(0, 1, 0);
+        menuScript.ChangeMenu(0);
+        menuScript.Reset();
+    }
+
 
     void Update()
     {
@@ -31,6 +48,7 @@ public class SlowlyDown : MonoBehaviour
                 StartCoroutine(animPlay());
                 rising = false;
                 hasRisen = true;
+                infoScript.MakeModel();
             }
         }
 
@@ -50,8 +68,9 @@ public class SlowlyDown : MonoBehaviour
             Debug.Log("EP");
             model.tag = "Interactable";
             speaker.enabled = false;
-            GameObject.FindGameObjectWithTag("Manager").GetComponent<ExtractInfo>().donePrinting = true;
+            //GameObject.FindGameObjectWithTag("Manager").GetComponent<ExtractInfo>().donePrinting = true;
             stopPrinting = true;
+            Reset();
         }
     }
 
