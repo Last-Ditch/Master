@@ -53,25 +53,29 @@ public class ExtractInfo : MonoBehaviour
             {
                 case 3:
                     model = Instantiate(Pyr3, transform, false);
+                    revealScript.animStopNo = 19;
                     //model.SetActive(true);
                     break;
                 case 2:
                     model = Instantiate(Pyr2, transform, false);
+                    revealScript.animStopNo = 30;
                     //model.SetActive(true);
                     break;
                 case 1:
                     model = Instantiate(Pyr1, transform, false);
+                    revealScript.animStopNo = 32;
                     //model.SetActive(true);
                     break;
                 default:
                     model = Instantiate(Pyr1, transform, false);
+                    revealScript.animStopNo = 32;
                     //model.SetActive(true);
                     break;
             }
             SetInfill();
 
             MaterialChange();
-
+            
         }
         if (progressScript.ModelPicked == 2)
         {
@@ -112,6 +116,7 @@ public class ExtractInfo : MonoBehaviour
                     }
                 }
             }
+            revealScript.animStopNo = 88;
 
         }
         revealScript.model = model;

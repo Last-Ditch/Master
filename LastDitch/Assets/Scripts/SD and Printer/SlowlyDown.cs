@@ -22,6 +22,8 @@ public class SlowlyDown : MonoBehaviour
     public UltimakerMenu menuScript;
     public bool sdd;
     public ExtractInfo infoScript;
+    public float animStopNo;
+
 
     public void Reset()
     {
@@ -36,13 +38,13 @@ public class SlowlyDown : MonoBehaviour
     }
 
 
-    void Update()
+    void FixedUpdate()
     {
         
         if (rising && !hasRisen)
         {
             
-            transform.Translate(0, 0.002f, 0);
+            transform.Translate(0, 0.02f, 0);
             if (transform.localPosition.y >= 197.4)
             {
                 StartCoroutine(animPlay());
@@ -59,12 +61,18 @@ public class SlowlyDown : MonoBehaviour
         {
             model.SetActive(true);
             speaker.enabled = true;
-            transform.Translate(0, -0.001f, 0);
+            transform.Translate(0, -0.01f, 0);
         }
-        if(transform.localPosition.y <= 0 && !stopPrinting)
+
+        if (transform.localPosition.y <= animStopNo && !rising)
+        {
+            anim.SetTrigger("StopPrinting");
+        }
+
+            if (transform.localPosition.y <= 0 && !stopPrinting)
         {
             GameObject.FindGameObjectWithTag("Speaker").GetComponent<Audio>().AudioButton(12);
-            anim.SetTrigger("StopPrinting");
+            
             Debug.Log("EP");
             model.tag = "Interactable";
             speaker.enabled = false;

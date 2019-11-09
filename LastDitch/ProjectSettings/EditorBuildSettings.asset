@@ -6,8 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/_Scenes/Whitebox.unity
-    guid: ab8a02419269da84fabdac8be721d09c
+    path: Assets/_Scenes/Alpha.unity
+    guid: 532d18584e6585d4d9b08251103eec6f
   - enabled: 1
     path: Assets/_Scenes/Cura.unity
     guid: 051db012f7c1d3241a56e11062445207
