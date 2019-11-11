@@ -23,6 +23,8 @@ TagManager:
   - Screen
   - SD Card
   - Speaker
+  - UltimakerWall
+  - Ultimaker Back
   layers:
   - Default
   - TransparentFX
