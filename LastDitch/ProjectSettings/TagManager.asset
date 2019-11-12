@@ -25,6 +25,8 @@ TagManager:
   - Speaker
   - UltimakerWall
   - Ultimaker Back
+  - Filament
+  - PopUpText
   layers:
   - Default
   - TransparentFX

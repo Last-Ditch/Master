@@ -4,59 +4,125 @@ using UnityEngine;
 
 public class FilamentPickup : MonoBehaviour
 {
+    public Material PLA, ABS, TPU, PTE;
+    Animator anim;
+    AudioSource speaker;
+    public AudioClip click;
+    public GameObject filamentSpool;
+    public bool haveFilament = false;
+    public int currentSpoolNum;
+    public bool readytoPrint;
+    public GameObject sd_ui;
 
-    public GameObject filament;
-    public GameObject hand;
-    public GameObject head;
-    bool pickup;
-    Rigidbody rb;
-
-
-
+    private void Start()
+    {
+        speaker = GetComponent<AudioSource>();
+    }
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+
+        if (Input.GetMouseButtonDown(0) && filamentSpool!=null)
         {
-            if (filament != null)
+            
+            if (filamentSpool.gameObject.GetComponent<MeshRenderer>().enabled)
             {
-                filament.GetComponent<Collider>().enabled = false;
-                filament.transform.parent = null;
-                pickup = true;
-                filament.transform.position = hand.transform.position;
-                filament.transform.parent = head.transform;
+                
+                //speaker.PlayOneShot(click);
+                anim = filamentSpool.GetComponent<Animator>();
+                anim.SetTrigger("Pickup");
+                filamentSpool.GetComponent<MeshRenderer>().enabled = false;
+                if(filamentSpool.gameObject.tag != "Ultimaker Back") { currentSpoolNum = filamentSpool.GetComponent<FilamentChoice>().matNo; }
+                
+                haveFilament = true;
+
+
+
+                if (filamentSpool.gameObject.transform.parent.tag == "Ultimaker")
+                {
+                    //GameObject.FindGameObjectWithTag("Progress").GetComponent<ProgressTracker>().sdIn = false;
+                }
+                return;
+            }
+            if (!filamentSpool.gameObject.GetComponent<MeshRenderer>().enabled && haveFilament)
+            {
+                //speaker.PlayOneShot(click);
+                anim = filamentSpool.GetComponent<Animator>();
+                anim.SetTrigger("Putdown");
+                filamentSpool.GetComponent<MeshRenderer>().enabled = true;
+                
+                if (filamentSpool.gameObject.tag == "Ultimaker Back")
+                {
+                    Debug.Log(23423423423);
+                    switch (currentSpoolNum)
+                    {
+                        case 4:
+                            filamentSpool.GetComponent<MeshRenderer>().material = PLA;
+                            break;
+
+                        case 3:
+                            filamentSpool.GetComponent<MeshRenderer>().material = ABS;
+                            break;
+
+                        case 2:
+                            filamentSpool.GetComponent<MeshRenderer>().material = TPU;
+                            break;
+
+                        case 1:
+                            filamentSpool.GetComponent<MeshRenderer>().material = PTE;
+                            break;
+
+                        default:
+
+                            break;
+                    }
+                }
+                haveFilament = false;
+
+
+
+                if (filamentSpool.gameObject.transform.parent.tag == "Ultimaker")
+                {
+                    //GameObject.FindGameObjectWithTag("Progress").GetComponent<ProgressTracker>().sdIn = true;
+                }
+                return;
             }
         }
+        StartCoroutine(sd_ui_trigger());
+    
 
-        if (filament != null && pickup)
-        {
-            filament.transform.position = hand.transform.position;
-        }
-
-        if (Input.GetMouseButtonDown(1) && filament != null)
-        {
-            Place();
-        }
     }
 
-
-    void Place()
+   IEnumerator sd_ui_trigger()
     {
+        if(haveFilament == true)
+        {
+            yield return new WaitForSeconds(0.5f);
+            sd_ui.SetActive(true);
+        }
 
+        if (haveFilament == false)
+        {
+            yield return new WaitForSeconds(0.5f);
+            sd_ui.SetActive(false);
+        }
     }
 
 
-
-    private void OnTriggerStay(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Filament")
         {
-            filament = other.gameObject;
-
+            filamentSpool = other.gameObject;
+            if(filamentSpool.GetComponent<FilamentChoice>())
+            {
+                filamentSpool.gameObject.GetComponent<FilamentChoice>().lookedAT = true;
+            }
+            
         }
-        if(other.gameObject.tag == "Ultimaker Back")
+        if (other.gameObject.tag == "Ultimaker Back")
         {
-
+            filamentSpool = other.gameObject;
         }
     }
 
@@ -64,12 +130,15 @@ public class FilamentPickup : MonoBehaviour
     {
         if (other.gameObject.tag == "Filament")
         {
-            filament = null;
+            if (filamentSpool.GetComponent<FilamentChoice>())
+            {
+                filamentSpool.gameObject.GetComponent<FilamentChoice>().lookedAT = false;
+            }
+            filamentSpool = null;
         }
-
         if (other.gameObject.tag == "Ultimaker Back")
         {
-
+            filamentSpool = null;
         }
     }
 }
