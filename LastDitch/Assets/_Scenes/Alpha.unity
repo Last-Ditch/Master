@@ -38678,6 +38678,7 @@ GameObject:
   - component: {fileID: 324727665}
   - component: {fileID: 324727664}
   - component: {fileID: 324727667}
+  - component: {fileID: 324727668}
   m_Layer: 0
   m_Name: Spool Ultimaker
   m_TagString: Ultimaker Back
@@ -38777,6 +38778,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.9999999, y: 2.0000002, z: 1.0000004}
   m_Center: {x: -0.0000008940697, y: 0.0000076293945, z: -0.0000005662441}
+--- !u!114 &324727668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 324727662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9cb5fc06c6072a47a6f703b2ecd4a85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  full: 0
+  currentMat: 0
+  prevMat: 0
 --- !u!1 &331764943
 GameObject:
   m_ObjectHideFlags: 0
@@ -49228,6 +49244,7 @@ MonoBehaviour:
   currentSpoolNum: 0
   readytoPrint: 0
   sd_ui: {fileID: 579973037}
+  spoolTrackerScript: {fileID: 324727668}
 --- !u!65 &1445814734
 BoxCollider:
   m_ObjectHideFlags: 0
