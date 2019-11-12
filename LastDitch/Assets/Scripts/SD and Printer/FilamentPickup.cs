@@ -109,7 +109,7 @@ public class FilamentPickup : MonoBehaviour
     }
 
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
         if (other.gameObject.tag == "Filament")
         {
@@ -130,9 +130,9 @@ public class FilamentPickup : MonoBehaviour
     {
         if (other.gameObject.tag == "Filament")
         {
-            if (filamentSpool.GetComponent<FilamentChoice>())
+            if (other.GetComponent<FilamentChoice>())
             {
-                filamentSpool.gameObject.GetComponent<FilamentChoice>().lookedAT = false;
+                other.gameObject.GetComponent<FilamentChoice>().lookedAT = false;
             }
             filamentSpool = null;
         }
