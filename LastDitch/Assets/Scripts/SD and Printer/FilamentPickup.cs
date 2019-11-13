@@ -14,7 +14,7 @@ public class FilamentPickup : MonoBehaviour
     public bool readytoPrint;
     public GameObject sd_ui;
     public PrinterSpoolTracker spoolTrackerScript;
-
+    public bool canPickup;
 
     private void Start()
     {
@@ -24,7 +24,7 @@ public class FilamentPickup : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetMouseButtonDown(0) && filamentSpool!=null)
+        if (Input.GetMouseButtonDown(0) && filamentSpool!=null && canPickup)
         {
             //Pick up
             if (filamentSpool.gameObject.GetComponent<MeshRenderer>().enabled && !haveFilament)
@@ -57,7 +57,7 @@ public class FilamentPickup : MonoBehaviour
             }
 
             //Place down
-            if (!filamentSpool.gameObject.GetComponent<MeshRenderer>().enabled && haveFilament)
+            if (!filamentSpool.gameObject.GetComponent<MeshRenderer>().enabled && haveFilament )
             {
                 //speaker.PlayOneShot(click);
 

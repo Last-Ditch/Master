@@ -44591,7 +44591,7 @@ GameObject:
   - component: {fileID: 871150994}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -46038,6 +46038,77 @@ Transform:
   m_Father: {fileID: 1453003801}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &977839741
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 977839742}
+  - component: {fileID: 977839744}
+  - component: {fileID: 977839743}
+  - component: {fileID: 977839745}
+  m_Layer: 0
+  m_Name: FilamentPickupSensors
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &977839742
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 977839741}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.298, y: -0.54, z: 1.47}
+  m_LocalScale: {x: 0.13532308, y: 0.17580777, z: 0.17580777}
+  m_Children: []
+  m_Father: {fileID: 1177377815}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &977839743
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 977839741}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 27.8, y: 1.12, z: 27.455828}
+  m_Center: {x: -14.9, y: -0.15000004, z: 2.1279135}
+--- !u!65 &977839744
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 977839741}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 31.043413, y: 1, z: 14.596735}
+  m_Center: {x: -5.481469, y: 0, z: -1.5100317}
+--- !u!114 &977839745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 977839741}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb67c7098bef83040861470ec6bb44db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1005899094
 GameObject:
   m_ObjectHideFlags: 0
@@ -50713,6 +50784,7 @@ MonoBehaviour:
   readytoPrint: 0
   sd_ui: {fileID: 579973037}
   spoolTrackerScript: {fileID: 324727668}
+  canPickup: 0
 --- !u!65 &1445814734
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -57577,7 +57649,7 @@ GameObject:
   - component: {fileID: 2088191679}
   m_Layer: 0
   m_Name: GameObject
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
