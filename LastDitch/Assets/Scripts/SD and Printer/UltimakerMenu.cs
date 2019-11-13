@@ -16,7 +16,7 @@ public class UltimakerMenu : MonoBehaviour
 
 
     int currentMenu;
-    public bool placedSpool, placedCorrectSpool;
+    public bool placedSpool, placedCorrectSpool, filamentInserted;
 
 
     public void ChangeMenu(int i)
@@ -47,7 +47,7 @@ public class UltimakerMenu : MonoBehaviour
 
         if (!revealScript.isPrinting && revealScript.completedSlicr)
         {
-            if (placedCorrectSpool)
+            if (!filamentInserted)
             {
                 ChangeMenu(2);
                 resumeButton.interactable = true;
