@@ -67,11 +67,12 @@ public class FilamentPickup : MonoBehaviour
                     anim = filamentSpool.GetComponent<Animator>();
                     if(filamentSpool.GetComponent<PrinterSpoolTracker>().full)
                     {
-                        anim.SetTrigger("PutdownFull");
+                        return;
                     }
                     else
                     {
                         anim.SetTrigger("Putdown");
+                        spoolTrackerScript.currentMat = currentSpoolNum;
                     }
                     
                     filamentSpool.GetComponent<MeshRenderer>().enabled = true;
@@ -104,7 +105,10 @@ public class FilamentPickup : MonoBehaviour
                     anim.SetTrigger("Putdown");
                     filamentSpool.GetComponent<MeshRenderer>().enabled = true;
                 }
-                spoolTrackerScript.full = true;
+                if (filamentSpool.gameObject.tag == "Ultimaker Back")
+                {
+                    spoolTrackerScript.full = true;
+                }
                 haveFilament = false;
 
 
