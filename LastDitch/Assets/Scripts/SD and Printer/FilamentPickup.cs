@@ -78,19 +78,19 @@ public class FilamentPickup : MonoBehaviour
                     filamentSpool.GetComponent<MeshRenderer>().enabled = true;
                     switch (currentSpoolNum)
                     {
-                        case 4:
+                        case 1:
                             filamentSpool.GetComponent<MeshRenderer>().material = PLA;
                             break;
 
-                        case 3:
+                        case 2:
                             filamentSpool.GetComponent<MeshRenderer>().material = ABS;
                             break;
 
-                        case 2:
+                        case 3:
                             filamentSpool.GetComponent<MeshRenderer>().material = TPU;
                             break;
 
-                        case 1:
+                        case 4:
                             filamentSpool.GetComponent<MeshRenderer>().material = PTE;
                             break;
 

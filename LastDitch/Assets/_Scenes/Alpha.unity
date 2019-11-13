@@ -249,7 +249,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d320214e1dcd88c42a93fc8b5e7283d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  matNo: 2
+  matNo: 3
   lookedAT: 0
 --- !u!95 &34905703
 Animator:
@@ -38824,6 +38824,7 @@ MonoBehaviour:
   full: 0
   currentMat: 0
   prevMat: 0
+  umenuScript: {fileID: 342084087}
 --- !u!1 &331764943
 GameObject:
   m_ObjectHideFlags: 0
@@ -39193,6 +39194,8 @@ MonoBehaviour:
   resumeButton: {fileID: 924874862}
   printButton: {fileID: 1769659405}
   printArea: {fileID: 1383405927}
+  placedSpool: 0
+  placedCorrectSpool: 0
 --- !u!1 &351507597 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8309716595950070746, guid: c28824631715a424abf18df70e7e7eeb,
@@ -42477,7 +42480,7 @@ GameObject:
   - component: {fileID: 699543722}
   - component: {fileID: 699543723}
   m_Layer: 0
-  m_Name: Cylinder
+  m_Name: PLA
   m_TagString: Filament
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -42603,7 +42606,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d320214e1dcd88c42a93fc8b5e7283d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  matNo: 4
+  matNo: 1
   lookedAT: 0
 --- !u!1 &719459347
 GameObject:
@@ -51338,7 +51341,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d320214e1dcd88c42a93fc8b5e7283d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  matNo: 1
+  matNo: 4
   lookedAT: 0
 --- !u!95 &1725547251
 Animator:
@@ -52282,7 +52285,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d320214e1dcd88c42a93fc8b5e7283d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  matNo: 3
+  matNo: 2
   lookedAT: 0
 --- !u!95 &1826222073
 Animator:
