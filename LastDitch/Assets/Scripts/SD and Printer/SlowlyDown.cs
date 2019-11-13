@@ -8,7 +8,7 @@ public class SlowlyDown : MonoBehaviour
     //7.999962
     [SerializeField] GameObject[] Pyramids;
     [SerializeField] GameObject[] Balls;
-
+    public FilamentPickup fPickupScript;
     //197.4
     public Animator anim;
     public GameObject model;
@@ -43,7 +43,7 @@ public class SlowlyDown : MonoBehaviour
         
         if (rising && !hasRisen)
         {
-            
+            fPickupScript.enabled = false;
             transform.Translate(0, 0.02f, 0);
             if (transform.localPosition.y >= 197.4)
             {
@@ -59,6 +59,7 @@ public class SlowlyDown : MonoBehaviour
 
         if (transform.localPosition.y >= 0 && canGo )
         {
+            fPickupScript.enabled = false;
             model.SetActive(true);
             speaker.enabled = true;
             transform.Translate(0, -0.01f, 0);
@@ -66,11 +67,13 @@ public class SlowlyDown : MonoBehaviour
 
         if (transform.localPosition.y <= animStopNo && !rising)
         {
+            
             anim.SetTrigger("StopPrinting");
         }
 
-            if (transform.localPosition.y <= 0 && !stopPrinting)
+        if (transform.localPosition.y <= 0 && !stopPrinting)
         {
+            fPickupScript.enabled = true;
             GameObject.FindGameObjectWithTag("Speaker").GetComponent<Audio>().AudioButton(12);
             
             Debug.Log("EP");
@@ -84,6 +87,7 @@ public class SlowlyDown : MonoBehaviour
 
     public void Printing()
     {
+        
         rising = true;
         if(hasRisen)
         {

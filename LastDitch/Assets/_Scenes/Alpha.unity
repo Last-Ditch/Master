@@ -49470,6 +49470,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Pyramids: []
   Balls: []
+  fPickupScript: {fileID: 1445814733}
   anim: {fileID: 255712352}
   model: {fileID: 0}
   completedSlicr: 0
