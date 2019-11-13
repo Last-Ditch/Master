@@ -6,7 +6,7 @@ public class PrinterSpoolTracker : MonoBehaviour
 {
     public bool full;
 
-    public int currentMat, prevMat;
+    public int currentMat, prevMat, chosenMat;
 
     ProgressTracker progresstrackerScript;
     public UltimakerMenu umenuScript;
@@ -19,17 +19,20 @@ public class PrinterSpoolTracker : MonoBehaviour
     
     void Update()
     {
-        if(currentMat == progresstrackerScript.MaterialC)
+        chosenMat = progresstrackerScript.MaterialC;
+
+        if (currentMat == chosenMat)
         {
             umenuScript.placedCorrectSpool = true;
             umenuScript.placedSpool = true;
         }
         if(currentMat == 0)
         {
+            umenuScript.filamentInserted = false;
             umenuScript.placedCorrectSpool = false;
             umenuScript.placedSpool = false;
         }
-        if(currentMat != 0 && currentMat != progresstrackerScript.MaterialC)
+        if(currentMat != 0 && currentMat != chosenMat)
         {
             umenuScript.placedCorrectSpool = false;
             umenuScript.placedSpool = true;

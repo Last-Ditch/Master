@@ -10,6 +10,7 @@ public class UltimakerMenu : MonoBehaviour
     [SerializeField] Button resumeButton;
     [SerializeField] Button printButton;
     [SerializeField] GameObject printArea;
+    [SerializeField] PrinterSpoolTracker spoolTrackerScript;
     //mainMenu, filamentMenu, printingMenu;
 
     //startPrint, resumeprint, filamentButton, lowerBuildPlate;
@@ -47,7 +48,7 @@ public class UltimakerMenu : MonoBehaviour
 
         if (!revealScript.isPrinting && revealScript.completedSlicr)
         {
-            if (!filamentInserted)
+            if (filamentInserted && placedCorrectSpool)
             {
                 ChangeMenu(2);
                 resumeButton.interactable = true;
@@ -61,15 +62,9 @@ public class UltimakerMenu : MonoBehaviour
             return;
         }
 
-        if (!placedSpool)
+        if (!filamentInserted)
         {
             ChangeMenu(5);
-            return;
-        }
-
-        if (!placedCorrectSpool)
-        {
-            ChangeMenu(6);
             return;
         }
 
@@ -102,6 +97,31 @@ public class UltimakerMenu : MonoBehaviour
         printButton.interactable = true;
     }
 
+    public void ChangeFilament(int i)
+    {
+        
+        Debug.Log(i);
+        if(spoolTrackerScript.currentMat == 0)
+        {
+            ChangeMenu(5);
+            return;
+        }
+        if(i != spoolTrackerScript.chosenMat)
+        {
+            ChangeMenu(7);
+            return;
+        }
+        if(i == spoolTrackerScript.chosenMat)
+        {
+            if(i != spoolTrackerScript.currentMat)
+            {
+                ChangeMenu(7);
+                return;
+            }
+            ChangeMenu(8);
+            filamentInserted = true;
+        }
+    }
 
 
     bool printAreaFull()
