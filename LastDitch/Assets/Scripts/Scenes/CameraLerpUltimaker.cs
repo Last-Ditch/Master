@@ -15,6 +15,7 @@ public class CameraLerpUltimaker : MonoBehaviour
     float timer = 2f;
     public GameObject hud;
     public ObjectPickup pickup;
+    public FilamentPickup fPickup;
 
 
     void Update()
@@ -22,6 +23,7 @@ public class CameraLerpUltimaker : MonoBehaviour
 
         if(Input.GetButtonDown("Jump") && nearUltimaker)
         {
+            fPickup.enabled = false;
             pickup.enabled = false;
             hud.SetActive(false);      //Dylan
 
@@ -64,6 +66,7 @@ public class CameraLerpUltimaker : MonoBehaviour
             player.GetComponent<player_controller>().enabled = true;
             player.GetComponentInChildren<player_look>().enabled = true;
             pickup.enabled = true;
+            fPickup.enabled = true;
         }
     }
 

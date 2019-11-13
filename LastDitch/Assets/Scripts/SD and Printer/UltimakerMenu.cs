@@ -45,28 +45,32 @@ public class UltimakerMenu : MonoBehaviour
             return;
         }
 
-        if(!placedSpool)
+        if (!revealScript.isPrinting && revealScript.completedSlicr)
+        {
+            if (placedCorrectSpool)
+            {
+                ChangeMenu(2);
+                resumeButton.interactable = true;
+                printButton.interactable = false;
+                revealScript.Printing();
+            }
+        }
+        else
+        {
+            ChangeMenu(3);
+            return;
+        }
+
+        if (!placedSpool)
         {
             ChangeMenu(5);
             return;
         }
 
-        if(!placedCorrectSpool)
+        if (!placedCorrectSpool)
         {
             ChangeMenu(6);
             return;
-        }
-
-        if (!revealScript.isPrinting && revealScript.completedSlicr && placedCorrectSpool)
-        {
-            ChangeMenu(2);
-            resumeButton.interactable = true;
-            printButton.interactable = false;
-            revealScript.Printing();
-        }
-        else
-        {
-            ChangeMenu(3);
         }
 
     }
