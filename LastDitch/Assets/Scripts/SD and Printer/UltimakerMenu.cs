@@ -115,7 +115,7 @@ public class UltimakerMenu : MonoBehaviour
         {
             if(i != spoolTrackerScript.currentMat)
             {
-                ChangeMenu(7);
+                ChangeMenu(6);
                 return;
             }
             ChangeMenu(8);
