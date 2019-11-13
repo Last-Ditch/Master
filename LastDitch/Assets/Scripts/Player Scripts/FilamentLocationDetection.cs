@@ -12,14 +12,14 @@ public class FilamentLocationDetection : MonoBehaviour
         fPickupScript = GameObject.FindGameObjectWithTag("Player").GetComponent<FilamentPickup>();
     }
 
-    
+  
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
-        Debug.Log(other.gameObject.tag);
+
         if(other.gameObject.tag =="Player")
         {
-            Debug.Log(234234234234234);
+
             fPickupScript.canPickup = true;
         }
     }

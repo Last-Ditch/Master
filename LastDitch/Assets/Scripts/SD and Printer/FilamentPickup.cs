@@ -27,12 +27,12 @@ public class FilamentPickup : MonoBehaviour
         if (Input.GetMouseButtonDown(0) && filamentSpool!=null && canPickup)
         {
             //Pick up
-            if (filamentSpool.gameObject.GetComponent<MeshRenderer>().enabled && !haveFilament)
+            if (filamentSpool.transform.GetChild(0).gameObject.GetComponent<MeshRenderer>().enabled && !haveFilament)
             {
                 //speaker.PlayOneShot(click);
                 anim = filamentSpool.GetComponent<Animator>();
                 anim.SetTrigger("Pickup");
-                filamentSpool.GetComponent<MeshRenderer>().enabled = false;
+                //filamentSpool.transform.GetChild(0).GetComponent<MeshRenderer>().enabled = false;
                 if(filamentSpool.gameObject.tag != "Ultimaker Back")
                 {
                     
@@ -57,7 +57,7 @@ public class FilamentPickup : MonoBehaviour
             }
 
             //Place down
-            if (!filamentSpool.gameObject.GetComponent<MeshRenderer>().enabled && haveFilament )
+            if (!filamentSpool.transform.GetChild(0).gameObject.GetComponent<MeshRenderer>().enabled && haveFilament )
             {
                 //speaker.PlayOneShot(click);
 
@@ -75,23 +75,23 @@ public class FilamentPickup : MonoBehaviour
                         spoolTrackerScript.currentMat = currentSpoolNum;
                     }
                     
-                    filamentSpool.GetComponent<MeshRenderer>().enabled = true;
+                    filamentSpool.transform.GetChild(0).GetComponent<MeshRenderer>().enabled = true;
                     switch (currentSpoolNum)
                     {
                         case 1:
-                            filamentSpool.GetComponent<MeshRenderer>().material = PLA;
+                            filamentSpool.transform.GetChild(0).GetComponent<MeshRenderer>().material = PLA;
                             break;
 
                         case 2:
-                            filamentSpool.GetComponent<MeshRenderer>().material = ABS;
+                            filamentSpool.transform.GetChild(0).GetComponent<MeshRenderer>().material = ABS;
                             break;
 
                         case 3:
-                            filamentSpool.GetComponent<MeshRenderer>().material = TPU;
+                            filamentSpool.transform.GetChild(0).GetComponent<MeshRenderer>().material = TPU;
                             break;
 
                         case 4:
-                            filamentSpool.GetComponent<MeshRenderer>().material = PTE;
+                            filamentSpool.transform.GetChild(0).GetComponent<MeshRenderer>().material = PTE;
                             break;
 
                         default:
@@ -103,7 +103,7 @@ public class FilamentPickup : MonoBehaviour
                 {
                     anim = filamentSpool.GetComponent<Animator>();
                     anim.SetTrigger("Putdown");
-                    filamentSpool.GetComponent<MeshRenderer>().enabled = true;
+                    filamentSpool.transform.GetChild(0).GetComponent<MeshRenderer>().enabled = true;
                 }
                 if (filamentSpool.gameObject.tag == "Ultimaker Back")
                 {

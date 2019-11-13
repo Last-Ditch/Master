@@ -5,13 +5,13 @@ using UnityEngine;
 public class FilamentChoice : MonoBehaviour
 {
     public int matNo;
-    MeshRenderer mRenderer;
+    public MeshRenderer mRenderer;
     public bool lookedAT;
     LookAtPlayer lookScript;
 
     void Start()
     {
-        mRenderer = GetComponent<MeshRenderer>();
+        
         lookScript = GetComponentInChildren<LookAtPlayer>();
     }
 
