@@ -43,10 +43,12 @@ public class SlowlyDown : MonoBehaviour
         
         if (rising && !hasRisen)
         {
+            
             fPickupScript.enabled = false;
             transform.Translate(0, 0.02f, 0);
             if (transform.localPosition.y >= 197.4)
             {
+                ClockMove.speed = 500;
                 StartCoroutine(animPlay());
                 rising = false;
                 hasRisen = true;
@@ -59,6 +61,7 @@ public class SlowlyDown : MonoBehaviour
 
         if (transform.localPosition.y >= 0 && canGo )
         {
+            
             fPickupScript.enabled = false;
             model.SetActive(true);
             speaker.enabled = true;
@@ -75,7 +78,7 @@ public class SlowlyDown : MonoBehaviour
         {
             fPickupScript.enabled = true;
             GameObject.FindGameObjectWithTag("Speaker").GetComponent<Audio>().AudioButton(12);
-            
+            ClockMove.speed = 1;
             Debug.Log("EP");
             model.tag = "Interactable";
             speaker.enabled = false;
