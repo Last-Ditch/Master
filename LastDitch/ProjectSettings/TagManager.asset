@@ -27,6 +27,7 @@ TagManager:
   - Ultimaker Back
   - Filament
   - PopUpText
+  - PFeet
   layers:
   - Default
   - TransparentFX

@@ -5,18 +5,18 @@ using UnityEngine;
 public class player_look : MonoBehaviour
 {
 
-    public float mouse_sensitivity = 150;                                               //mouse sensitivity
+    public float mouse_sensitivity = 200;                                               //mouse sensitivity
     private float x_axis_clamp = 0;                                                    //vaule to stop mouse roating too far on the Y axis
     private Transform player;                                                         //what ever object you want the camera's rotation to be based off i.e the player
 
-    private void Awake()
+    private void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;                                  //locks the mouse to the center of the screen
-
+        Cursor.visible = false;
         player = GameObject.FindGameObjectWithTag("Player").transform;            //sets the player transform to an object with the tag Player
-}                                                         //calls all functions before application begins
+    }                                                         //calls all functions before application begins
 
-void Update()
+    void Update()
     {
         cam_rotate();                                                             //runs camera rotation function
     }                                                                   //calls function every frame

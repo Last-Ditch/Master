@@ -35,6 +35,7 @@ public class pause_menu : MonoBehaviour
 
     void pause()
     {
+        Cursor.visible = true;
         game_ui.SetActive(false);
         pause_menu_ui.SetActive(true);
         Time.timeScale = 0f;
@@ -50,6 +51,7 @@ public class pause_menu : MonoBehaviour
         Time.timeScale = 1f;
         paused = false;
         Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
         AudioListener.pause = false;
 
     }
