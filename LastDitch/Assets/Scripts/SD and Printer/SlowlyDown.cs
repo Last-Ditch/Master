@@ -66,13 +66,15 @@ public class SlowlyDown : MonoBehaviour
             
             fPickupScript.enabled = false;
             model.SetActive(true);
-            speaker.enabled = true;
+            
             if(!donePrinting)
             {
+                speaker.enabled = true;
                 transform.Translate(0, -0.005f, 0);
             }
             else
             {
+                speaker.enabled = false;
                 transform.Translate(0, -0.01f, 0);
             }
         }
