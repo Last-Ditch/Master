@@ -45,7 +45,7 @@ public class SlowlyDown : MonoBehaviour
         {
             
             fPickupScript.enabled = false;
-            transform.Translate(0, 0.02f, 0);
+            transform.Translate(0, 0.01f, 0);
             if (transform.localPosition.y >= 197.4)
             {
                 ClockMove.speed = 500;
@@ -65,7 +65,7 @@ public class SlowlyDown : MonoBehaviour
             fPickupScript.enabled = false;
             model.SetActive(true);
             speaker.enabled = true;
-            transform.Translate(0, -0.01f, 0);
+            transform.Translate(0, -0.001f, 0);
         }
 
         if (transform.localPosition.y <= animStopNo && !rising)
