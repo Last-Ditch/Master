@@ -19,6 +19,10 @@ public class ChangeScene : MonoBehaviour
 
     public void ChangeScenes(int index)
     {
+        if(index == 0)
+        {
+            Audio.counter = 0;
+        }
         SceneManager.LoadScene(index);
     }
 }

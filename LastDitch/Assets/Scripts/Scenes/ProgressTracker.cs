@@ -21,6 +21,10 @@ public class ProgressTracker : MonoBehaviour
         DontDestroyOnLoad(this.gameObject);
     }
 
+    private void Start()
+    {
+        PlayerPrefs.SetInt("Disabled", 1);
+    }
 
     public void Material(int i)
     {

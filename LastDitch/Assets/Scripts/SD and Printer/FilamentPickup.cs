@@ -120,22 +120,22 @@ public class FilamentPickup : MonoBehaviour
                 return;
             }
         }
-        StartCoroutine(sd_ui_trigger());
+        sd_ui_trigger();
     
 
     }
 
-   IEnumerator sd_ui_trigger()
+   void sd_ui_trigger()
     {
         if(haveFilament == true)
         {
-            yield return new WaitForSeconds(0.5f);
+            //yield return new WaitForSeconds(0.5f);
             sd_ui.SetActive(true);
         }
 
         if (haveFilament == false)
         {
-            yield return new WaitForSeconds(0.5f);
+            //yield return new WaitForSeconds(0.5f);
             sd_ui.SetActive(false);
         }
     }

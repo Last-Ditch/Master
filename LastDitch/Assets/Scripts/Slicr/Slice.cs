@@ -5,7 +5,8 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement; 
 public class Slice : MonoBehaviour
 {
-
+    public ImporterPanels ImporterPanelsScript;
+    public bool supportsAdded;
     public GameObject exportPanel;
     public Slider progressbar;
     public ProgressTracker progressScript;
@@ -13,6 +14,7 @@ public class Slice : MonoBehaviour
     public GameObject Mat;
     public GameObject LH;
     public GameObject ID;
+    public GameObject SA;
 
     private void Start()
     {
@@ -22,7 +24,8 @@ public class Slice : MonoBehaviour
 
     public void Sliced()
     {
-        if(!progressScript.MatPicked || !progressScript.LHPicked || !progressScript.InfillPicked)
+        Debug.Log(ImporterPanelsScript.Model);
+        if(!progressScript.MatPicked || !progressScript.LHPicked || !progressScript.InfillPicked || (ImporterPanelsScript.Model == 2 && !supportsAdded))
         {
             notDone.SetActive(true);
             if(!progressScript.MatPicked)
@@ -36,6 +39,10 @@ public class Slice : MonoBehaviour
             if(!progressScript.InfillPicked)
             {
                 ID.SetActive(true);
+            }
+            if (ImporterPanelsScript.Model == 2 && !supportsAdded)
+            {
+                SA.SetActive(true);
             }
             return;
         }
@@ -52,7 +59,7 @@ public class Slice : MonoBehaviour
         if (progressbar.value == 100)
         {
             GameObject.FindGameObjectWithTag("Progress").GetComponent<ProgressTracker>().sliced = true;
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(1);
         }
         else
         {
@@ -69,4 +76,8 @@ public class Slice : MonoBehaviour
         notDone.SetActive(false);
     }
 
+    public void Supports()
+    {
+        supportsAdded = !supportsAdded;
+    }
 }

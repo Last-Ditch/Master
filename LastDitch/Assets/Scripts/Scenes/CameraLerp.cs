@@ -97,7 +97,7 @@ public class CameraLerp : MonoBehaviour
         {
             movingCam = false;
             timer = 2f;
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(2);
         }
     }
 

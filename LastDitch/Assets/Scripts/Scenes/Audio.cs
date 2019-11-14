@@ -8,9 +8,9 @@ public class Audio : MonoBehaviour
 
     public AudioClip[] audioClips;
     AudioSource speaker;
-
-    static int counter = 0;
-
+    bool explosive;
+    public static int counter = 0;
+    
 
     void Start()
     {
@@ -21,21 +21,32 @@ public class Audio : MonoBehaviour
     
     void Update()
     {
-        if(!speaker.isPlaying && counter < 4 && SceneManager.GetActiveScene().buildIndex == 0)
+        speaker.volume = PlayerPrefs.GetInt("Disabled");
+        Debug.Log(counter);
+
+
+        if(!speaker.isPlaying && counter < 4 && SceneManager.GetActiveScene().buildIndex == 1)
         {
             speaker.PlayOneShot(audioClips[counter]);
             counter++;
-            
+            return;
         }
 
-        if(SceneManager.GetActiveScene().buildIndex == 1 && counter < 4)
+        if(SceneManager.GetActiveScene().buildIndex == 2 && counter < 4)
         {
             counter = 4;
         }
 
-        if (!speaker.isPlaying && counter < 6 && SceneManager.GetActiveScene().buildIndex == 1)
+        if (!speaker.isPlaying && counter < 6 && SceneManager.GetActiveScene().buildIndex == 2)
         {
             
+            speaker.PlayOneShot(audioClips[counter]);
+            counter++;
+
+        }
+
+        if(!speaker.isPlaying && counter < 8 && SceneManager.GetActiveScene().buildIndex == 1)
+        {
             speaker.PlayOneShot(audioClips[counter]);
             counter++;
         }
@@ -49,4 +60,12 @@ public class Audio : MonoBehaviour
         speaker.PlayOneShot(audioClips[i]);
     }
 
+    public void ExplosiveSpools()
+    {
+        if(!explosive && !speaker.isPlaying)
+        {
+            AudioButton(8);
+            explosive = true;
+        }
+    }
 }

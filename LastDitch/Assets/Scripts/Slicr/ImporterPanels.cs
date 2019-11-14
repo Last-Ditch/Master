@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 public class ImporterPanels : MonoBehaviour
 {
-
+    public int Model;
     public GameObject ImportPanel;
     Selection selectionScript;
     public TransferProgress transferScript;
@@ -27,6 +27,7 @@ public class ImporterPanels : MonoBehaviour
 
     public void ImportModelClicked(int i)
     {
+        Model = i;
         transferScript.ModelChosen(i);
         selectionScript.Import(i);
         ImportPanel.SetActive(false);
