@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ExtractInfo : MonoBehaviour
 {
-    
+    public Audio audioSCript;
     public ProgressTracker progressScript;
     public GameObject model;
     public Material PLA, ABS, TPU, PTE;
@@ -28,10 +28,15 @@ public class ExtractInfo : MonoBehaviour
 
     private void Update()
     {
+        if(progressScript.sliced)
+        {
+            audioSCript.doneSlicr = true;
+        }
+
         if (progressScript.sliced && progressScript.sdIn && !donePrinting)
         {
             revealScript.completedSlicr = true;
-
+            
             if (canPrint)
             {
                 
