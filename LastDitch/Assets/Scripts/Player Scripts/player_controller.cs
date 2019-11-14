@@ -7,7 +7,7 @@ public class player_controller : MonoBehaviour
     private CharacterController char_control;
     public float walk_speed, run_speed;
     private float move_speed;
-    private float accel;
+    private float accel = 0;
     private float slope_force = 3f;
     private float slope_ray_lenght = 1.5f;
 

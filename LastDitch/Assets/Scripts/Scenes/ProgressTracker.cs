@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 public class ProgressTracker : MonoBehaviour
 {
     public bool sliced, sdIn, supportsAdded;
-    public bool MatPicked, LHPicked, InfillPicked;
+    public bool MatPicked, LHPicked, InfillPicked, modelPicked;
     public int MaterialC, LayerHeightC, InfillC, ModelPicked;
 
 
@@ -47,6 +47,7 @@ public class ProgressTracker : MonoBehaviour
 
     public void ModelChosen(int i)
     {
+        modelPicked = true;
         ModelPicked = i;
     }
 

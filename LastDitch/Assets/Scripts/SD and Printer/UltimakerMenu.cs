@@ -5,12 +5,12 @@ using UnityEngine.UI;
 
 public class UltimakerMenu : MonoBehaviour
 {
-    [SerializeField] GameObject[] menus;
-    [SerializeField] SlowlyDown revealScript;
-    [SerializeField] Button resumeButton;
-    [SerializeField] Button printButton;
-    [SerializeField] GameObject printArea;
-    [SerializeField] PrinterSpoolTracker spoolTrackerScript;
+    public GameObject[] menus;
+    public SlowlyDown revealScript;
+    public Button resumeButton;
+    public Button printButton;
+    public GameObject printArea;
+    public PrinterSpoolTracker spoolTrackerScript;
     //mainMenu, filamentMenu, printingMenu;
 
     //startPrint, resumeprint, filamentButton, lowerBuildPlate;

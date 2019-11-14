@@ -5,8 +5,8 @@ using UnityEngine;
 public class WallDamage : MonoBehaviour
 {
 
-    [SerializeField] GameObject damageeffect;
-    [SerializeField] AudioClip boom;
+    public GameObject damageeffect;
+    public AudioClip boom;
     AudioSource speaker;
     private void Start()
     {

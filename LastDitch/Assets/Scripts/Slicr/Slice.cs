@@ -15,6 +15,7 @@ public class Slice : MonoBehaviour
     public GameObject LH;
     public GameObject ID;
     public GameObject SA;
+    public GameObject MP;
 
     private void Start()
     {
@@ -28,6 +29,10 @@ public class Slice : MonoBehaviour
         if(!progressScript.MatPicked || !progressScript.LHPicked || !progressScript.InfillPicked || (ImporterPanelsScript.Model == 2 && !supportsAdded))
         {
             notDone.SetActive(true);
+            if(!progressScript.modelPicked)
+            {
+                MP.SetActive(true);
+            }
             if(!progressScript.MatPicked)
             {
                 Mat.SetActive(true);

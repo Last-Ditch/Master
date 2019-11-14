@@ -65,7 +65,7 @@ public class SlowlyDown : MonoBehaviour
             fPickupScript.enabled = false;
             model.SetActive(true);
             speaker.enabled = true;
-            transform.Translate(0, -0.001f, 0);
+            transform.Translate(0, -0.008f, 0);
         }
 
         if (transform.localPosition.y <= animStopNo && !rising)

@@ -4,9 +4,9 @@ using UnityEngine;
 using UnityEngine.UI;
 public class Selection : MonoBehaviour
 {
-    [SerializeField] Material PLA, ABS, TPU, PTE;
-    [SerializeField] GameObject[] models;
-    [SerializeField] GameObject currentModel, currentObj;
+    public Material PLA, ABS, TPU, PTE;
+    public GameObject[] models;
+    public GameObject currentModel, currentObj;
     MeshRenderer[] children;
     Transform[] supprtChildren;
     GameObject defaultObj;
