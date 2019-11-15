@@ -8716,7 +8716,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: ULTIMAKER SLICR
+  m_Text: Generic 3d Slicing software
 --- !u!222 &1580179998
 CanvasRenderer:
   m_ObjectHideFlags: 0
