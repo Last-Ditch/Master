@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4465794, g: 0.49641597, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.49641538, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -862,11 +862,6 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Ultimaker Back
       objectReference: {fileID: 0}
-    - target: {fileID: 6934673021216967862, guid: 0c9751b1fc550144aa1774077b509364,
-        type: 3}
-      propertyPath: m_TagString
-      value: Untagged
-      objectReference: {fileID: 0}
     - target: {fileID: -5023644638669085872, guid: 0c9751b1fc550144aa1774077b509364,
         type: 3}
       propertyPath: m_Enabled
@@ -981,6 +976,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0.161
+      objectReference: {fileID: 0}
+    - target: {fileID: 6934673021216967862, guid: 0c9751b1fc550144aa1774077b509364,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c9751b1fc550144aa1774077b509364, type: 3}
@@ -1148,7 +1148,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Plastics!
+  m_text: "Filaments! \nMake sure to pick the same one\n as you chose when slicing!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
@@ -1192,7 +1192,7 @@ MonoBehaviour:
   m_charWidthMaxAdj: 0
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_overflowMode: 3
   m_firstOverflowCharacterIndex: -1
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
@@ -1217,12 +1217,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 122816803}
-    characterCount: 9
+    characterCount: 70
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 1
+    spaceCount: 14
+    wordCount: 13
     linkCount: 0
-    lineCount: 1
+    lineCount: 3
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
@@ -2609,17 +2609,17 @@ PrefabInstance:
     - target: {fileID: 343899617170572043, guid: 53a88e5f34ae06e42b99d833f75b08bc,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 10.22
+      value: 15.598786
       objectReference: {fileID: 0}
     - target: {fileID: 343899617170572043, guid: 53a88e5f34ae06e42b99d833f75b08bc,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 3.995586
+      value: 6.0984626
       objectReference: {fileID: 0}
     - target: {fileID: 343899617170572043, guid: 53a88e5f34ae06e42b99d833f75b08bc,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 6.3818474
+      value: 17.450308
       objectReference: {fileID: 0}
     - target: {fileID: 7913135358309473903, guid: 53a88e5f34ae06e42b99d833f75b08bc,
         type: 3}
@@ -24829,11 +24829,6 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Filament
       objectReference: {fileID: 0}
-    - target: {fileID: 6934673021216967862, guid: 0c9751b1fc550144aa1774077b509364,
-        type: 3}
-      propertyPath: m_TagString
-      value: Untagged
-      objectReference: {fileID: 0}
     - target: {fileID: -5023644638669085872, guid: 0c9751b1fc550144aa1774077b509364,
         type: 3}
       propertyPath: m_Enabled
@@ -24953,6 +24948,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 6934673021216967862, guid: 0c9751b1fc550144aa1774077b509364,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c9751b1fc550144aa1774077b509364, type: 3}
@@ -40810,11 +40810,6 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Filament
       objectReference: {fileID: 0}
-    - target: {fileID: 6934673021216967862, guid: 0c9751b1fc550144aa1774077b509364,
-        type: 3}
-      propertyPath: m_TagString
-      value: Untagged
-      objectReference: {fileID: 0}
     - target: {fileID: -5023644638669085872, guid: 0c9751b1fc550144aa1774077b509364,
         type: 3}
       propertyPath: m_Enabled
@@ -40934,6 +40929,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 6934673021216967862, guid: 0c9751b1fc550144aa1774077b509364,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c9751b1fc550144aa1774077b509364, type: 3}
@@ -46298,11 +46298,6 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Filament
       objectReference: {fileID: 0}
-    - target: {fileID: 6934673021216967862, guid: 0c9751b1fc550144aa1774077b509364,
-        type: 3}
-      propertyPath: m_TagString
-      value: Untagged
-      objectReference: {fileID: 0}
     - target: {fileID: -5023644638669085872, guid: 0c9751b1fc550144aa1774077b509364,
         type: 3}
       propertyPath: m_Enabled
@@ -46422,6 +46417,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 6934673021216967862, guid: 0c9751b1fc550144aa1774077b509364,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c9751b1fc550144aa1774077b509364, type: 3}
@@ -47776,11 +47776,6 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Filament
       objectReference: {fileID: 0}
-    - target: {fileID: 6934673021216967862, guid: 0c9751b1fc550144aa1774077b509364,
-        type: 3}
-      propertyPath: m_TagString
-      value: Untagged
-      objectReference: {fileID: 0}
     - target: {fileID: -5023644638669085872, guid: 0c9751b1fc550144aa1774077b509364,
         type: 3}
       propertyPath: m_Enabled
@@ -47900,6 +47895,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 6934673021216967862, guid: 0c9751b1fc550144aa1774077b509364,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c9751b1fc550144aa1774077b509364, type: 3}
@@ -49829,16 +49829,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1753907593}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: 000b40319daa51e4b8b2b046003a47ea,
-        type: 3}
-      propertyPath: m_Name
-      value: Tissue Box
-      objectReference: {fileID: 0}
-    - target: {fileID: -6990376597412257226, guid: 000b40319daa51e4b8b2b046003a47ea,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 136e2b5b523966646a8553d5c8a6ee8e, type: 2}
     - target: {fileID: -4216859302048453862, guid: 000b40319daa51e4b8b2b046003a47ea,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -49909,6 +49899,16 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.7200073
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 000b40319daa51e4b8b2b046003a47ea,
+        type: 3}
+      propertyPath: m_Name
+      value: Tissue Box
+      objectReference: {fileID: 0}
+    - target: {fileID: -6990376597412257226, guid: 000b40319daa51e4b8b2b046003a47ea,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 136e2b5b523966646a8553d5c8a6ee8e, type: 2}
     - target: {fileID: 1603612412206971952, guid: 000b40319daa51e4b8b2b046003a47ea,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -61206,7 +61206,7 @@ RectTransform:
   m_GameObject: {fileID: 1893256004}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -0.01}
-  m_LocalScale: {x: 0.0073513, y: 0.0073513, z: 0.7193053}
+  m_LocalScale: {x: 0.0020399631, y: 0.0036568309, z: 0.3578112}
   m_Children:
   - {fileID: 122816802}
   m_Father: {fileID: 246884065}
