@@ -28,6 +28,7 @@ TagManager:
   - Filament
   - PopUpText
   - PFeet
+  - Other
   layers:
   - Default
   - TransparentFX

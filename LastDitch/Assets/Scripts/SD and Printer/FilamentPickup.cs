@@ -152,6 +152,15 @@ public class FilamentPickup : MonoBehaviour
             }
             
         }
+        if (other.gameObject.tag == "Other")
+        {
+            
+            if (other.GetComponent<FilamentChoice>())
+            {
+                other.gameObject.GetComponent<FilamentChoice>().lookedAT = true;
+            }
+
+        }
         if (other.gameObject.tag == "Ultimaker Back")
         {
             filamentSpool = other.gameObject;
@@ -171,6 +180,15 @@ public class FilamentPickup : MonoBehaviour
         if (other.gameObject.tag == "Ultimaker Back")
         {
             filamentSpool = null;
+        }
+        if (other.gameObject.tag == "Other")
+        {
+
+            if (other.GetComponent<FilamentChoice>())
+            {
+                other.gameObject.GetComponent<FilamentChoice>().lookedAT = false;
+            }
+
         }
     }
 }
