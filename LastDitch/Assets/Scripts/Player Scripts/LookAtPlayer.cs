@@ -7,6 +7,7 @@ public class LookAtPlayer : MonoBehaviour
     public GameObject Player;
     public GameObject child;
     public bool LAenabled;
+    public bool QuickFix;
 
     void Start()
     {
@@ -18,7 +19,16 @@ public class LookAtPlayer : MonoBehaviour
         if(LAenabled)
         {
             child.SetActive(true);
-            transform.LookAt(Player.transform.position);
+            
+            if(QuickFix)
+            {
+                
+            }
+            else
+            {
+                transform.LookAt(Player.transform.position);
+            }
+            
         }
         else
         {

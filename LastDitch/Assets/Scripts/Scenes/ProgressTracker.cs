@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 public class ProgressTracker : MonoBehaviour
 {
     public bool sliced, sdIn, supportsAdded;
-    public bool MatPicked, LHPicked, InfillPicked, modelPicked;
+    public bool MatPicked, LHPicked, InfillPicked, modelPicked, TpuPicked;
     public int MaterialC, LayerHeightC, InfillC, ModelPicked;
 
 
@@ -30,6 +30,14 @@ public class ProgressTracker : MonoBehaviour
     {
         MatPicked = true;
         MaterialC = i;
+        if(i == 3)
+        {
+            TpuPicked = true;
+        }
+        else
+        {
+            TpuPicked = false;
+        }
     }
 
     public void LayerHeight(int i)
