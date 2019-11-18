@@ -38541,6 +38541,10 @@ MonoBehaviour:
   resumeButton: {fileID: 924874862}
   printButton: {fileID: 1769659405}
   printArea: {fileID: 1383405927}
+  spoolTrackerScript: {fileID: 0}
+  placedSpool: 0
+  placedCorrectSpool: 0
+  filamentInserted: 0
 --- !u!1 &351507597 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8309716595950070746, guid: c28824631715a424abf18df70e7e7eeb,
@@ -39198,6 +39202,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c23d7a6d191624b40b4a4b84a5344846, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  doneSlicr: 0
   audioClips:
   - {fileID: 8300000, guid: 191b9fe014b407b4b951ef262a4b38f9, type: 3}
   - {fileID: 8300000, guid: 72c25bf687c2cd24c93c1d85fc6c05f0, type: 3}
@@ -39279,8 +39284,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -118, y: 33}
-  m_SizeDelta: {x: 342.5, y: 342.5}
+  m_AnchoredPosition: {x: 3, y: -3}
+  m_SizeDelta: {x: 233, y: 233}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &396912304
 MonoBehaviour:
@@ -45572,16 +45577,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Pyramids: []
   Balls: []
+  fPickupScript: {fileID: 0}
   anim: {fileID: 255712352}
   model: {fileID: 0}
   completedSlicr: 0
   canGo: 0
   isPrinting: 0
+  donePrinting: 0
   stopPrinting: 0
   speaker: {fileID: 255712351}
   menuScript: {fileID: 342084087}
   sdd: 0
   infoScript: {fileID: 1383405930}
+  animStopNo: 0
+  instructions: {fileID: 0}
 --- !u!114 &1383405930
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45594,6 +45603,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a766ca6afc7022f418be4de33dd66e4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioSCript: {fileID: 0}
   progressScript: {fileID: 0}
   model: {fileID: 0}
   PLA: {fileID: 2100000, guid: 79b93ccb88b8b374fa50d155ac668d9c, type: 2}
@@ -46775,6 +46785,7 @@ MonoBehaviour:
   ultimakerMenu: {fileID: 0}
   hud: {fileID: 1462029101}
   pickup: {fileID: 2088191677}
+  fPickup: {fileID: 0}
 --- !u!114 &1445814732
 MonoBehaviour:
   m_ObjectHideFlags: 0

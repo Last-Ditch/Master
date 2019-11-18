@@ -50465,6 +50465,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1753907593}
     m_Modifications:
+    - target: {fileID: -927199367670048503, guid: 000b40319daa51e4b8b2b046003a47ea,
+        type: 3}
+      propertyPath: m_Name
+      value: Tissue Box
+      objectReference: {fileID: 0}
+    - target: {fileID: -6990376597412257226, guid: 000b40319daa51e4b8b2b046003a47ea,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 136e2b5b523966646a8553d5c8a6ee8e, type: 2}
     - target: {fileID: -4216859302048453862, guid: 000b40319daa51e4b8b2b046003a47ea,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -50535,16 +50545,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.7200073
       objectReference: {fileID: 0}
-    - target: {fileID: -927199367670048503, guid: 000b40319daa51e4b8b2b046003a47ea,
-        type: 3}
-      propertyPath: m_Name
-      value: Tissue Box
-      objectReference: {fileID: 0}
-    - target: {fileID: -6990376597412257226, guid: 000b40319daa51e4b8b2b046003a47ea,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 136e2b5b523966646a8553d5c8a6ee8e, type: 2}
     - target: {fileID: 1603612412206971952, guid: 000b40319daa51e4b8b2b046003a47ea,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
