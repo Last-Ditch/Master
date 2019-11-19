@@ -29,6 +29,7 @@ public class FilamentPickup : MonoBehaviour
             //Pick up
             if (filamentSpool.transform.GetChild(0).gameObject.GetComponent<MeshRenderer>().enabled && !haveFilament)
             {
+                GameObject.FindGameObjectWithTag("Progress").GetComponent<ProgressTracker>().filamentPickedUp = true;
                 //speaker.PlayOneShot(click);
                 anim = filamentSpool.GetComponent<Animator>();
                 anim.SetTrigger("Pickup");
@@ -64,6 +65,7 @@ public class FilamentPickup : MonoBehaviour
                 
                 if (filamentSpool.gameObject.tag == "Ultimaker Back")
                 {
+                    GameObject.FindGameObjectWithTag("Progress").GetComponent<ProgressTracker>().filamenttBackofPrinter = true;
                     anim = filamentSpool.GetComponent<Animator>();
                     if(filamentSpool.GetComponent<PrinterSpoolTracker>().full)
                     {

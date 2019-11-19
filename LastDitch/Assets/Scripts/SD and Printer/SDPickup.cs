@@ -25,6 +25,7 @@ public class SDPickup : MonoBehaviour
             
             if (sdSlot.gameObject.GetComponent<MeshRenderer>().enabled)
             {
+                GameObject.FindGameObjectWithTag("Progress").GetComponent<ProgressTracker>().sdPickedUp = true;
                 //speaker.PlayOneShot(click);
                 anim = sdSlot.GetComponent<Animator>();
                 anim.SetTrigger("SDOut");

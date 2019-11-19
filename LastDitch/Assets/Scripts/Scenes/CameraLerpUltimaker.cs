@@ -72,6 +72,7 @@ public class CameraLerpUltimaker : MonoBehaviour
 
     public void CameraIn()
     {
+        GameObject.FindGameObjectWithTag("Progress").GetComponent<ProgressTracker>().enterUltimakerMenu = true;
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
         transform.position = Vector3.Slerp(transform.position, screen.position, Time.deltaTime * 2f);

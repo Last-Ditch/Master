@@ -97,6 +97,7 @@ public class CameraLerp : MonoBehaviour
         {
             movingCam = false;
             timer = 2f;
+            GameObject.FindGameObjectWithTag("Progress").GetComponent<ProgressTracker>().enteredSlicr = true;
             SceneManager.LoadScene(2);
         }
     }
