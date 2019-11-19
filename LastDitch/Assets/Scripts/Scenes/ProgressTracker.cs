@@ -5,7 +5,8 @@ using UnityEngine.SceneManagement;
 public class ProgressTracker : MonoBehaviour
 {
     public bool sliced, sdIn, supportsAdded;
-    public bool MatPicked, LHPicked, InfillPicked, modelPicked, TpuPicked;
+    public bool MatPicked, LHPicked, InfillPicked, modelPicked, TpuPicked, enteredSlicr,
+        sdPickedUp, filamentPickedUp, filamenttBackofPrinter, enterUltimakerMenu, insertFilament, objectPrinting;
     public int MaterialC, LayerHeightC, InfillC, ModelPicked;
 
 

@@ -119,6 +119,7 @@ public class UltimakerMenu : MonoBehaviour
                 return;
             }
             ChangeMenu(8);
+            GameObject.FindGameObjectWithTag("Progress").GetComponent<ProgressTracker>().insertFilament = true;
             filamentInserted = true;
         }
     }
