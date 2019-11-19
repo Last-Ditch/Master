@@ -11,6 +11,7 @@ public class UltimakerMenu : MonoBehaviour
     public Button printButton;
     public GameObject printArea;
     public PrinterSpoolTracker spoolTrackerScript;
+    public WipeDownAndGlue wipeScript;
     //mainMenu, filamentMenu, printingMenu;
 
     //startPrint, resumeprint, filamentButton, lowerBuildPlate;
@@ -53,7 +54,8 @@ public class UltimakerMenu : MonoBehaviour
                 ChangeMenu(2);
                 resumeButton.interactable = true;
                 printButton.interactable = false;
-                revealScript.Printing();
+                wipeScript.WipeDown();
+                //revealScript.Printing();
             }
         }
         else

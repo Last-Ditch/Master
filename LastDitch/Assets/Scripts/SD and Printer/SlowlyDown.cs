@@ -101,6 +101,9 @@ public class SlowlyDown : MonoBehaviour
         }
     }
 
+
+
+
     public void Printing()
     {
         GameObject.FindGameObjectWithTag("Progress").GetComponent<ProgressTracker>().objectPrinting = true;

@@ -6,7 +6,7 @@ public class ProgressTracker : MonoBehaviour
 {
     public bool sliced, sdIn, supportsAdded;
     public bool MatPicked, LHPicked, InfillPicked, modelPicked, TpuPicked, enteredSlicr,
-        sdPickedUp, filamentPickedUp, filamenttBackofPrinter, enterUltimakerMenu, insertFilament, objectPrinting;
+        sdPickedUp, filamentPickedUp, filamenttBackofPrinter, enterUltimakerMenu, insertFilament, objectReadytoPrint, objectPrinting;
     public int MaterialC, LayerHeightC, InfillC, ModelPicked;
 
 
@@ -17,6 +17,10 @@ public class ProgressTracker : MonoBehaviour
         if (objs.Length > 1)
         {
             Destroy(this.gameObject);
+        }
+        if(SceneManager.GetActiveScene().buildIndex == 0)
+        {
+            Destroy(gameObject);
         }
 
         DontDestroyOnLoad(this.gameObject);
