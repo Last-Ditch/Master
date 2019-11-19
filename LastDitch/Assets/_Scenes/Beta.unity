@@ -43003,7 +43003,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   doneSlicr: 0
   audioClips:
-  - {fileID: 8300000, guid: d864a7a270d55e54eb6951581f7053f8, type: 3}
+  - {fileID: 8300000, guid: 1f18b32c103ef004c9a09892ca1be19f, type: 3}
   - {fileID: 8300000, guid: 12b9ef3c5e304c84fb45c1c07c298a45, type: 3}
   - {fileID: 8300000, guid: d3a6cd69de6efad48b1b1269b2af43e8, type: 3}
   - {fileID: 8300000, guid: eba93359cc6257f48b10bef4a5df05d5, type: 3}
@@ -55598,6 +55598,12 @@ MonoBehaviour:
   Ball1: {fileID: 6877518937024789840, guid: 143c9d58b30818a419a06a59233cbb7f, type: 3}
   Ball2: {fileID: 7870886269677795250, guid: effb92eb2ebaa534a8e4e93852986f4d, type: 3}
   Ball3: {fileID: 8248065471665429771, guid: c22707978ae811a4db3b45e27e779590, type: 3}
+  Pawn1: {fileID: 834492388561155876, guid: adbcc67f6b50b3642aeb9c4d53df13e2, type: 3}
+  Pawn2: {fileID: 1800415793437650932, guid: 1d47acd2e8467864287ae778a1a5c9f2, type: 3}
+  Pawn3: {fileID: 7926004589814365196, guid: 0e29e1a5e3f3b7d4d856f1af98e8519b, type: 3}
+  Arch1: {fileID: 6953448862662618939, guid: 92b4b3d7b226df040a739fa21d49400c, type: 3}
+  Arch2: {fileID: 9219807971175092793, guid: 452bfff231e19184f833d22f7dc193a1, type: 3}
+  Arch3: {fileID: 1918062734148335638, guid: 1c1eb7aad44a2524bb924b746a4ab0e7, type: 3}
   donePrinting: 0
   PhysPLA: {fileID: 13400000, guid: 9b6b1e93bea00e343bb7685bef0e5f02, type: 2}
   PhysABS: {fileID: 13400000, guid: ac8fd7ffeb58c2f46b7214f47ca83774, type: 2}

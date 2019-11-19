@@ -13,7 +13,9 @@ public class ExtractInfo : MonoBehaviour
     public SDPickup SDCardScript;
     public SlowlyDown revealScript;
     public GameObject Pyr1, Pyr2, Pyr3,
-                      Ball1, Ball2, Ball3;
+                      Ball1, Ball2, Ball3,
+                      Pawn1, Pawn2, Pawn3,
+                      Arch1, Arch2, Arch3;
     bool canPrint = true;
     public bool donePrinting;
     public PhysicMaterial PhysPLA, PhysABS, PhysTPU, PhysPTE;
@@ -103,6 +105,8 @@ public class ExtractInfo : MonoBehaviour
                     //model.SetActive(true);
                     break;
             }
+
+
             SetInfill();
 
             MaterialChange();
@@ -124,6 +128,98 @@ public class ExtractInfo : MonoBehaviour
             revealScript.animStopNo = 88;
 
         }
+
+        if (progressScript.ModelPicked == 3)
+        {
+            switch (progressScript.LayerHeightC)
+            {
+                case 3:
+                    model = Instantiate(Pawn3, transform, false);
+                    //model.SetActive(true);
+                    break;
+                case 2:
+                    model = Instantiate(Pawn2, transform, false);
+                    //model.SetActive(true);
+                    break;
+                case 1:
+                    model = Instantiate(Pawn1, transform, false);
+                    //model.SetActive(true);
+                    break;
+                default:
+                    model = Instantiate(Pawn1, transform, false);
+                    //model.SetActive(true);
+                    break;
+            }
+
+
+            SetInfill();
+
+            MaterialChange();
+
+            if (progressScript.supportsAdded)
+            {
+                supprtChildren = model.GetComponentsInChildren<Transform>();
+                if (supprtChildren != null)
+                {
+                    foreach (Transform g in supprtChildren)
+                    {
+                        if (g.gameObject.tag == "Support")
+                        {
+                            g.GetComponent<MeshRenderer>().enabled = true;
+                        }
+                    }
+                }
+            }
+            revealScript.animStopNo = 88;
+
+        }
+
+        if (progressScript.ModelPicked == 4)
+        {
+            switch (progressScript.LayerHeightC)
+            {
+                case 3:
+                    model = Instantiate(Arch3, transform, false);
+                    //model.SetActive(true);
+                    break;
+                case 2:
+                    model = Instantiate(Arch2, transform, false);
+                    //model.SetActive(true);
+                    break;
+                case 1:
+                    model = Instantiate(Arch1, transform, false);
+                    //model.SetActive(true);
+                    break;
+                default:
+                    model = Instantiate(Arch1, transform, false);
+                    //model.SetActive(true);
+                    break;
+            }
+
+
+            SetInfill();
+
+            MaterialChange();
+
+            if (progressScript.supportsAdded)
+            {
+                supprtChildren = model.GetComponentsInChildren<Transform>();
+                if (supprtChildren != null)
+                {
+                    foreach (Transform g in supprtChildren)
+                    {
+                        if (g.gameObject.tag == "Support")
+                        {
+                            g.GetComponent<MeshRenderer>().enabled = true;
+                        }
+                    }
+                }
+            }
+            revealScript.animStopNo = 88;
+
+        }
+
+
         revealScript.model = model;
     }
 
