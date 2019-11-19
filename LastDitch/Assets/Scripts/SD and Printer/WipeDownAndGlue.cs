@@ -5,18 +5,29 @@ using UnityEngine;
 public class WipeDownAndGlue : MonoBehaviour
 {
     ProgressTracker progressScript;
-    SlowlyDown slowlyScript;
+    public SlowlyDown slowlyScript;
     Animator anim;
+    public bool canWipe;
 
     void Start()
     {
-        progressScript = GetComponent<ProgressTracker>();
+        
         anim = GetComponent<Animator>();
     }
 
-
-    public void WipeDown()
+    private void Update()
     {
+        if (canWipe && Input.GetButtonDown("Jump"))
+        {
+            canWipe = false;
+            StartCoroutine(delay());
+        }
+    }
+
+
+    void WipeDown()
+    {
+        progressScript = GameObject.FindGameObjectWithTag("Progress").GetComponent<ProgressTracker>();
         GameObject.FindGameObjectWithTag("Progress").GetComponent<ProgressTracker>().objectReadytoPrint = true;
         anim.SetTrigger("Wipe");
         if(progressScript.TpuPicked)
@@ -34,4 +45,11 @@ public class WipeDownAndGlue : MonoBehaviour
         slowlyScript.Printing();
     }
 
+
+
+    IEnumerator delay()
+    {
+        yield return new WaitForSeconds(2f);
+        WipeDown();
+    }
 }

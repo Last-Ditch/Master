@@ -54,7 +54,7 @@ public class UltimakerMenu : MonoBehaviour
                 ChangeMenu(2);
                 resumeButton.interactable = true;
                 printButton.interactable = false;
-                wipeScript.WipeDown();
+                wipeScript.canWipe = true;
                 //revealScript.Printing();
             }
         }

@@ -2120,14 +2120,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 186640344}
-  m_LocalRotation: {x: -0, y: 0.17986831, z: -0, w: 0.98369074}
-  m_LocalPosition: {x: 0.0129997935, y: 0.4900001, z: 0.7709999}
+  m_LocalRotation: {x: -0, y: 0.9998112, z: -0, w: 0.019430948}
+  m_LocalPosition: {x: 0.01, y: 0.4900001, z: 0.465}
   m_LocalScale: {x: 0.7568316, y: 0.056058332, z: 0.5825499}
   m_Children:
   - {fileID: 1429073245}
   m_Father: {fileID: 1373767553}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 177.77301, z: 0}
 --- !u!114 &186640346
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2143,7 +2143,7 @@ MonoBehaviour:
   Player: {fileID: 1445814726}
   child: {fileID: 1429073244}
   LAenabled: 0
-  QuickFix: 0
+  QuickFix: 1
 --- !u!1001 &198163794
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2156,15 +2156,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: GLueStick
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: db04ec9b8ba6c804c8a9c6352626291f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -5580916350219692131, guid: db04ec9b8ba6c804c8a9c6352626291f,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 56f02287178ec0049b4b768f8aa90092, type: 2}
+    - target: {fileID: -5580916350219692131, guid: db04ec9b8ba6c804c8a9c6352626291f,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: db04ec9b8ba6c804c8a9c6352626291f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.39049757
+      value: -0.3904976
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: db04ec9b8ba6c804c8a9c6352626291f,
         type: 3}
@@ -2241,6 +2251,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 333be24ee2613ae4e908129683198b34, type: 2}
+    - target: {fileID: -2911559083550024789, guid: db04ec9b8ba6c804c8a9c6352626291f,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.1016
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db04ec9b8ba6c804c8a9c6352626291f, type: 3}
 --- !u!1 &214395795
@@ -35700,6 +35715,7 @@ GameObject:
   - component: {fileID: 255477822}
   - component: {fileID: 255712351}
   - component: {fileID: 255712352}
+  - component: {fileID: 255712353}
   m_Layer: 0
   m_Name: Assembly UM2 stepfile
   m_TagString: Untagged
@@ -35822,6 +35838,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &255712353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 255712350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15d9cfb0a17337740b1642e6361943e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slowlyScript: {fileID: 1383405929}
+  canWipe: 0
 --- !u!1 &255712768
 GameObject:
   m_ObjectHideFlags: 0
@@ -41899,7 +41929,7 @@ MonoBehaviour:
   printButton: {fileID: 1769659405}
   printArea: {fileID: 1383405927}
   spoolTrackerScript: {fileID: 600518275}
-  wipeScript: {fileID: 0}
+  wipeScript: {fileID: 255712353}
   placedSpool: 0
   placedCorrectSpool: 0
   filamentInserted: 0
@@ -57261,7 +57291,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1453003801}
   - component: {fileID: 1453003803}
-  - component: {fileID: 1453003802}
   m_Layer: 0
   m_Name: Ultimaker
   m_TagString: Ultimaker
@@ -57292,25 +57321,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 35.202, z: 0}
---- !u!95 &1453003802
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1453003800}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 84143bae5fd42944a8903f1116839602, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!65 &1453003803
 BoxCollider:
   m_ObjectHideFlags: 0
