@@ -8,7 +8,7 @@ public class Audio : MonoBehaviour
     public bool doneSlicr;
     public AudioClip[] audioClips;
     AudioSource speaker;
-    bool explosive, touchy;
+    bool explosive, touchy,end;
     public static int counter = 0;
     
 
@@ -82,6 +82,15 @@ public class Audio : MonoBehaviour
         {
             AudioButton(14);
             touchy = true;
+        }
+    }
+
+    public void EndPrint()
+    {
+        if (!end)
+        {
+            AudioButton(12);
+            end = true;
         }
     }
 }

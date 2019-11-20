@@ -34,6 +34,7 @@ public class Destruction : MonoBehaviour
                         t.GetComponent<Rigidbody>().isKinematic = false;
                         t.GetComponent<Rigidbody>().useGravity = true;
                         t.GetComponent<Collider>().enabled = true;
+                        ObjectPickup.pickup = false;
                     }
                 }
                 StartCoroutine(Countdown());

@@ -13,6 +13,8 @@ public class WhiteBoardChangeScipt : MonoBehaviour
     {
         Board = GetComponent<AudioSource>();
         SR = GetComponent<SpriteRenderer>();
+
+        //dont destroy on load objects reset references whever the scene changes, use this to get around that
         PT = GameObject.FindGameObjectWithTag("Progress").GetComponent<ProgressTracker>();
     }
 

@@ -5,19 +5,19 @@ using UnityEngine;
 public class ObjectPickup : MonoBehaviour
 {
 
-    public GameObject model;
+    public GameObject model, canPickup;
     public GameObject hand;
     public GameObject head;
-    bool pickup;
+    public static bool pickup;
     Rigidbody rb;
 
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
         {
-            if (model != null)
+            if (canPickup != null && !pickup)
             {
-                
+                model = canPickup;
                 model.GetComponent<BreakawayStructure>().PickedUp();
                 rb = model.GetComponent<Rigidbody>();
                 rb.velocity = Vector3.zero;
@@ -28,12 +28,18 @@ public class ObjectPickup : MonoBehaviour
                 pickup = true;
                 model.transform.position = hand.transform.position;
                 model.transform.parent = head.transform;
+
             }
         }
 
         if (model != null && pickup)
         {
             model.transform.position = hand.transform.position;
+        }
+
+        if(!model.gameObject && pickup)
+        {
+            pickup = false;
         }
 
         if (Input.GetMouseButtonDown(1))
@@ -61,7 +67,7 @@ public class ObjectPickup : MonoBehaviour
     {
         if (other.gameObject.tag == "Interactable")
         {
-            model = other.gameObject;
+            canPickup = other.gameObject;
             
         }
     }
@@ -70,7 +76,7 @@ public class ObjectPickup : MonoBehaviour
     {
         if (other.gameObject.tag == "Interactable")
         {
-            model = null;
+            canPickup = null;
         }
     }
 

@@ -32,7 +32,7 @@ public class SlowlyDown : MonoBehaviour
         rising = false;
         hasRisen = false;
         isPrinting = false;
-        donePrinting = false;
+        
         stopPrinting = false;
         transform.localPosition = new Vector3(0, 1, 0);
         menuScript.ChangeMenu(0);
@@ -50,7 +50,7 @@ public class SlowlyDown : MonoBehaviour
             transform.Translate(0, 0.01f, 0);
             if (transform.localPosition.y >= 197.4)
             {
-                ClockMove.speed = 500;
+                
                 StartCoroutine(animPlay());
                 rising = false;
                 hasRisen = true;
@@ -70,6 +70,7 @@ public class SlowlyDown : MonoBehaviour
             if(!donePrinting)
             {
                 speaker.enabled = true;
+                speaker.playOnAwake = true;
                 transform.Translate(0, -0.005f, 0);
             }
             else
@@ -79,17 +80,17 @@ public class SlowlyDown : MonoBehaviour
             }
         }
 
-        if (transform.localPosition.y <= animStopNo && !rising)
+        if (transform.localPosition.y <= animStopNo && !rising && !donePrinting)
         {
-            
-            anim.SetTrigger("StopPrinting");
+            Debug.Log("StopPrinting");
+            anim.SetBool("StopPrinting", true);
             donePrinting = true;
         }
 
         if (transform.localPosition.y <= 0 && !stopPrinting)
         {
             fPickupScript.enabled = true;
-            GameObject.FindGameObjectWithTag("Speaker").GetComponent<Audio>().AudioButton(12);
+            GameObject.FindGameObjectWithTag("Speaker").GetComponent<Audio>().EndPrint();
             ClockMove.speed = 1;
             Debug.Log("EP");
             instructions.SetActive(true);
@@ -117,6 +118,7 @@ public class SlowlyDown : MonoBehaviour
 
     public void StopPrinting()
     {
+        
         anim.SetTrigger("StopPrinting");
         canGo = false;
     }
@@ -127,7 +129,10 @@ public class SlowlyDown : MonoBehaviour
         anim.SetTrigger("IntoPosition");
         yield return new WaitForSeconds(1.5f);
         anim.SetTrigger("StartPrinting");
+        anim.SetBool("StopPrinting", false);
+        ClockMove.speed = 500;
         canGo = true;
+        donePrinting = false;
         isPrinting = true;
         Debug.Log("SP");
     }
