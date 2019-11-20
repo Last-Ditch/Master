@@ -43,6 +43,7 @@ public class WipeDownAndGlue : MonoBehaviour
     public void SendPrintMesssage()
     {
         slowlyScript.Printing();
+        GameObject.FindGameObjectWithTag("Progress").GetComponent<ProgressTracker>().bedGlued = true;
     }
 
 

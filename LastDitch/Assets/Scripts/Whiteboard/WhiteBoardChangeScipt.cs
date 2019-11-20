@@ -5,7 +5,7 @@ using UnityEngine;
 public class WhiteBoardChangeScipt : MonoBehaviour
 {
     public Sprite[] boardSprites;
-    public ProgressTracker PT;
+     ProgressTracker PT;
     AudioSource Board;
     private SpriteRenderer SR;
 
@@ -13,6 +13,7 @@ public class WhiteBoardChangeScipt : MonoBehaviour
     {
         Board = GetComponent<AudioSource>();
         SR = GetComponent<SpriteRenderer>();
+        PT = GameObject.FindGameObjectWithTag("Progress").GetComponent<ProgressTracker>();
     }
 
     public void Update()

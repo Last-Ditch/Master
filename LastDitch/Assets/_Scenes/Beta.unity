@@ -43003,7 +43003,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   doneSlicr: 0
   audioClips:
-  - {fileID: 8300000, guid: 1f18b32c103ef004c9a09892ca1be19f, type: 3}
+  - {fileID: 8300000, guid: 191b9fe014b407b4b951ef262a4b38f9, type: 3}
   - {fileID: 8300000, guid: 12b9ef3c5e304c84fb45c1c07c298a45, type: 3}
   - {fileID: 8300000, guid: d3a6cd69de6efad48b1b1269b2af43e8, type: 3}
   - {fileID: 8300000, guid: eba93359cc6257f48b10bef4a5df05d5, type: 3}
@@ -61354,7 +61354,6 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 25ea1e0e0ded1d34e9a5a10630028702, type: 3}
   - {fileID: 21300000, guid: f9cd867d90a0fed4b89e79fc1b3059f8, type: 3}
   - {fileID: 21300000, guid: ed826aab5b7b97b47ac6f84f9a98f38a, type: 3}
-  PT: {fileID: 84816720300294336}
 --- !u!212 &1776236027
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -66356,18 +66355,6 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 1a752c0003704844f81d19498e965d48, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e12d76ed9911217428d5b32df6000f60, type: 3}
---- !u!114 &84816720300294336 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 84816720365471767, guid: e12d76ed9911217428d5b32df6000f60,
-    type: 3}
-  m_PrefabInstance: {fileID: 84816720300294335}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1312663225}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 52af2f9e341d18d4386fbf22d72c9b55, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &107476911190681630
 GameObject:
   m_ObjectHideFlags: 0
