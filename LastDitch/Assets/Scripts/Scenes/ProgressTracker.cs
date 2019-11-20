@@ -6,7 +6,7 @@ public class ProgressTracker : MonoBehaviour
 {
     public bool sliced, sdIn, supportsAdded;
     public bool MatPicked, LHPicked, InfillPicked, modelPicked, TpuPicked, enteredSlicr,
-        sdPickedUp, filamentPickedUp, filamenttBackofPrinter, enterUltimakerMenu, insertFilament, objectReadytoPrint, objectPrinting;
+        sdPickedUp, filamentPickedUp, filamenttBackofPrinter, bedGlued, enterUltimakerMenu, insertFilament, objectReadytoPrint, objectPrinting;
     public int MaterialC, LayerHeightC, InfillC, ModelPicked;
 
 
