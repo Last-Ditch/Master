@@ -6,8 +6,8 @@ using UnityEngine.SceneManagement;
 public class pause_menu : MonoBehaviour
 {
 
-    public static bool paused = false;
-
+    public bool paused = false;
+    public static bool canPause = true;
     public GameObject pause_menu_ui;
 
     public GameObject game_ui;
@@ -20,16 +20,19 @@ public class pause_menu : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) && canPause)
         {
-            if (paused)
-            {
-                resume();
-            }
-            else
+            if (!paused)
             {
                 pause();
             }
+        }
+
+        if(SceneManager.GetActiveScene().buildIndex == 0)
+        {
+            Time.timeScale = 1f;
+            paused = false;
+            resume();
         }
     }
 

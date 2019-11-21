@@ -21,6 +21,10 @@ public class ChangeScene : MonoBehaviour
     {
         if(index == 0)
         {
+            Time.timeScale = 1f;
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+            AudioListener.pause = false;
             Audio.counter = 0;
         }
         SceneManager.LoadScene(index);

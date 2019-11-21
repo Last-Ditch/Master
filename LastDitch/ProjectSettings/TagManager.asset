@@ -29,6 +29,7 @@ TagManager:
   - PopUpText
   - PFeet
   - Other
+  - UI
   layers:
   - Default
   - TransparentFX

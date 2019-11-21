@@ -21,6 +21,8 @@ public class WhiteBoardChangeScipt : MonoBehaviour
     public void Update()
     {
 
+
+
         if( PT.enteredSlicr == true)
         {
             Board.Play();

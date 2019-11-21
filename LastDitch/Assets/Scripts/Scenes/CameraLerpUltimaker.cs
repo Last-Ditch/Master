@@ -63,6 +63,7 @@ public class CameraLerpUltimaker : MonoBehaviour
         {
             movingCam = false;
             timer = 2f;
+            pause_menu.canPause = true;
             player.GetComponent<player_controller>().enabled = true;
             player.GetComponentInChildren<player_look>().enabled = true;
             pickup.enabled = true;
@@ -77,6 +78,7 @@ public class CameraLerpUltimaker : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
         transform.position = Vector3.Slerp(transform.position, screen.position, Time.deltaTime * 2f);
         transform.rotation = Quaternion.Slerp(transform.rotation, screen.rotation, Time.time * 0.5f);
+        pause_menu.canPause = false;
         player.GetComponent<player_controller>().enabled = false;
         player.GetComponentInChildren<player_look>().enabled = false;
         

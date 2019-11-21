@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class SlowlyDown : MonoBehaviour
 {
 
@@ -28,6 +28,7 @@ public class SlowlyDown : MonoBehaviour
     public float animStopNo;
     public GameObject instructions;
     public GameObject instructionsSpace;
+    public Button MenuButton;
 
     ProgressTracker progressScript;
     private void Start()
@@ -64,13 +65,15 @@ public class SlowlyDown : MonoBehaviour
                 anim.SetTrigger("CleanNozzle");
                 anim.SetBool("PausePrinting", false);
                 anim.SetBool("StopPrinting", false);
+                MenuButton.interactable = false;
             }
 
             return;
         }
         if (transform.localPosition.y <= 140 && !rising && progressScript.blocked && canGo && progressScript.ModelPicked == 3)
         {
-            Debug.Log(transform.position.y);
+            //Debug.Log(transform.position.y);
+            MenuButton.interactable = true;
             anim.SetBool("PausePrinting", true);
             GameObject.FindGameObjectWithTag("Speaker").GetComponent<Audio>().Nozzle();
             ClockMove.speed = 1;
@@ -151,7 +154,7 @@ public class SlowlyDown : MonoBehaviour
             fPickupScript.enabled = true;
             GameObject.FindGameObjectWithTag("Speaker").GetComponent<Audio>().EndPrint();
             ClockMove.speed = 1;
-            Debug.Log("EP");
+            //Debug.Log("EP");
             instructionsSpace.SetActive(false);
             instructions.SetActive(true);
             model.tag = "Interactable";
@@ -194,7 +197,7 @@ public class SlowlyDown : MonoBehaviour
         canGo = true;
         donePrinting = false;
         isPrinting = true;
-        Debug.Log("SP");
+        //Debug.Log("SP");
     }
 
 

@@ -43620,7 +43620,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1383405927}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 66fb8b004c871ff4b971824161a996f0, type: 3}
   m_Name: 
@@ -43630,15 +43630,21 @@ MonoBehaviour:
   fPickupScript: {fileID: 0}
   anim: {fileID: 255712352}
   model: {fileID: 0}
+  holdModel: {fileID: 0}
   completedSlicr: 0
   canGo: 0
+  lowerbuildPlate: 0
   isPrinting: 0
+  donePrinting: 0
   stopPrinting: 0
   speaker: {fileID: 255712351}
   menuScript: {fileID: 0}
   sdd: 0
   infoScript: {fileID: 0}
   animStopNo: 0
+  instructions: {fileID: 0}
+  instructionsSpace: {fileID: 0}
+  MenuButton: {fileID: 0}
 --- !u!1 &1384408785
 GameObject:
   m_ObjectHideFlags: 0
@@ -44045,6 +44051,7 @@ GameObject:
   - component: {fileID: 1453003801}
   - component: {fileID: 1453003803}
   - component: {fileID: 1453003802}
+  - component: {fileID: 1453003804}
   m_Layer: 0
   m_Name: Ultimaker
   m_TagString: Ultimaker
@@ -44096,6 +44103,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 623.8566, y: 1631.6426, z: 661.67145}
   m_Center: {x: -7.6470714, y: -446.8927, z: 325.8357}
+--- !u!114 &1453003804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1453003800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9aaa661965642404b8f87cbd7dd8715e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1458349564 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6090750197725042024, guid: c971787a5895e8a46bc95bdd414f5ea0,

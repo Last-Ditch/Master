@@ -18,16 +18,16 @@ public class ProgressTracker : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
-        if(SceneManager.GetActiveScene().buildIndex == 0)
-        {
-            Destroy(gameObject);
-        }
+
 
         DontDestroyOnLoad(this.gameObject);
     }
 
+
+
     private void Start()
     {
+
         PlayerPrefs.SetInt("Disabled", 1);
     }
 
