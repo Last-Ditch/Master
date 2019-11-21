@@ -27,6 +27,7 @@ public class SlowlyDown : MonoBehaviour
     public ExtractInfo infoScript;
     public float animStopNo;
     public GameObject instructions;
+    public GameObject instructionsSpace;
 
     ProgressTracker progressScript;
     private void Start()
@@ -151,6 +152,7 @@ public class SlowlyDown : MonoBehaviour
             GameObject.FindGameObjectWithTag("Speaker").GetComponent<Audio>().EndPrint();
             ClockMove.speed = 1;
             Debug.Log("EP");
+            instructionsSpace.SetActive(false);
             instructions.SetActive(true);
             model.tag = "Interactable";
             speaker.enabled = false;
