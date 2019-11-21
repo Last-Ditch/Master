@@ -37,7 +37,7 @@ public class tutorial : MonoBehaviour
 
     IEnumerator kill()
     {
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(10);
         Debug.Log(3333333);
         playedAlready = true;
     }
