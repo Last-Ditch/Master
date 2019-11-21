@@ -6,7 +6,7 @@ public class ExtractInfo : MonoBehaviour
 {
     public Audio audioSCript;
     public ProgressTracker progressScript;
-    public GameObject model;
+    public GameObject model, holdModel;
     public Material PLA, ABS, TPU, PTE;
     public Transform[] children;
     public Transform[] supprtChildren;
@@ -15,11 +15,13 @@ public class ExtractInfo : MonoBehaviour
     public GameObject Pyr1, Pyr2, Pyr3,
                       Ball1, Ball2, Ball3,
                       Pawn1, Pawn2, Pawn3,
-                      Arch1, Arch2, Arch3;
+                      Arch1, Arch2, Arch3,
+                      nozzle1,nozzle2,nozzle3;
     bool canPrint = true;
     public bool donePrinting;
     public PhysicMaterial PhysPLA, PhysABS, PhysTPU, PhysPTE;
 
+    public GameObject[] blockedMod;
 
     private void Start()
     {
@@ -172,6 +174,15 @@ public class ExtractInfo : MonoBehaviour
             }
             revealScript.animStopNo = 88;
 
+            if(progressScript.blocked)
+            {
+                holdModel = model;
+                revealScript.holdModel = holdModel;
+                model.SetActive(false);
+                model = blockedMod[progressScript.LayerHeightC - 1];
+                model.SetActive(true);
+            }
+            MaterialChange();
         }
 
         if (progressScript.ModelPicked == 4)

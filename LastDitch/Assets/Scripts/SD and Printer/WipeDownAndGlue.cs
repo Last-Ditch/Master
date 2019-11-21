@@ -46,7 +46,10 @@ public class WipeDownAndGlue : MonoBehaviour
         GameObject.FindGameObjectWithTag("Progress").GetComponent<ProgressTracker>().bedGlued = true;
     }
 
-
+    public void Resume()
+    {
+        slowlyScript.Resume();
+    }
 
     IEnumerator delay()
     {
