@@ -9,6 +9,8 @@ public class ObjectPickup : MonoBehaviour
     public GameObject hand;
     public GameObject head;
     public static bool pickup;
+    public bool in_hand;
+
     Rigidbody rb;
 
     void Update()
@@ -17,6 +19,7 @@ public class ObjectPickup : MonoBehaviour
         {
             if (canPickup != null && !pickup)
             {
+                in_hand = true;                //Dylan
                 model = canPickup;
                 model.GetComponent<BreakawayStructure>().PickedUp();
                 rb = model.GetComponent<Rigidbody>();
@@ -51,12 +54,14 @@ public class ObjectPickup : MonoBehaviour
 
     void Throw()
     {
+        
         pickup = false;
         model.GetComponent<Destruction>().canBeDamaged = true;
         model.GetComponent<Collider>().enabled = true;
         model.transform.parent = null;
         model.GetComponent<Rigidbody>().AddForce(hand.transform.forward * 5000);
         model.GetComponent<Rigidbody>().useGravity = true;
+        in_hand = false;                //Dylan
 
     }
 

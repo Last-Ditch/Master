@@ -20,7 +20,7 @@ public class SDPickup : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.E) && sdSlot!=null)
+        if (Input.GetMouseButtonDown(0) && sdSlot!=null)
         {
             
             if (sdSlot.gameObject.GetComponent<MeshRenderer>().enabled)
