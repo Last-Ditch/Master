@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\Dylan -G-\.Rider2019.2\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Dylan -G-\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_LastDitch.-958359106.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Dylan -G-\Desktop\Unity Games\Master\LastDitch" t="IncludeRecursive">
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="FinalVoice.cs" t="Include" />
+        <e p="Scripts" t="Include">
+          <e p="Bin" t="Include">
+            <e p="bin.cs" t="Include" />
+          </e>
+          <e p="Clock" t="Include">
+            <e p="ClockMove.cs" t="Include" />
+          </e>
+          <e p="Hoop" t="Include">
+            <e p="hoop.cs" t="Include" />
+          </e>
+          <e p="Player Scripts" t="Include">
+            <e p="BreakawayStructure.cs" t="Include" />
+            <e p="Destruction.cs" t="Include" />
+            <e p="explode.cs" t="Include" />
+            <e p="FilamentLocationDetection.cs" t="Include" />
+            <e p="Kill.cs" t="Include" />
+            <e p="Laptop.cs" t="Include" />
+            <e p="LookAtPlayer.cs" t="Include" />
+            <e p="ObjectPickup.cs" t="Include" />
+            <e p="pickup.cs" t="Include" />
+            <e p="player_controller.cs" t="Include" />
+            <e p="player_look.cs" t="Include" />
+            <e p="PopUpObject.cs" t="Include" />
+            <e p="PopUps.cs" t="Include" />
+            <e p="Ultimaker.cs" t="Include" />
+            <e p="WallDamage.cs" t="Include" />
+          </e>
+          <e p="Scenes" t="Include">
+            <e p="Audio.cs" t="Include" />
+            <e p="AudioLevels.cs" t="Include" />
+            <e p="CameraLerp.cs" t="Include" />
+            <e p="CameraLerpUltimaker.cs" t="Include" />
+            <e p="ChangeScene.cs" t="Include" />
+            <e p="KillProgress.cs" t="Include" />
+            <e p="OnLoad.cs" t="Include" />
+            <e p="ProgressTracker.cs" t="Include" />
+            <e p="SendExplosiveMessage.cs" t="Include" />
+            <e p="SetVoice.cs" t="Include" />
+          </e>
+          <e p="SD and Printer" t="Include">
+            <e p="ActivateDeactiveateSpool.cs" t="Include" />
+            <e p="Clicks.cs" t="Include" />
+            <e p="FilamentChangeChildren.cs" t="Include" />
+            <e p="FilamentChoice.cs" t="Include" />
+            <e p="FilamentPickup.cs" t="Include" />
+            <e p="PlayClick.cs" t="Include" />
+            <e p="PrinterSpoolTracker.cs" t="Include" />
+            <e p="SDPickup.cs" t="Include" />
+            <e p="SlowlyDown.cs" t="Include" />
+            <e p="UltimakerMenu.cs" t="Include" />
+            <e p="WipeDownAndGlue.cs" t="Include" />
+          </e>
+          <e p="Slicr" t="Include">
+            <e p="CheckForSupports.cs" t="Include" />
+            <e p="ExtractInfo.cs" t="Include" />
+            <e p="FadeOut.cs" t="Include" />
+            <e p="FreeMouse.cs" t="Include" />
+            <e p="ImporterPanels.cs" t="Include" />
+            <e p="InfillCrossSect.cs" t="Include" />
+            <e p="Selection.cs" t="Include" />
+            <e p="Slice.cs" t="Include" />
+            <e p="TimeToPrint.cs" t="Include" />
+            <e p="TransferProgress.cs" t="Include" />
+          </e>
+          <e p="Start &amp; pause Menu" t="Include">
+            <e p="pause_menu.cs" t="Include" />
+            <e p="start_menu.cs" t="Include" />
+          </e>
+          <e p="UI Scripts" t="Include">
+            <e p="text_appear.cs" t="Include" />
+            <e p="tutorial.cs" t="Include" />
+          </e>
+          <e p="Whiteboard" t="Include">
+            <e p="WhiteBoardChangeScipt.cs" t="Include" />
+          </e>
+        </e>
+        <e p="Shaders" t="Include">
+          <e p="DepthMask.shader" t="Include" />
+          <e p="StayVisible.shader" t="Include" />
+        </e>
+        <e p="TextMesh Pro" t="Include">
+          <e p="Examples &amp; Extras" t="Include">
+            <e p="Fonts" t="Include">
+              <e p="Anton OFL.txt" t="Include" />
+              <e p="Bangers - OFL.txt" t="Include" />
+              <e p="Oswald-Bold - OFL.txt" t="Include" />
+            </e>
+            <e p="Scripts" t="Include">
+              <e p="Benchmark01.cs" t="Include" />
+              <e p="Benchmark01_UGUI.cs" t="Include" />
+              <e p="Benchmark02.cs" t="Include" />
+              <e p="Benchmark03.cs" t="Include" />
+              <e p="Benchmark04.cs" t="Include" />
+              <e p="CameraController.cs" t="Include" />
+              <e p="ChatController.cs" t="Include" />
+              <e p="EnvMapAnimator.cs" t="Include" />
+              <e p="ObjectSpin.cs" t="Include" />
+              <e p="ShaderPropAnimator.cs" t="Include" />
+              <e p="SimpleScript.cs" t="Include" />
+              <e p="SkewTextExample.cs" t="Include" />
+              <e p="TeleType.cs" t="Include" />
+              <e p="TextConsoleSimulator.cs" t="Include" />
+              <e p="TextMeshProFloatingText.cs" t="Include" />
+              <e p="TextMeshSpawner.cs" t="Include" />
+              <e p="TMP_DigitValidator.cs" t="Include" />
+              <e p="TMP_ExampleScript_01.cs" t="Include" />
+              <e p="TMP_FrameRateCounter.cs" t="Include" />
+              <e p="TMP_PhoneNumberValidator.cs" t="Include" />
+              <e p="TMP_TextEventCheck.cs" t="Include" />
+              <e p="TMP_TextEventHandler.cs" t="Include" />
+              <e p="TMP_TextInfoDebugTool.cs" t="Include" />
+              <e p="TMP_TextSelector_A.cs" t="Include" />
+              <e p="TMP_TextSelector_B.cs" t="Include" />
+              <e p="TMP_UiFrameRateCounter.cs" t="Include" />
+              <e p="TMPro_InstructionOverlay.cs" t="Include" />
+              <e p="VertexColorCycler.cs" t="Include" />
+              <e p="VertexJitter.cs" t="Include" />
+              <e p="VertexShakeA.cs" t="Include" />
+              <e p="VertexShakeB.cs" t="Include" />
+              <e p="VertexZoom.cs" t="Include" />
+              <e p="WarpTextExample.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Fonts" t="Include">
+            <e p="LiberationSans - OFL.txt" t="Include" />
+          </e>
+          <e p="Resources" t="Include">
+            <e p="LineBreaking Following Characters.txt" t="Include" />
+            <e p="LineBreaking Leading Characters.txt" t="Include" />
+            <e p="Shaders" t="Include">
+              <e p="TMP_Bitmap-Custom-Atlas.shader" t="Include" />
+              <e p="TMP_Bitmap-Mobile.shader" t="Include" />
+              <e p="TMP_Bitmap.shader" t="Include" />
+              <e p="TMP_SDF Overlay.shader" t="Include" />
+              <e p="TMP_SDF-Mobile Masking.shader" t="Include" />
+              <e p="TMP_SDF-Mobile Overlay.shader" t="Include" />
+              <e p="TMP_SDF-Mobile.shader" t="Include" />
+              <e p="TMP_SDF-Surface-Mobile.shader" t="Include" />
+              <e p="TMP_SDF-Surface.shader" t="Include" />
+              <e p="TMP_SDF.shader" t="Include" />
+              <e p="TMP_Sprite.shader" t="Include" />
+              <e p="TMPro.cginc" t="Include" />
+              <e p="TMPro_Properties.cginc" t="Include" />
+              <e p="TMPro_Surface.cginc" t="Include" />
+            </e>
+          </e>
+          <e p="Sprites" t="Include">
+            <e p="EmojiOne Attribution.txt" t="Include" />
+          </e>
+        </e>
+      </e>
+      <e p="LastDitch.sln" t="IncludeFlat" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="Temp\Bin" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>
