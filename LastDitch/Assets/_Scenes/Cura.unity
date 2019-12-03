@@ -12072,7 +12072,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1024346161}
   m_LocalRotation: {x: -0, y: 0.06203869, z: -0, w: 0.9980738}
-  m_LocalPosition: {x: -102, y: 0, z: -1.5}
+  m_LocalPosition: {x: -102.3, y: -1.7, z: -3.5}
   m_LocalScale: {x: 15.727625, y: 15.727625, z: 15.727625}
   m_Children:
   - {fileID: 1595548443}
@@ -17612,16 +17612,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1970776689}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: fcb0119078e01a24daf57b88ba8018c7,
-        type: 3}
-      propertyPath: m_Name
-      value: Thin Pyramid
-      objectReference: {fileID: 0}
-    - target: {fileID: -927199367670048503, guid: fcb0119078e01a24daf57b88ba8018c7,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: fcb0119078e01a24daf57b88ba8018c7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -17691,6 +17681,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 16.17
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: fcb0119078e01a24daf57b88ba8018c7,
+        type: 3}
+      propertyPath: m_Name
+      value: Thin Pyramid
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: fcb0119078e01a24daf57b88ba8018c7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6180052434626441845, guid: fcb0119078e01a24daf57b88ba8018c7,
         type: 3}
