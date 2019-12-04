@@ -42,7 +42,7 @@ public class ObjectPickup : MonoBehaviour
             pickup = false;
         }
 
-        if (Input.GetMouseButtonDown(1))
+        if (Input.GetMouseButtonDown(1) && pickup)
         {
             Throw();
         }

@@ -17,7 +17,7 @@ public class OnLoad : MonoBehaviour
     {
         //PlayerPrefs.SetInt("inMenu", 1);
 
-        if (PlayerPrefs.GetInt("inMenu") == 1)
+        if (CameraLerp.inMenu)
         {
             //set camera at screen pos
             player.transform.position = outPos;
@@ -28,7 +28,7 @@ public class OnLoad : MonoBehaviour
             player.GetComponent<player_controller>().enabled = false;
             player.GetComponentInChildren<player_look>().enabled = false;
 
-            PlayerPrefs.SetInt("inMenu", 0);
+            CameraLerp.inMenu = false;
             cameraScript.movingCam = true;
             player.GetComponent<player_controller>().enabled = true;
             player.GetComponentInChildren<player_look>().enabled = true;

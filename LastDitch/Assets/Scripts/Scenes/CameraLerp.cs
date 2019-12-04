@@ -6,7 +6,7 @@ public class CameraLerp : MonoBehaviour
 {
     public Transform original;
     public Transform screen;
-    bool inMenu;
+    public static bool inMenu;
     public GameObject player;
     private Vector3 outCamPos = new Vector3(-34.5f,14.9f,36.5f);
     private Vector3 outPos = new Vector3(-34.5f, 7.9f, 36.5f);
@@ -19,6 +19,9 @@ public class CameraLerp : MonoBehaviour
 
     void Update()
     {
+        Debug.Log(movingCam + "MC");
+        Debug.Log(inMenu + "IM");
+        /*
         if(PlayerPrefs.GetInt("inMenu") == 1)
         {
             inMenu = true;
@@ -28,8 +31,8 @@ public class CameraLerp : MonoBehaviour
         {
             inMenu = false;
         }
-
-        if(Input.GetButtonDown("Jump") && nearLaptop)
+        */
+        if (Input.GetButtonDown("Jump") && nearLaptop)
         {
             hub.SetActive(false);
 
@@ -37,12 +40,12 @@ public class CameraLerp : MonoBehaviour
             inMenu = !inMenu;
             if(inMenu)
             {
-                PlayerPrefs.SetInt("inMenu", 1);
+                //PlayerPrefs.SetInt("inMenu", 1);
                 timer = 2.5f;
             }
             else
             {
-                PlayerPrefs.SetInt("inMenu", 0);
+                //PlayerPrefs.SetInt("inMenu", 0);
             }
             movingCam = true;
         }
