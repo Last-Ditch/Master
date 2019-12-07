@@ -55,7 +55,7 @@ public class ObjectPickup : MonoBehaviour
         model.GetComponent<Destruction>().canBeDamaged = true;
         model.GetComponent<Collider>().enabled = true;
         model.transform.parent = null;
-        model.GetComponent<Rigidbody>().AddForce(hand.transform.forward * 5000);
+        model.GetComponent<Rigidbody>().AddForce(hand.transform.forward * 500);
         model.GetComponent<Rigidbody>().useGravity = true;
 
     }

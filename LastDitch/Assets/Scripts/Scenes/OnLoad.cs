@@ -13,7 +13,7 @@ public class OnLoad : MonoBehaviour
     //public UnityStandardAssets.Characters.FirstPerson.FirstPersonController script;
     public CameraLerp cameraScript;
 
-    void Start()
+    void Awake()
     {
         //PlayerPrefs.SetInt("inMenu", 1);
 
