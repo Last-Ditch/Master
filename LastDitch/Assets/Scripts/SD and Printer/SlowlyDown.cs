@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 public class SlowlyDown : MonoBehaviour
 {
-
+    public GameObject warningText;
     //7.999962
     [SerializeField] GameObject[] Pyramids;
     [SerializeField] GameObject[] Balls;
@@ -33,6 +33,7 @@ public class SlowlyDown : MonoBehaviour
     ProgressTracker progressScript;
     private void Start()
     {
+        warningText.SetActive(false);
         progressScript = GameObject.FindGameObjectWithTag("Progress").GetComponent<ProgressTracker>();
     }
 
@@ -123,7 +124,7 @@ public class SlowlyDown : MonoBehaviour
 
         if (transform.localPosition.y >= 0 && canGo )
         {
-            
+            warningText.SetActive(true);
             fPickupScript.enabled = false;
             model.SetActive(true);
             
@@ -161,6 +162,7 @@ public class SlowlyDown : MonoBehaviour
             speaker.enabled = false;
             //GameObject.FindGameObjectWithTag("Manager").GetComponent<ExtractInfo>().donePrinting = true;
             stopPrinting = true;
+            warningText.SetActive(false);
             Reset();
         }
     }
