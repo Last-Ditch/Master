@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PopUpObject : MonoBehaviour
 {
+    public bool filamentTable, filamentUltimaker, SD_Laptop, SD_Ultimaker;
+
     public bool lookedAT;
     LookAtPlayer lookScript;
 

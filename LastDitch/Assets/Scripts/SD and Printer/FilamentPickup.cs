@@ -24,7 +24,7 @@ public class FilamentPickup : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetMouseButtonDown(0) && filamentSpool!=null && canPickup)
+        if (Input.GetMouseButtonDown(1) && filamentSpool!=null && canPickup)
         {
             //Pick up
             if (filamentSpool.transform.GetChild(0).gameObject.GetComponent<MeshRenderer>().enabled && !haveFilament)
