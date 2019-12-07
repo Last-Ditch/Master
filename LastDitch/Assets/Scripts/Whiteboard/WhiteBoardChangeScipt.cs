@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class WhiteBoardChangeScipt : MonoBehaviour
 {
+    int counter = 0;
     public Sprite[] boardSprites;
      ProgressTracker PT;
     AudioSource Board;
@@ -13,7 +14,7 @@ public class WhiteBoardChangeScipt : MonoBehaviour
     {
         Board = GetComponent<AudioSource>();
         SR = GetComponent<SpriteRenderer>();
-
+        counter = 0;
         //dont destroy on load objects reset references whever the scene changes, use this to get around that
         PT = GameObject.FindGameObjectWithTag("Progress").GetComponent<ProgressTracker>();
     }
@@ -21,60 +22,72 @@ public class WhiteBoardChangeScipt : MonoBehaviour
     public void Update()
     {
 
-
+        //Debug.Log();
 
         if( PT.enteredSlicr == true)
         {
-            Board.Play();
-            SR.sprite = boardSprites[1];
+            ChangeBoard(1);
+            //SR.sprite = boardSprites[1];
             if (PT.modelPicked == true)
             {
-                Board.Play();
-                SR.sprite = boardSprites[2];
+                ChangeBoard(2);
+                //Board.Play();
+                //SR.sprite = boardSprites[2];
                 if (PT.MatPicked == true && PT.LHPicked == true && PT.InfillPicked == true )
                 {
-                    Board.Play();
-                    SR.sprite = boardSprites[3];
+                    ChangeBoard(3);
+                    //Board.Play();
+                    //SR.sprite = boardSprites[3];
                     if (PT.sliced == true)
                     {
-                        Board.Play();
-                        SR.sprite = boardSprites[4];
+                        ChangeBoard(4);
+                        //Board.Play();
+                        //SR.sprite = boardSprites[4];
                         if (PT.TpuPicked == true)
                         {
-                            Board.Play();
-                            SR.sprite = boardSprites[13];
+                            ChangeBoard(13);
+                            //Board.Play();
+                            //SR.sprite = boardSprites[13];
                             if (PT.sdPickedUp == true)
                             {
-                                Board.Play();
-                                SR.sprite = boardSprites[14];
+                                ChangeBoard(14);
+                                //Board.Play();
+                                //SR.sprite = boardSprites[14];
                                 if (PT.sdIn == true)
                                 {
-                                    Board.Play();
-                                    SR.sprite = boardSprites[15];
+                                    ChangeBoard(15);
+                                    //Board.Play();
+                                    //SR.sprite = boardSprites[15];
                                     if (PT.filamentPickedUp == true)
                                     {
-                                        Board.Play();
-                                        SR.sprite = boardSprites[16];
+                                        ChangeBoard(16);
+                                        //Board.Play();
+                                        //SR.sprite = boardSprites[16];
                                         if (PT.filamenttBackofPrinter == true)
                                         {
-                                            Board.Play();
-                                            SR.sprite = boardSprites[17];
+                                            ChangeBoard(17);
+                                            //Board.Play();
+                                            //SR.sprite = boardSprites[17];
                                             if (PT.bedGlued == true)
                                             {
-                                                SR.sprite = boardSprites[18];
-                                                Board.Play();
+                                                ChangeBoard(18);
+                                                //SR.sprite = boardSprites[18];
+                                                //Board.Play();
                                                 if (PT.enterUltimakerMenu == true)
                                                 {
-                                                    SR.sprite = boardSprites[19];
-                                                    Board.Play();
+                                                    ChangeBoard(19);
+                                                    //SR.sprite = boardSprites[19];
+                                                    //Board.Play();
                                                     if (PT.insertFilament == true)
                                                     {
-                                                        Board.Play();
-                                                        SR.sprite = boardSprites[20];
+                                                        ChangeBoard(20);
+                                                        //Board.Play();
+                                                        //SR.sprite = boardSprites[20];
                                                         if (PT.objectPrinting == true)
                                                         {
-                                                            Board.Play();
-                                                            SR.sprite = boardSprites[21];
+                                                            ChangeBoard(21);
+                                                            //Board.Play();
+                                                            //SR.sprite = boardSprites[21];
                                                         }
                                                     }
                                                 }
@@ -86,39 +99,47 @@ public class WhiteBoardChangeScipt : MonoBehaviour
                         }
                         else
                         {
-                            Board.Play();
-                            SR.sprite = boardSprites[5];
+                            ChangeBoard(5);
+                            //Board.Play();
+                            //SR.sprite = boardSprites[5];
                             if (PT.sdPickedUp == true)
                             {
-                                Board.Play();
-                                SR.sprite = boardSprites[6];
+                                ChangeBoard(6);
+                                //Board.Play();
+                                //SR.sprite = boardSprites[6];
                                 if (PT.sdIn == true)
                                 {
-                                    Board.Play();
-                                    SR.sprite = boardSprites[7];
+                                    ChangeBoard(7);
+                                    //Board.Play();
+                                    //SR.sprite = boardSprites[7];
                                     if (PT.filamentPickedUp == true)
                                     {
-                                        Board.Play();
-                                        SR.sprite = boardSprites[8];
+                                        ChangeBoard(8);
+                                        //Board.Play();
+                                        //SR.sprite = boardSprites[8];
                                         if (PT.filamenttBackofPrinter == true)
                                         {
-                                            Board.Play();
-                                            SR.sprite = boardSprites[9];
-                                        
-                                                if (PT.enterUltimakerMenu == true)
+                                            ChangeBoard(9);
+                                            //Board.Play();
+                                            //SR.sprite = boardSprites[9];
+
+                                            if (PT.enterUltimakerMenu == true)
                                                 {
-                                                    SR.sprite = boardSprites[10];
-                                                    Board.Play();
-                                                    if (PT.insertFilament == true)
+                                                ChangeBoard(10);
+                                                //SR.sprite = boardSprites[10];
+                                                //Board.Play();
+                                                if (PT.insertFilament == true)
                                                     {
-                                                        Board.Play();
-                                                        SR.sprite = boardSprites[11];
-                                                        if (PT.objectPrinting == true)
+                                                    ChangeBoard(11);
+                                                    //Board.Play();
+                                                    //SR.sprite = boardSprites[11];
+                                                    if (PT.objectPrinting == true)
                                                         {
-                                                            Board.Play();
-                                                            SR.sprite = boardSprites[12];
-                                                        }
+                                                        ChangeBoard(12);
+                                                        //Board.Play();
+                                                        //SR.sprite = boardSprites[12];
                                                     }
+                                                }
                                                 }
                                             
                                         }
@@ -130,6 +151,20 @@ public class WhiteBoardChangeScipt : MonoBehaviour
                     }
                 }
             }
+        }
+    }
+
+
+    void ChangeBoard(int index)
+    {
+        Debug.Log(1);
+        while(counter < index)
+        {
+            Board.Stop();
+            Board.Play();
+            Debug.Log(2);
+            SR.sprite = boardSprites[index];
+            counter++;
         }
     }
 }

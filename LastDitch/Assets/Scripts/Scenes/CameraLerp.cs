@@ -19,8 +19,8 @@ public class CameraLerp : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(movingCam + "MC");
-        Debug.Log(inMenu + "IM");
+        //Debug.Log(movingCam + "MC");
+        //Debug.Log(inMenu + "IM");
         /*
         if(PlayerPrefs.GetInt("inMenu") == 1)
         {
