@@ -10,10 +10,11 @@ public class WipeDownAndGlue : MonoBehaviour
     public SlowlyDown slowlyScript;
     Animator anim;
     public bool canWipe;
+    Audio audioS;
 
     void Start()
     {
-        
+        audioS = GameObject.FindGameObjectWithTag("Speaker").GetComponent<Audio>();
         anim = GetComponent<Animator>();
     }
 
@@ -57,5 +58,13 @@ public class WipeDownAndGlue : MonoBehaviour
     {
         yield return new WaitForSeconds(2f);
         WipeDown();
+    }
+
+    public void SendTPUGlue()
+    {
+        if(progressScript.TpuPicked)
+        {
+            audioS.TPUGlue();
+        }
     }
 }

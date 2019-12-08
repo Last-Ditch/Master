@@ -8,7 +8,7 @@ public class Audio : MonoBehaviour
     public bool doneSlicr;
     public AudioClip[] audioClips;
     AudioSource speaker;
-    bool explosive, touchy,end, nozzle;
+    bool explosive, touchy,end, nozzle, TPU;
     public static int counter = 0;
     
 
@@ -105,6 +105,15 @@ public class Audio : MonoBehaviour
         {
             AudioButton(13);
             nozzle = true;
+        }
+    }
+
+    public void TPUGlue()
+    {
+        if (!TPU)
+        {
+            AudioButton(16);
+            TPU = true;
         }
     }
 }

@@ -45370,6 +45370,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 5fcd8163d7b055344a761cf1e8d85f73, type: 3}
   - {fileID: 8300000, guid: ee92e31258ad8e04ba91987952795e98, type: 3}
   - {fileID: 8300000, guid: ebb49e1e4ce2e2948a065f0ed423bbe9, type: 3}
+  - {fileID: 8300000, guid: 393cea8233c645841b0070e5b3df1630, type: 3}
 --- !u!95 &395072589
 Animator:
   serializedVersion: 3
