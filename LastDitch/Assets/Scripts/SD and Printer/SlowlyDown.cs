@@ -26,6 +26,9 @@ public class SlowlyDown : MonoBehaviour
     public bool donePrinting;
     public bool stopPrinting;
     public AudioSource speaker;
+    public AudioClip liftClip;
+    public AudioSource liftSource;
+    public float volume;
     public UltimakerMenu menuScript;
     public bool sdd;
     public ExtractInfo infoScript;
@@ -33,6 +36,8 @@ public class SlowlyDown : MonoBehaviour
     public GameObject instructions;
     public GameObject instructionsSpace;
     public Button MenuButton;
+    private bool Moving;
+    private bool isPlaying;
 
     ProgressTracker progressScript;
     private void Start()
@@ -40,6 +45,7 @@ public class SlowlyDown : MonoBehaviour
         warningText.SetActive(false);
         warningText2.SetActive(false);
         progressScript = GameObject.FindGameObjectWithTag("Progress").GetComponent<ProgressTracker>();
+        liftSource = GetComponent<AudioSource>();
     }
 
 
@@ -59,16 +65,30 @@ public class SlowlyDown : MonoBehaviour
 
     void FixedUpdate()
     {
+        //Audio Trigger
+        if (Moving == true && isPlaying == false)
+        {
+            liftSource.PlayOneShot(liftClip, volume);
+            isPlaying = true;
+        }
+        else if(Moving == false)
+        {
+            isPlaying = false;
+        }
+
         //for the clearing nozzle animation
         if(lowerbuildPlate)
         {
             speaker.enabled = false;
             if (transform.localPosition.y >= 1.1f)
             {
+                Moving = true;
                 transform.Translate(0, -0.01f, 0);
+               
             }
             else
             {
+                Moving = false;
                 anim.SetTrigger("CleanNozzle");
                 anim.SetBool("PausePrinting", false);
                 anim.SetBool("StopPrinting", false);
@@ -88,7 +108,7 @@ public class SlowlyDown : MonoBehaviour
 
         if (rising && !hasRisen)
         {
-
+            Moving = true;
             fPickupScript.enabled = false;
             transform.Translate(0, 0.01f, 0);
             if (transform.localPosition.y >= 197.4)
@@ -96,6 +116,7 @@ public class SlowlyDown : MonoBehaviour
 
                 StartCoroutine(animPlay());
                 rising = false;
+                Moving = false;
                 hasRisen = true;
                 infoScript.MakeModel();
             }
@@ -109,12 +130,15 @@ public class SlowlyDown : MonoBehaviour
             if (transform.localPosition.y <= 140)
             {
                 anim.SetBool("StopPrinting", false);
+                Moving = true;
                 transform.Translate(0, 0.01f, 0);
+               
             }
             else
             {
                 
                 restartAnim = false;
+                Moving = false;
                 model.SetActive(false);
                 model = holdModel;
                 model.SetActive(true);
@@ -138,13 +162,17 @@ public class SlowlyDown : MonoBehaviour
             {
                 speaker.enabled = true;
                 speaker.playOnAwake = true;
+                Moving = true;
                 transform.Translate(0, -0.005f, 0);
+               
             }
             else
             {
                 speaker.enabled = false;
+                Moving = true;
                 transform.Translate(0, -0.01f, 0);
             }
+            Moving = false;
         }
 
 
@@ -180,9 +208,11 @@ public class SlowlyDown : MonoBehaviour
     {
         GameObject.FindGameObjectWithTag("Progress").GetComponent<ProgressTracker>().objectPrinting = true;
         rising = true;
+        Moving = true;
         if(hasRisen)
         {
             canGo = true;
+            Moving = false;
         }
     }
 
