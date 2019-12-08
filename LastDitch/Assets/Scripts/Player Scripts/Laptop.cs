@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Laptop : MonoBehaviour
 {
+    //checks to see if the player is near the laptop so they can transition to other scene
+
 
     CameraLerp script;
 

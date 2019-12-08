@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class Kill : MonoBehaviour
 {
+    //destroy gameobject after time
+
 
     public float life_time = 5;
 
-    // Update is called once per frame
+    
     void Start()
     {
         StartCoroutine(kill());

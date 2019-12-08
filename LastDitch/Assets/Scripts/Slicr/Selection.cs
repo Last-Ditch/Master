@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 public class Selection : MonoBehaviour
 {
+    //tracks progress through the "cura" program
     public Material PLA, ABS, TPU, PTE;
     public GameObject[] models, infill;
     public GameObject currentModel, currentObj, currentInfillModel, currentInfillObj;

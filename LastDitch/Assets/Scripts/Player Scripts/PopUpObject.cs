@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PopUpObject : MonoBehaviour
 {
+    //set in inspector
     public bool filamentTable, filamentUltimaker, SD_Laptop, SD_Ultimaker;
 
     public bool lookedAT;
@@ -11,7 +12,6 @@ public class PopUpObject : MonoBehaviour
 
     void Start()
     {
-
         lookScript = GetComponentInChildren<LookAtPlayer>();
     }
 

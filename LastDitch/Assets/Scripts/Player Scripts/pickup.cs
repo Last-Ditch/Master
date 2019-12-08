@@ -20,7 +20,6 @@ public class pickup : MonoBehaviour
         temp_parent = GameObject.FindGameObjectWithTag("Hand");
     }
 
-    // Update is called once per frame
     void Update()
     {
         

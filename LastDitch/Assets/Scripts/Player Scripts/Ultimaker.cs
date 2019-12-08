@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Ultimaker : MonoBehaviour
 {
+    //same as laptop script
 
     CameraLerpUltimaker script;
 

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class InfillCrossSect : MonoBehaviour
 {
+    //shows preview of the infill inthe cross section part of "cura"
+
     public GameObject[] Models;
 
     public Material PLA, ABS, TPU, PTE;

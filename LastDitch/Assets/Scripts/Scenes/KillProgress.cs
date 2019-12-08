@@ -5,11 +5,7 @@ using UnityEngine;
 public class KillProgress : MonoBehaviour
 {
 
-    void Start()
-    {
-        
-    }
-
+    //reset game if the player goes to the main menu
 
     void Update()
     {

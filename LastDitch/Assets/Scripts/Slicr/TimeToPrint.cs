@@ -8,10 +8,6 @@ public class TimeToPrint : MonoBehaviour
 
     public Text ttp;
 
-    void Start()
-    {
-        
-    }
 
     
     public void Change(string i)

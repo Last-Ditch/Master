@@ -11,19 +11,28 @@ public class ObjectPickup : MonoBehaviour
     public static bool pickup;
     Rigidbody rb;
 
+
+
     void Update()
     {
+        
         if (Input.GetMouseButtonDown(0))
         {
+            //if the player can pickup and is not currently holding anything
             if (canPickup != null && !pickup)
             {
+                //set model as picked up and remove any supports
                 model = canPickup;
                 model.GetComponent<BreakawayStructure>().PickedUp();
+
+                //remove any forces on the object 
                 rb = model.GetComponent<Rigidbody>();
                 rb.velocity = Vector3.zero;
                 rb.angularVelocity = Vector3.zero;
                 rb.useGravity = false;
                 model.GetComponent<Collider>().enabled = false;
+
+                //set the model in the players hand
                 model.transform.parent = null;
                 pickup = true;
                 model.transform.position = hand.transform.position;
@@ -44,6 +53,7 @@ public class ObjectPickup : MonoBehaviour
 
         if (Input.GetMouseButtonDown(1) && pickup)
         {
+            
             Throw();
         }
     }
@@ -67,8 +77,7 @@ public class ObjectPickup : MonoBehaviour
     {
         if (other.gameObject.tag == "Interactable")
         {
-            canPickup = other.gameObject;
-            
+            canPickup = other.gameObject;          
         }
     }
 

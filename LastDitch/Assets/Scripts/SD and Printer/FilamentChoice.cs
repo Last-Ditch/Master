@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class FilamentChoice : MonoBehaviour
 {
+    //choose material from spools and prompts
+
     public int matNo;
     public MeshRenderer mRenderer;
     public bool lookedAT;

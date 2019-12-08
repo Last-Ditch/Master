@@ -10,12 +10,14 @@ public class Destruction : MonoBehaviour
 
     void Start()
     {
+        //grab all layers of the model
         parts = GetComponentsInChildren<Transform>();
     }
 
 
     private void OnCollisionEnter(Collision collision)
     {
+        //if it hits a wall, deal damage
         if (collision.gameObject.tag == "Wall")
         {
             if(health > 0 & canBeDamaged)
@@ -30,6 +32,7 @@ public class Destruction : MonoBehaviour
                 {
                     if (t.gameObject.tag == "part")
                     {
+                        //if object health reaches 0, unparent all parts and start destroy countdown
                         t.transform.parent = null;
                         t.GetComponent<Rigidbody>().isKinematic = false;
                         t.GetComponent<Rigidbody>().useGravity = true;

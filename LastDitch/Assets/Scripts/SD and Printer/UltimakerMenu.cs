@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class UltimakerMenu : MonoBehaviour
 {
+    //for moving around the menu on the ultimaker
+
     public GameObject[] menus;
     public SlowlyDown revealScript;
     public Button resumeButton;
@@ -12,9 +14,7 @@ public class UltimakerMenu : MonoBehaviour
     public GameObject printArea;
     public PrinterSpoolTracker spoolTrackerScript;
     public WipeDownAndGlue wipeScript;
-    //mainMenu, filamentMenu, printingMenu;
 
-    //startPrint, resumeprint, filamentButton, lowerBuildPlate;
 
 
     int currentMenu;

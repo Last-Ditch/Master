@@ -16,7 +16,7 @@ public class PrinterSpoolTracker : MonoBehaviour
         progresstrackerScript = GameObject.FindGameObjectWithTag("Progress").GetComponent<ProgressTracker>();
     }
 
-    
+    //for finding out if the right filament waas chosen
     void Update()
     {
         chosenMat = progresstrackerScript.MaterialC;

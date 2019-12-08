@@ -8,44 +8,31 @@ public class CameraLerp : MonoBehaviour
     public Transform screen;
     public static bool inMenu;
     public GameObject player;
+
+    //place to set the player when coming out of the "cura"
     private Vector3 outCamPos = new Vector3(-34.5f,14.9f,36.5f);
     private Vector3 outPos = new Vector3(-34.5f, 7.9f, 36.5f);
     public float x;
+
+    //is the camera moving
     public bool movingCam;
     public bool nearLaptop;
+    
+    //the UI
     public GameObject hub;                          //Dylan
 
     float timer = 2f;
 
     void Update()
     {
-        //Debug.Log(movingCam + "MC");
-        //Debug.Log(inMenu + "IM");
-        /*
-        if(PlayerPrefs.GetInt("inMenu") == 1)
-        {
-            inMenu = true;
-            
-        }
-        else
-        {
-            inMenu = false;
-        }
-        */
+
         if (Input.GetButtonDown("Jump") && nearLaptop)
         {
             hub.SetActive(false);
-
-            //Debug.Log("Jump");
             inMenu = !inMenu;
             if(inMenu)
             {
-                //PlayerPrefs.SetInt("inMenu", 1);
                 timer = 2.5f;
-            }
-            else
-            {
-                //PlayerPrefs.SetInt("inMenu", 0);
             }
             movingCam = true;
         }
@@ -59,17 +46,8 @@ public class CameraLerp : MonoBehaviour
             CameraOut();
         }
 
-
-        //Debug shit
-        /*
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            Cursor.lockState = CursorLockMode.None;
-            SceneManager.LoadScene(0);
-        }
-
-    */
     }
+
 
     public void CameraOut()
     {
@@ -89,7 +67,6 @@ public class CameraLerp : MonoBehaviour
         {
             movingCam = false;
             timer = 2f;
-            //GetComponentInParent<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>().enabled = true;
             pause_menu.canPause = true;
             player.GetComponent<player_controller>().enabled = true;
             player.GetComponentInChildren<player_look>().enabled = true;
@@ -98,9 +75,9 @@ public class CameraLerp : MonoBehaviour
 
     public void CameraIn()
     {
+        //moves camera in and disables controls
         transform.position = Vector3.Slerp(transform.position, screen.position, Time.deltaTime * 2f);
         transform.rotation = Quaternion.Slerp(transform.rotation, screen.rotation, Time.time * 0.5f);
-        //GetComponentInParent<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>().enabled = false;
         pause_menu.canPause = false;
         player.GetComponent<player_controller>().enabled = false;
         player.GetComponentInChildren<player_look>().enabled = false;

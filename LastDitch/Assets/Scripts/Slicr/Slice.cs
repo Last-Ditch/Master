@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement; 
 public class Slice : MonoBehaviour
 {
+    //sets all choices when Slice is clicked
     public ImporterPanels ImporterPanelsScript;
     public bool supportsAdded;
     public GameObject exportPanel;

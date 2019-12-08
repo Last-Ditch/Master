@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class WipeDownAndGlue : MonoBehaviour
 {
+    //for playing the animations at the start of printing
+
     ProgressTracker progressScript;
     public SlowlyDown slowlyScript;
     Animator anim;

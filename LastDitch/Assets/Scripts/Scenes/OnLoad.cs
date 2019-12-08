@@ -10,12 +10,14 @@ public class OnLoad : MonoBehaviour
 
     private Vector3 outPos = new Vector3(-34.5f, 7.9f, 36.5f);
 
-    //public UnityStandardAssets.Characters.FirstPerson.FirstPersonController script;
     public CameraLerp cameraScript;
+
+
+
+    //if the player was in "cura", then put them near the laptop to transition out
 
     void Awake()
     {
-        //PlayerPrefs.SetInt("inMenu", 1);
 
         if (CameraLerp.inMenu)
         {
@@ -24,7 +26,6 @@ public class OnLoad : MonoBehaviour
             player.transform.rotation = Quaternion.Euler(0,-22f,0);
             mainCamera.transform.position = screenCamera.transform.position;
             mainCamera.transform.rotation = screenCamera.transform.rotation;
-            //script.enabled = false;
             player.GetComponent<player_controller>().enabled = false;
             player.GetComponentInChildren<player_look>().enabled = false;
 

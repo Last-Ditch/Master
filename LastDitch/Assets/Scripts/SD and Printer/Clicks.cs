@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Clicks : MonoBehaviour
 {
+
+    //play UI clicks
+
     Clicks otherClicks;
     public AudioClip[] audioClips;
     AudioSource speaker;
@@ -13,12 +16,6 @@ public class Clicks : MonoBehaviour
     {
         speaker = GetComponent<AudioSource>();
         otherClicks = GameObject.FindGameObjectWithTag("Manager").GetComponent<Clicks>();
-    }
-
-
-    void Update()
-    {
-
     }
 
     public void AudioButton(int i)

@@ -6,7 +6,11 @@ public class ClockMove : MonoBehaviour
 {
     public GameObject center;
     public static float speed;
+
+    //set in inspector so one script can do both hands
     public bool hourHand;
+
+    //make hands go spinny
     void Update()
     {
         if(!hourHand)

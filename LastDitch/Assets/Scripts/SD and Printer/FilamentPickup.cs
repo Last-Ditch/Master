@@ -26,17 +26,16 @@ public class FilamentPickup : MonoBehaviour
 
         if (Input.GetMouseButtonDown(1) && filamentSpool!=null && canPickup)
         {
-            //Pick up
+            //Pick up spool
             if (filamentSpool.transform.GetChild(0).gameObject.GetComponent<MeshRenderer>().enabled && !haveFilament)
             {
+                //update progress tracker and play animation
                 GameObject.FindGameObjectWithTag("Progress").GetComponent<ProgressTracker>().filamentPickedUp = true;
-                //speaker.PlayOneShot(click);
                 anim = filamentSpool.GetComponent<Animator>();
                 anim.SetTrigger("Pickup");
-                //filamentSpool.transform.GetChild(0).GetComponent<MeshRenderer>().enabled = false;
                 if(filamentSpool.gameObject.tag != "Ultimaker Back")
                 {
-                    
+                    //find out which filament was picked up
                     currentSpoolNum = filamentSpool.GetComponent<FilamentChoice>().matNo;
                 }
                 else
@@ -60,9 +59,7 @@ public class FilamentPickup : MonoBehaviour
             //Place down
             if (!filamentSpool.transform.GetChild(0).gameObject.GetComponent<MeshRenderer>().enabled && haveFilament )
             {
-                //speaker.PlayOneShot(click);
 
-                
                 if (filamentSpool.gameObject.tag == "Ultimaker Back")
                 {
                     GameObject.FindGameObjectWithTag("Progress").GetComponent<ProgressTracker>().filamenttBackofPrinter = true;
@@ -131,13 +128,11 @@ public class FilamentPickup : MonoBehaviour
     {
         if(haveFilament == true)
         {
-            //yield return new WaitForSeconds(0.5f);
             sd_ui.SetActive(true);
         }
 
         if (haveFilament == false)
         {
-            //yield return new WaitForSeconds(0.5f);
             sd_ui.SetActive(false);
         }
     }

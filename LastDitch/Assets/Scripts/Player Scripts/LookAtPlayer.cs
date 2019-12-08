@@ -4,16 +4,15 @@ using UnityEngine;
 
 public class LookAtPlayer : MonoBehaviour
 {
+    //Prompts turn to face player if enabled
+
+
     public GameObject Player;
     public GameObject child;
-    public bool LAenabled;
-    public bool QuickFix;
+    public bool LAenabled; //Look at enabled
+    public bool QuickFix; //Stops the prompt turning to face the player, for if prompts clip throuh walls
 
-    void Start()
-    {
-    }
 
-    
     void Update()
     {
         if(LAenabled)

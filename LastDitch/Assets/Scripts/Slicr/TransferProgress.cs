@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class TransferProgress : MonoBehaviour
 {
+    //transfer everthing to the progress tracker
+
     public ProgressTracker progressScript;
 
     private void Start()

@@ -21,10 +21,11 @@ public class Audio : MonoBehaviour
     
     void Update()
     {
+        //tell if the speech has been toggled off
         speaker.volume = PlayerPrefs.GetInt("Disabled");
         
 
-
+        //cycle through audio clips
         if(!speaker.isPlaying && counter < 4 && SceneManager.GetActiveScene().buildIndex == 1)
         {
             //Debug.Log(counter);
@@ -33,39 +34,43 @@ public class Audio : MonoBehaviour
             return;
         }
 
+        //if go to "cura" before cycle is finished, jump forward
         if(SceneManager.GetActiveScene().buildIndex == 2 && counter < 4)
         {
             counter = 4;
         }
-
+        //pause the cycle until we get to the "cura" scene 
         if (SceneManager.GetActiveScene().buildIndex == 2 && !speaker.isPlaying && counter < 6  )
         {
-            //Debug.Log("Yes");
             speaker.PlayOneShot(audioClips[counter]);
             counter++;
 
         }
 
+        //continue on when the player gets back
         if (SceneManager.GetActiveScene().buildIndex == 1 && counter < 7 && doneSlicr   )
         {
             AudioButton(6);
             counter = 7;
         }
 
+
         if (!speaker.isPlaying && counter < 8 && SceneManager.GetActiveScene().buildIndex == 1 && doneSlicr)
         {
             speaker.PlayOneShot(audioClips[counter]);
             counter++;
         }
-
-        //Debug.Log(counter);
     }
 	
+    //play a one-off
     public void AudioButton(int i)
     {
         speaker.Stop();
         speaker.PlayOneShot(audioClips[i]);
     }
+
+
+    //some audio clips that we only want played once
 
     public void ExplosiveSpools()
     {

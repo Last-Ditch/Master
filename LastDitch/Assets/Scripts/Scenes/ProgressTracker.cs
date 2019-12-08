@@ -9,6 +9,7 @@ public class ProgressTracker : MonoBehaviour
         sdPickedUp, filamentPickedUp, filamenttBackofPrinter, bedGlued, enterUltimakerMenu, insertFilament, objectReadytoPrint, objectPrinting;
     public int MaterialC, LayerHeightC, InfillC, ModelPicked;
 
+    //tracks progress through the game via bools
 
     void Awake()
     {
@@ -27,7 +28,7 @@ public class ProgressTracker : MonoBehaviour
 
     private void Start()
     {
-
+        //for resetting if speech is disabled
         PlayerPrefs.SetInt("Disabled", 1);
     }
 

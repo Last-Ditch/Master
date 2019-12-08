@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 public class SlowlyDown : MonoBehaviour
 {
+    //moves the build plate down when printing and spawns in the model
+
     public GameObject warningText;
     public GameObject warningText2;
 
@@ -57,6 +59,7 @@ public class SlowlyDown : MonoBehaviour
 
     void FixedUpdate()
     {
+        //for the clearing nozzle animation
         if(lowerbuildPlate)
         {
             speaker.enabled = false;
@@ -76,7 +79,6 @@ public class SlowlyDown : MonoBehaviour
         }
         if (transform.localPosition.y <= 140 && !rising && progressScript.blocked && canGo && progressScript.ModelPicked == 3)
         {
-            //Debug.Log(transform.position.y);
             MenuButton.interactable = true;
             anim.SetBool("PausePrinting", true);
             GameObject.FindGameObjectWithTag("Speaker").GetComponent<Audio>().Nozzle();
@@ -164,7 +166,6 @@ public class SlowlyDown : MonoBehaviour
             instructions.SetActive(true);
             model.tag = "Interactable";
             speaker.enabled = false;
-            //GameObject.FindGameObjectWithTag("Manager").GetComponent<ExtractInfo>().donePrinting = true;
             stopPrinting = true;
             warningText.SetActive(false);
             warningText2.SetActive(false);

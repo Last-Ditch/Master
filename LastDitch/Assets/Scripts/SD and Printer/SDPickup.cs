@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class SDPickup : MonoBehaviour
 {
+    //for picking up the sd card and putting it in the ultimaker
+
     Animator anim;
     AudioSource speaker;
     public AudioClip click;
@@ -19,7 +21,7 @@ public class SDPickup : MonoBehaviour
 
     void Update()
     {
-
+        
         if (Input.GetKeyDown(KeyCode.Mouse1) && sdSlot!=null)
         {
             

@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 public class ImporterPanels : MonoBehaviour
 {
+    //for importing the right model in "cura"
     public int Model;
     public GameObject ImportPanel;
     Selection selectionScript;

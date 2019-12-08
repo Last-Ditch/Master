@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class ExtractInfo : MonoBehaviour
 {
+    //pulls all the info off the progress tracker and sets everything up to be printed
+
     public Audio audioSCript;
     public ProgressTracker progressScript;
     public GameObject model, holdModel;
@@ -43,11 +45,6 @@ public class ExtractInfo : MonoBehaviour
             
             if (canPrint)
             {
-                
-                
-                //revealScript.enabled = true;
-                //revealScript.model = model;
-                //revealScript.Printing();
                 canPrint = false;
             }
         }
@@ -56,12 +53,15 @@ public class ExtractInfo : MonoBehaviour
 
     public void MakeModel()
     {
+        //chooses which model the player picked tio be spawned
         if (progressScript.ModelPicked == 1)
         {
             switch (progressScript.LayerHeightC)
             {
                 case 3:
                     model = Instantiate(Pyr3, transform, false);
+
+                    //anim stop num is when the printer has finished the actual printing and just needs to reach the bottom
                     revealScript.animStopNo = 19;
                     //model.SetActive(true);
                     break;
@@ -246,7 +246,7 @@ public class ExtractInfo : MonoBehaviour
                 {
                     if (i.GetComponent<MeshRenderer>())
                     {
-
+                        //adds material and physics materials
                         i.GetComponent<MeshRenderer>().material = PTE;
                         if (i.gameObject.tag != "Support")
                         {

@@ -16,7 +16,7 @@ public class FilamentLocationDetection : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-
+        //PFeet = Player feet, if the player is standing in the right position then let them pick up filaments
         if(other.gameObject.tag =="PFeet")
         {
 

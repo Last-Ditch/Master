@@ -5,23 +5,10 @@ using UnityEngine.UI;
 public class AudioLevels : MonoBehaviour
 {
 
-    public Toggle speechToggle;
-
-    private void Start()
-    {
-        if (PlayerPrefs.GetInt("Disabled") == 1)
-        {
-            //speechToggle.isOn = true;
-        }
-        else
-        {
-            //speechToggle.isOn = false;
-        }
-    }
+    //toggle the voiceover
 
     public void SetSpeechEnable()
     {
-        Debug.Log(22222);
         if(PlayerPrefs.GetInt("Disabled") == 1)
         {
             PlayerPrefs.SetInt("Disabled", 0);

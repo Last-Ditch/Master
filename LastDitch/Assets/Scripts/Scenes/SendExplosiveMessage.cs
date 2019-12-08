@@ -13,6 +13,7 @@ public class SendExplosiveMessage : MonoBehaviour
 
     public void Send()
     {
+        //play the spools audioclip
         audioS.ExplosiveSpools();
     }
 	
