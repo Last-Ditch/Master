@@ -21,7 +21,7 @@ public class CameraLerp : MonoBehaviour
     //the UI
     public GameObject hub;                          //Dylan
 
-    float timer = 2f;
+    float timer = 1.5f;
 
     void Update()
     {
@@ -56,7 +56,7 @@ public class CameraLerp : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         player.transform.position = outPos;
-        transform.position = Vector3.Slerp(transform.position, outCamPos, Time.deltaTime * 2f);
+        transform.position = Vector3.Slerp(transform.position, outCamPos, Time.deltaTime * 1.5f);
 
 
         if (timer > 0)
@@ -66,7 +66,7 @@ public class CameraLerp : MonoBehaviour
         else
         {
             movingCam = false;
-            timer = 2f;
+            timer = 1.5f;
             pause_menu.canPause = true;
             player.GetComponent<player_controller>().enabled = true;
             player.GetComponentInChildren<player_look>().enabled = true;
@@ -76,7 +76,7 @@ public class CameraLerp : MonoBehaviour
     public void CameraIn()
     {
         //moves camera in and disables controls
-        transform.position = Vector3.Slerp(transform.position, screen.position, Time.deltaTime * 2f);
+        transform.position = Vector3.Slerp(transform.position, screen.position, Time.deltaTime * 1.5f);
         transform.rotation = Quaternion.Slerp(transform.rotation, screen.rotation, Time.time * 0.5f);
         pause_menu.canPause = false;
         player.GetComponent<player_controller>().enabled = false;
@@ -89,7 +89,7 @@ public class CameraLerp : MonoBehaviour
         else
         {
             movingCam = false;
-            timer = 2f;
+            timer = 1.5f;
             GameObject.FindGameObjectWithTag("Progress").GetComponent<ProgressTracker>().enteredSlicr = true;
             SceneManager.LoadScene(2);
         }
