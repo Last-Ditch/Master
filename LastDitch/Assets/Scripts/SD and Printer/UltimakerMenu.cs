@@ -102,7 +102,7 @@ public class UltimakerMenu : MonoBehaviour
     public void ChangeFilament(int i)
     {
         
-        Debug.Log(i);
+        //Debug.Log(i);
         if(spoolTrackerScript.currentMat == 0)
         {
             ChangeMenu(5);

@@ -30,6 +30,7 @@ TagManager:
   - PFeet
   - Other
   - UI
+  - shelf
   layers:
   - Default
   - TransparentFX

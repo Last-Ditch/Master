@@ -9,7 +9,7 @@ public class Hoop : MonoBehaviour
     public GameObject text;
     public GameObject hoop;
     public GameObject player;
-    private AudioSource sound;
+    public AudioSource sound;
     public AudioClip cheer;
 
     private void Start()
@@ -24,11 +24,11 @@ public class Hoop : MonoBehaviour
     {
         if (other.transform.IsChildOf(player.transform))
         {
-            return;
+            
         }
         else
         {
-            if (other.gameObject.tag != "Player")
+            if (!other.gameObject.CompareTag("Player"))
             {
                 anim1.SetTrigger("net");
                 anim2.SetTrigger("net");

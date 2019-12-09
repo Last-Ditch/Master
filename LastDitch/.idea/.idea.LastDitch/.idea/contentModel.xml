@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
     <e p="C:\Users\Dylan -G-\.Rider2019.2\system\extResources" t="IncludeRecursive" />
@@ -6,7 +6,9 @@
     <e p="C:\Users\Dylan -G-\Desktop\Unity Games\Master\LastDitch" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
-        <e p="FinalVoice.cs" t="Include" />
+        <e p="Laptop" t="Include">
+          <e p="StandardColorMask.shader" t="Include" />
+        </e>
         <e p="Scripts" t="Include">
           <e p="Bin" t="Include">
             <e p="bin.cs" t="Include" />
@@ -14,6 +16,7 @@
           <e p="Clock" t="Include">
             <e p="ClockMove.cs" t="Include" />
           </e>
+          <e p="FinalVoice.cs" t="Include" />
           <e p="Hoop" t="Include">
             <e p="hoop.cs" t="Include" />
           </e>
@@ -59,6 +62,7 @@
             <e p="UltimakerMenu.cs" t="Include" />
             <e p="WipeDownAndGlue.cs" t="Include" />
           </e>
+          <e p="shelf.cs" t="Include" />
           <e p="Slicr" t="Include">
             <e p="CheckForSupports.cs" t="Include" />
             <e p="ExtractInfo.cs" t="Include" />

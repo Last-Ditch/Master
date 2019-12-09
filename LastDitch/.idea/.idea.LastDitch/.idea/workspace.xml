@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a4c36d75-8db6-4d5d-91cc-5417bf023d62" name="Default Changelist" comment="" />
@@ -9,16 +9,30 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI Scripts/tutorial.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Hoop/Hoop.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Slicr/Slice.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Whiteboard/WhiteBoardChangeScipt.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Bin/Bin.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player Scripts/Destruction.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SD and Printer/UltimakerMenu.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Scenes/ChangeScene.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SD and Printer/SDPickup.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/shelf.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player Scripts/ObjectPickup.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/Scripts/Bin/Bin.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SD and Printer/SDPickup.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI Scripts/tutorial.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Hoop/Hoop.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Whiteboard/WhiteBoardChangeScipt.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Slicr/Slice.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SD and Printer/UltimakerMenu.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player Scripts/ObjectPickup.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/shelf.cs" />
       </list>
     </option>
   </component>
@@ -27,6 +41,7 @@
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="Rider.DefaultBreakpoints.AreToggled" value="true" />
     <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">

@@ -157,12 +157,12 @@ public class WhiteBoardChangeScipt : MonoBehaviour
 
     void ChangeBoard(int index)
     {
-        Debug.Log(1);
+        //Debug.Log(1);
         while(counter < index)
         {
             Board.Stop();
             Board.Play();
-            Debug.Log(2);
+            //Debug.Log(2);
             SR.sprite = boardSprites[index];
             counter++;
         }

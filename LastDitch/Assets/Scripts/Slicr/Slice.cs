@@ -26,7 +26,7 @@ public class Slice : MonoBehaviour
 
     public void Sliced()
     {
-        Debug.Log(ImporterPanelsScript.Model);
+        //Debug.Log(ImporterPanelsScript.Model);
         if(!progressScript.MatPicked || !progressScript.LHPicked || !progressScript.InfillPicked || !progressScript.modelPicked || (ImporterPanelsScript.Model == 2 && !supportsAdded) || (ImporterPanelsScript.Model == 3 && !supportsAdded) || (ImporterPanelsScript.Model == 4 && !supportsAdded))
         {
             notDone.SetActive(true);
