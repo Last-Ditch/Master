@@ -8,6 +8,7 @@ public class Audio : MonoBehaviour
     public bool doneSlicr;
     public AudioClip[] audioClips;
     AudioSource speaker;
+    Animator anim;
     bool explosive, touchy,end, nozzle, TPU;
     public static int counter = 0;
     
@@ -15,12 +16,22 @@ public class Audio : MonoBehaviour
     void Start()
     {
         speaker = GetComponent<AudioSource>();
-
+        anim = GetComponent<Animator>();
     }
 
     
     void Update()
     {
+        //animations
+        if(speaker.isPlaying)
+        {
+            anim.SetBool("isPlaying", true);
+        }
+        else
+        {
+            anim.SetBool("isPlaying", false);
+        }
+
         //tell if the speech has been toggled off
         speaker.volume = PlayerPrefs.GetInt("Disabled");
         
