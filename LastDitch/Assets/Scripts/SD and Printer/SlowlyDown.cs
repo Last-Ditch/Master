@@ -7,7 +7,7 @@ public class SlowlyDown : MonoBehaviour
     //moves the build plate down when printing and spawns in the model
 
     public GameObject warningText;
-    public GameObject warningText2;
+
 
     //7.999962
     [SerializeField] GameObject[] Pyramids;
@@ -43,7 +43,7 @@ public class SlowlyDown : MonoBehaviour
     private void Start()
     {
         warningText.SetActive(false);
-        warningText2.SetActive(false);
+
         progressScript = GameObject.FindGameObjectWithTag("Progress").GetComponent<ProgressTracker>();
         liftSource = GetComponent<AudioSource>();
     }
@@ -154,7 +154,6 @@ public class SlowlyDown : MonoBehaviour
         if (transform.localPosition.y >= 0 && canGo )
         {
             warningText.SetActive(true);
-            warningText2.SetActive(true);
             fPickupScript.enabled = false;
             model.SetActive(true);
             
@@ -196,7 +195,7 @@ public class SlowlyDown : MonoBehaviour
             speaker.enabled = false;
             stopPrinting = true;
             warningText.SetActive(false);
-            warningText2.SetActive(false);
+
             Reset();
         }
     }
