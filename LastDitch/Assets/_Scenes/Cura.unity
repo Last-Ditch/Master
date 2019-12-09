@@ -864,7 +864,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: cc05f601113b09646832f29e307cbd9e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0b5292ed91544be47b9b1e48060efb13, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6818,16 +6818,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 571186526}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: 457d485fbf6bbda4f8c4ae8db2345d3c,
-        type: 3}
-      propertyPath: m_Name
-      value: Arch_MaxHeight_Infill 25%
-      objectReference: {fileID: 0}
-    - target: {fileID: -927199367670048503, guid: 457d485fbf6bbda4f8c4ae8db2345d3c,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 457d485fbf6bbda4f8c4ae8db2345d3c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6897,6 +6887,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 457d485fbf6bbda4f8c4ae8db2345d3c,
+        type: 3}
+      propertyPath: m_Name
+      value: Arch_MaxHeight_Infill 25%
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 457d485fbf6bbda4f8c4ae8db2345d3c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 457d485fbf6bbda4f8c4ae8db2345d3c, type: 3}
@@ -9440,11 +9440,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1057461723}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: c8cf0f540e9cd204cbe4778614778d1a,
-        type: 3}
-      propertyPath: m_Name
-      value: Arch_MinHeight_Infill 50%
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: c8cf0f540e9cd204cbe4778614778d1a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9514,6 +9509,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: c8cf0f540e9cd204cbe4778614778d1a,
+        type: 3}
+      propertyPath: m_Name
+      value: Arch_MinHeight_Infill 50%
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8cf0f540e9cd204cbe4778614778d1a, type: 3}
@@ -12982,7 +12982,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: a49d7455b831eba47a041cbf50bf015e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 181705528d01fae4594eb3acb5ec9382, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -14791,11 +14791,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1057461723}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: 14daeed2367fd6e429b45ec84d781912,
-        type: 3}
-      propertyPath: m_Name
-      value: Arch_MinHeight_Infill 75%
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 14daeed2367fd6e429b45ec84d781912,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -14865,6 +14860,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 14daeed2367fd6e429b45ec84d781912,
+        type: 3}
+      propertyPath: m_Name
+      value: Arch_MinHeight_Infill 75%
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 14daeed2367fd6e429b45ec84d781912, type: 3}
@@ -17902,16 +17902,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 571186526}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: d270545bdabe19646a0036a94c882fcf,
-        type: 3}
-      propertyPath: m_Name
-      value: Arch_MidHeight_Infill 25%
-      objectReference: {fileID: 0}
-    - target: {fileID: -927199367670048503, guid: d270545bdabe19646a0036a94c882fcf,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: d270545bdabe19646a0036a94c882fcf,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -17981,6 +17971,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: d270545bdabe19646a0036a94c882fcf,
+        type: 3}
+      propertyPath: m_Name
+      value: Arch_MidHeight_Infill 25%
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: d270545bdabe19646a0036a94c882fcf,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d270545bdabe19646a0036a94c882fcf, type: 3}
@@ -18389,16 +18389,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1970776689}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: 4c0a39a7652bc024da2317fc6d685244,
-        type: 3}
-      propertyPath: m_Name
-      value: Pyramid(Thick)
-      objectReference: {fileID: 0}
-    - target: {fileID: -927199367670048503, guid: 4c0a39a7652bc024da2317fc6d685244,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 4c0a39a7652bc024da2317fc6d685244,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -18468,6 +18458,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 4c0a39a7652bc024da2317fc6d685244,
+        type: 3}
+      propertyPath: m_Name
+      value: Pyramid(Thick)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 4c0a39a7652bc024da2317fc6d685244,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c0a39a7652bc024da2317fc6d685244, type: 3}
@@ -19584,16 +19584,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 571186526}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: 14daeed2367fd6e429b45ec84d781912,
-        type: 3}
-      propertyPath: m_Name
-      value: Arch_MinHeight_Infill 75%
-      objectReference: {fileID: 0}
-    - target: {fileID: -927199367670048503, guid: 14daeed2367fd6e429b45ec84d781912,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 14daeed2367fd6e429b45ec84d781912,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -19663,6 +19653,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 14daeed2367fd6e429b45ec84d781912,
+        type: 3}
+      propertyPath: m_Name
+      value: Arch_MinHeight_Infill 75%
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 14daeed2367fd6e429b45ec84d781912,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 14daeed2367fd6e429b45ec84d781912, type: 3}
@@ -20952,7 +20952,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 265dae7d6d00b1947b289e64396fd2c8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b8f9ac2d2e980d44998eac3b84324035, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -22025,16 +22025,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1970776689}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: fcb0119078e01a24daf57b88ba8018c7,
-        type: 3}
-      propertyPath: m_Name
-      value: Thin Pyramid
-      objectReference: {fileID: 0}
-    - target: {fileID: -927199367670048503, guid: fcb0119078e01a24daf57b88ba8018c7,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: fcb0119078e01a24daf57b88ba8018c7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -22104,6 +22094,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 16.17
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: fcb0119078e01a24daf57b88ba8018c7,
+        type: 3}
+      propertyPath: m_Name
+      value: Thin Pyramid
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: fcb0119078e01a24daf57b88ba8018c7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6180052434626441845, guid: fcb0119078e01a24daf57b88ba8018c7,
         type: 3}
@@ -23293,16 +23293,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1057461723}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: 457d485fbf6bbda4f8c4ae8db2345d3c,
-        type: 3}
-      propertyPath: m_Name
-      value: Arch_MaxHeight_Infill 25%
-      objectReference: {fileID: 0}
-    - target: {fileID: -927199367670048503, guid: 457d485fbf6bbda4f8c4ae8db2345d3c,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 457d485fbf6bbda4f8c4ae8db2345d3c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -23372,6 +23362,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 457d485fbf6bbda4f8c4ae8db2345d3c,
+        type: 3}
+      propertyPath: m_Name
+      value: Arch_MaxHeight_Infill 25%
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 457d485fbf6bbda4f8c4ae8db2345d3c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 457d485fbf6bbda4f8c4ae8db2345d3c, type: 3}
@@ -25056,16 +25056,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 571186526}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: c8cf0f540e9cd204cbe4778614778d1a,
-        type: 3}
-      propertyPath: m_Name
-      value: Arch_MinHeight_Infill 50%
-      objectReference: {fileID: 0}
-    - target: {fileID: -927199367670048503, guid: c8cf0f540e9cd204cbe4778614778d1a,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: c8cf0f540e9cd204cbe4778614778d1a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -25135,6 +25125,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: c8cf0f540e9cd204cbe4778614778d1a,
+        type: 3}
+      propertyPath: m_Name
+      value: Arch_MinHeight_Infill 50%
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: c8cf0f540e9cd204cbe4778614778d1a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8cf0f540e9cd204cbe4778614778d1a, type: 3}
@@ -26254,11 +26254,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1057461723}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: 48acd8a5c25e4394a9e329b739065cfe,
-        type: 3}
-      propertyPath: m_Name
-      value: Arch_MidHeight_Infill 75%
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 48acd8a5c25e4394a9e329b739065cfe,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -26328,6 +26323,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 48acd8a5c25e4394a9e329b739065cfe,
+        type: 3}
+      propertyPath: m_Name
+      value: Arch_MidHeight_Infill 75%
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 48acd8a5c25e4394a9e329b739065cfe, type: 3}
@@ -27725,16 +27725,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 571186526}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: 39a35dd786e19b34a8152335bb813971,
-        type: 3}
-      propertyPath: m_Name
-      value: Arch_MaxHeight_Infill 100%
-      objectReference: {fileID: 0}
-    - target: {fileID: -927199367670048503, guid: 39a35dd786e19b34a8152335bb813971,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 39a35dd786e19b34a8152335bb813971,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -27804,6 +27794,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 39a35dd786e19b34a8152335bb813971,
+        type: 3}
+      propertyPath: m_Name
+      value: Arch_MaxHeight_Infill 100%
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 39a35dd786e19b34a8152335bb813971,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 39a35dd786e19b34a8152335bb813971, type: 3}
@@ -28080,16 +28080,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 571186526}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: 48acd8a5c25e4394a9e329b739065cfe,
-        type: 3}
-      propertyPath: m_Name
-      value: Arch_MidHeight_Infill 75%
-      objectReference: {fileID: 0}
-    - target: {fileID: -927199367670048503, guid: 48acd8a5c25e4394a9e329b739065cfe,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 48acd8a5c25e4394a9e329b739065cfe,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -28159,6 +28149,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 48acd8a5c25e4394a9e329b739065cfe,
+        type: 3}
+      propertyPath: m_Name
+      value: Arch_MidHeight_Infill 75%
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 48acd8a5c25e4394a9e329b739065cfe,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 48acd8a5c25e4394a9e329b739065cfe, type: 3}
@@ -29114,11 +29114,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1057461723}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: 39a35dd786e19b34a8152335bb813971,
-        type: 3}
-      propertyPath: m_Name
-      value: Arch_MaxHeight_Infill 100%
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 39a35dd786e19b34a8152335bb813971,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -29189,6 +29184,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 39a35dd786e19b34a8152335bb813971,
+        type: 3}
+      propertyPath: m_Name
+      value: Arch_MaxHeight_Infill 100%
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 39a35dd786e19b34a8152335bb813971, type: 3}
 --- !u!1001 &2052883336
@@ -29198,11 +29198,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1057461723}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: d270545bdabe19646a0036a94c882fcf,
-        type: 3}
-      propertyPath: m_Name
-      value: Arch_MidHeight_Infill 25%
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: d270545bdabe19646a0036a94c882fcf,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -29272,6 +29267,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: d270545bdabe19646a0036a94c882fcf,
+        type: 3}
+      propertyPath: m_Name
+      value: Arch_MidHeight_Infill 25%
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d270545bdabe19646a0036a94c882fcf, type: 3}
