@@ -226,7 +226,7 @@ public class ExtractInfo : MonoBehaviour
                     }
                 }
             }
-            revealScript.animStopNo = 88;
+            revealScript.animStopNo = 37;
 
         }
 
